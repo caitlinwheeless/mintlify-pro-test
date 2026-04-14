@@ -1,0 +1,59 @@
+---
+title: ReactCode settings
+short: ReactCode
+tier: enterprise
+type: guide
+hide_menu: false
+order: 0
+order_enterprise: 364
+meta_title: ReactCode settings
+meta_description: Configure ReactCode settings for your organization.
+section: "Manage Your Organization"
+parent_enterprise: "admin_settings"
+date: 2026-04-08 12:03:59
+---
+
+You can configure what permissions to provide [ReactCode interfaces](/tags/reactcode) within your organization. 
+
+This is available from the **Organization > Usage & License > ReactCode** page.
+
+## Application execution mode
+
+This setting controls whether ReactCode is allowed in your organization, and if so, whether that code must be loaded from an external source rather than written inline in the interface.
+
+| Mode | Description |
+| --- | --- |
+| **Disabled** | The application is disabled across you entire organization. |
+| **External applications only** | ReactCode is enabled, but only when the application is [loaded from an external source](/tags/reactcode#External-app-mode-src). |
+| **All applications** | ReactCode can be added to interfaces using both inline code and loaded from an external application. |
+
+## Allowed origins
+
+Enter the domains that are allowed for external applications.
+
+Enter domains without a scheme — HTTPS is always enforced automatically. Use *.example.com to allow all subdomains, or app.example.com for an exact match. Leave the list empty to allow any HTTPS URL.
+
+## iframe permissions
+Select which browser features ReactCode iframes may request via the allow attribute. Only checked items will be permitted, even if the labeling config requests others.
+
+
+autoplay
+
+camera
+
+encrypted-media
+
+fullscreen
+
+geolocation
+
+idle-detection
+
+language-detector
+
+microphone
+
+on-device-speech-recognition
+
+storage-access
+Note: Permissions that require device or sensor access — such as camera, microphone, and geolocation — do not work with inline ReactCode because the sandboxed iframe runs with an opaque origin. Use the src attribute to load an external application if you need these permissions.
