@@ -18,8 +18,8 @@
               {
                 "group": "Discover & Learn",
                 "pages": [
-                  "docs/source/guide/glossary",
                   "docs/source/guide/get_started",
+                  "docs/source/guide/glossary",
                   "docs/source/guide/label_studio_compare",
                   "docs/source/guide/enterprise_features"
                 ]
