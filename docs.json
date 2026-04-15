@@ -9,8 +9,8 @@
     "products": [
       {
         "product": "Open Source",
-        "description": "Community edition of Label Studio",
         "icon": "box-open",
+        "description": "Community edition of Label Studio",
         "tabs": [
           {
             "tab": "Guide",
@@ -18,8 +18,8 @@
               {
                 "group": "Discover & Learn",
                 "pages": [
-                  "docs/source/guide/get_started",
                   "docs/source/guide/glossary",
+                  "docs/source/guide/get_started",
                   "docs/source/guide/label_studio_compare",
                   "docs/source/guide/enterprise_features"
                 ]
@@ -30,19 +30,19 @@
                   "docs/source/guide/quick_start",
                   {
                     "group": "Installation",
+                    "root": "docs/source/guide/install",
                     "pages": [
                       {
                         "group": "Install using Kubernetes",
+                        "root": "docs/source/guide/install_k8s",
                         "pages": [
                           "docs/source/guide/ingress_config",
                           "docs/source/guide/install_k8s_airgapped",
                           "docs/source/guide/helm_values"
-                        ],
-                        "root": "docs/source/guide/install_k8s"
+                        ]
                       },
                       "docs/source/guide/install_troubleshoot"
-                    ],
-                    "root": "docs/source/guide/install"
+                    ]
                   },
                   "docs/source/guide/install_requirements",
                   "docs/source/guide/storedata",
@@ -60,19 +60,19 @@
                   "docs/source/guide/setup",
                   {
                     "group": "Manage projects",
+                    "root": "docs/source/guide/manage_projects_lso",
                     "pages": [
                       "docs/source/guide/project_settings",
                       "docs/source/guide/manage_data"
-                    ],
-                    "root": "docs/source/guide/manage_projects_lso"
+                    ]
                   },
                   {
                     "group": "Labeling",
+                    "root": "docs/source/guide/labeling",
                     "pages": [
                       "docs/source/guide/hotkeys",
                       "docs/source/guide/skip"
-                    ],
-                    "root": "docs/source/guide/labeling"
+                    ]
                   }
                 ]
               },
@@ -81,6 +81,7 @@
                 "pages": [
                   {
                     "group": "Add project storage",
+                    "root": "docs/source/guide/storage",
                     "pages": [
                       "docs/source/guide/storage_s3",
                       "docs/source/guide/storage_gcp",
@@ -88,16 +89,15 @@
                       "docs/source/guide/storage_databricks",
                       "docs/source/guide/storage_redis",
                       "docs/source/guide/storage_local"
-                    ],
-                    "root": "docs/source/guide/storage"
+                    ]
                   },
                   {
                     "group": "Import data",
+                    "root": "docs/source/guide/tasks",
                     "pages": [
                       "docs/source/guide/task_format",
                       "docs/source/guide/predictions"
-                    ],
-                    "root": "docs/source/guide/tasks"
+                    ]
                   },
                   "docs/source/guide/export"
                 ]
@@ -126,11 +126,11 @@
                   "docs/source/guide/sdk",
                   {
                     "group": "Webhooks",
+                    "root": "docs/source/guide/webhooks",
                     "pages": [
                       "docs/source/guide/webhook_create",
                       "docs/source/guide/webhook_reference"
-                    ],
-                    "root": "docs/source/guide/webhooks"
+                    ]
                   },
                   "docs/source/guide/frontend_reference"
                 ]
@@ -416,8 +416,8 @@
       },
       {
         "product": "Enterprise",
-        "description": "Label Studio Enterprise edition",
         "icon": "building",
+        "description": "Label Studio Enterprise edition",
         "tabs": [
           {
             "tab": "Guide",
@@ -435,22 +435,22 @@
                 "pages": [
                   {
                     "group": "Installation",
+                    "root": "docs/source/guide/install_enterprise",
                     "pages": [
                       {
                         "group": "Install using Kubernetes",
+                        "root": "docs/source/guide/install_enterprise_k8s",
                         "pages": [
                           "docs/source/guide/ingress_config",
                           "docs/source/guide/install_prompts",
                           "docs/source/guide/install_k8s_airgapped",
                           "docs/source/guide/helm_values"
-                        ],
-                        "root": "docs/source/guide/install_enterprise_k8s"
+                        ]
                       },
                       "docs/source/guide/install_enterprise_docker",
                       "docs/source/guide/upgrade_enterprise",
                       "docs/source/guide/backup_enterprise"
-                    ],
-                    "root": "docs/source/guide/install_enterprise"
+                    ]
                   },
                   "docs/source/guide/persistent_storage",
                   "docs/source/guide/email_setup",
@@ -467,20 +467,20 @@
                   "docs/source/guide/setup",
                   {
                     "group": "Manage projects",
+                    "root": "docs/source/guide/manage_projects",
                     "pages": [
                       "docs/source/guide/project_settings_lse",
                       "docs/source/guide/manage_data"
-                    ],
-                    "root": "docs/source/guide/manage_projects"
+                    ]
                   },
                   {
                     "group": "Labeling",
+                    "root": "docs/source/guide/labeling",
                     "pages": [
                       "docs/source/guide/labeling_bulk",
                       "docs/source/guide/hotkeys",
                       "docs/source/guide/skip"
-                    ],
-                    "root": "docs/source/guide/labeling"
+                    ]
                   },
                   "docs/source/guide/dashboards",
                   "docs/source/guide/plugins"
@@ -491,6 +491,7 @@
                 "pages": [
                   {
                     "group": "Add project storage",
+                    "root": "docs/source/guide/storage",
                     "pages": [
                       "docs/source/guide/storage_s3",
                       "docs/source/guide/storage_gcp",
@@ -498,16 +499,15 @@
                       "docs/source/guide/storage_databricks",
                       "docs/source/guide/storage_redis",
                       "docs/source/guide/storage_local"
-                    ],
-                    "root": "docs/source/guide/storage"
+                    ]
                   },
                   {
                     "group": "Import data",
+                    "root": "docs/source/guide/tasks",
                     "pages": [
                       "docs/source/guide/task_format",
                       "docs/source/guide/predictions"
-                    ],
-                    "root": "docs/source/guide/tasks"
+                    ]
                   },
                   "docs/source/guide/export"
                 ]
@@ -521,6 +521,7 @@
                   "docs/source/guide/command_palette",
                   {
                     "group": "Settings",
+                    "root": "docs/source/guide/admin_settings",
                     "pages": [
                       "docs/source/guide/admin_usage",
                       "docs/source/guide/access_tokens",
@@ -528,33 +529,32 @@
                       "docs/source/guide/model_providers",
                       "docs/source/guide/admin_permissions",
                       "docs/source/guide/admin_react"
-                    ],
-                    "root": "docs/source/guide/admin_settings"
+                    ]
                   },
                   {
                     "group": "User management",
+                    "root": "docs/source/guide/manage_users",
                     "pages": [
                       "docs/source/guide/admin_user",
                       "docs/source/guide/admin_manage_lse",
                       "docs/source/guide/admin_roles",
                       "docs/source/guide/user_account"
-                    ],
-                    "root": "docs/source/guide/manage_users"
+                    ]
                   },
                   {
                     "group": "SSO, LDAP & SCIM",
+                    "root": "docs/source/guide/admin_auth",
                     "pages": [
                       "docs/source/guide/auth_ldap",
                       "docs/source/guide/auth_setup",
                       {
                         "group": "SCIM2",
+                        "root": "docs/source/guide/scim_setup",
                         "pages": [
                           "docs/source/guide/scim_workflow"
-                        ],
-                        "root": "docs/source/guide/scim_setup"
+                        ]
                       }
-                    ],
-                    "root": "docs/source/guide/admin_auth"
+                    ]
                   },
                   "docs/source/guide/google_saml"
                 ]
@@ -567,11 +567,11 @@
                   "docs/source/guide/sdk",
                   {
                     "group": "Webhooks",
+                    "root": "docs/source/guide/webhooks",
                     "pages": [
                       "docs/source/guide/webhook_create",
                       "docs/source/guide/webhook_reference"
-                    ],
-                    "root": "docs/source/guide/webhooks"
+                    ]
                   },
                   "docs/source/guide/embed",
                   "docs/source/guide/frontend_reference"
@@ -593,11 +593,11 @@
                   "docs/source/guide/comments_notifications",
                   {
                     "group": "Agreement",
+                    "root": "docs/source/guide/stats",
                     "pages": [
                       "docs/source/guide/agreement_metrics",
                       "docs/source/guide/custom_metric"
-                    ],
-                    "root": "docs/source/guide/stats"
+                    ]
                   }
                 ]
               },
@@ -614,11 +614,11 @@
                 "pages": [
                   {
                     "group": "Onboarding guides by role",
+                    "root": "docs/source/guide/onboarding",
                     "pages": [
                       "docs/source/guide/onboarding_annotator",
                       "docs/source/guide/onboarding_reviewer"
-                    ],
-                    "root": "docs/source/guide/onboarding"
+                    ]
                   }
                 ]
               },
