@@ -955,14 +955,12 @@
   },
   "fonts": {
     "family": "Poppins",
-    "weight": 300,
+    "weight": 400,
     "heading": {
-      "family": "Poppins",
-      "weight": 400
+      "family": "Poppins"
     },
     "body": {
       "family": "Poppins"
     }
-  },
-  "logo": "/images/labelstudio.svg"
+  }
 }
