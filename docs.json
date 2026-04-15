@@ -952,5 +952,16 @@
         ]
       }
     ]
+  },
+  "fonts": {
+    "family": "Poppins",
+    "weight": 300,
+    "heading": {
+      "family": "Poppins",
+      "weight": 400
+    },
+    "body": {
+      "family": "Poppins"
+    }
   }
 }
