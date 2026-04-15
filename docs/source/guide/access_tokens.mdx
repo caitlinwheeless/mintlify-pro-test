@@ -1,6 +1,8 @@
 ---
 title: Access tokens
 description: Access tokens to interact with the Label Studio API and SDK. 
+sidebarTitle: Access tokens
+parent_enterprise: admin_settings
 ---
 
 Label Studio has personal access tokens and legacy tokens. These tokens are also referred to as your "API keys." 
@@ -15,23 +17,23 @@ Label Studio has personal access tokens and legacy tokens. These tokens are also
   <tr>
   <td>
     <ul>
-        <li>Have a TTL that can be set at the org level. (Label Studio Enterprise only)
-        <li>Are only visible to users once
-        <li>JWT refresh tokens
-        <li>Can be manually revoked
-        <li>Require <a href="#HTTP-API">extra steps</a> when used with HTTP API
-        <li> <code>-H 'Authorization: Bearer &lt;token&gt;'</code> with HTTP API requests
-        <li>Only need to be set once when used with the SDK
+        <li>Have a TTL that can be set at the org level. (Label Studio Enterprise only)</li>
+        <li>Are only visible to users once</li>
+        <li>JWT refresh tokens</li>
+        <li>Can be manually revoked</li>
+        <li>Require <a href="#HTTP-API">extra steps</a> when used with HTTP API</li>
+        <li> <code>-H 'Authorization: Bearer &lt;token&gt;'</code> with HTTP API requests</li>
+        <li>Only need to be set once when used with the SDK</li>
     </ul>
   </td>
   <td>
     <ul>
-        <li>Does not expire
-        <li>Remains listed and available in your account settings
-        <li>Can be manually revoked
-        <li>Do not need to be refreshed with used with HTTP API
-        <li> <code>-H 'Authorization: Token  &lt;token&gt;'</code> with HTTP API requests
-        <li>Only need to be set once when used with the SDK
+        <li>Does not expire</li>
+        <li>Remains listed and available in your account settings</li>
+        <li>Can be manually revoked</li>
+        <li>Do not need to be refreshed with used with HTTP API</li>
+        <li> <code>-H 'Authorization: Token  &lt;token&gt;'</code> with HTTP API requests</li>
+        <li>Only need to be set once when used with the SDK</li>
     </ul>
   </td>
   </tr>
@@ -64,13 +66,13 @@ From here you can enable and disable token types.
 
 <div class="enterprise-only">
 
-<img src="/images/admin/token-settings.png" style="max-width: 668px" alt="Screenshot of Access Token window">
+<img src="/images/admin/token-settings.png" style="max-width: 668px" alt="Screenshot of Access Token window" />
 
 </div>
 
 <div class="opensource-only">
 
-<img src="/images/admin/token-settings-lso.png" style="max-width: 475px" alt="Screenshot of Access Token window">
+<img src="/images/admin/token-settings-lso.png" style="max-width: 475px" alt="Screenshot of Access Token window" />
 
 </div>
 

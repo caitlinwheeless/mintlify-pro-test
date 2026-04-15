@@ -1,6 +1,9 @@
 ---
 title: Set up SCIM2 for Label Studio
 description: Label Studio Enterprise documentation for setting up SCIM2
+sidebarTitle: SCIM2
+parent: admin_auth
+parent_enterprise: admin_auth
 ---
 
 System for Cross-domain Identity Management (SCIM) is a popular protocol to manage access for services and applications across an organization. 
@@ -57,7 +60,7 @@ Complete the following fields:
 |-------|-------------------|
 | **SCIM connector base URL** | `https://<LABEL_STUDIO_BASE_URL>/scim/v2/` where `<LABEL_STUDIO_BASE_URL>` is the base URL of your Label Studio Enterprise instance. |
 | **Unique identifier field for users** | Use `email`. Label Studio Enterprise uses email as user identifier in this field. |
-| **Supported provisioning actions** | Select the following items:<br>- Import New Users and Profile Updates<br>- Push New Users<br>- Push Profile Updates<br>- Push Groups |
+| **Supported provisioning actions** | Select the following items:<br />- Import New Users and Profile Updates<br />- Push New Users<br />- Push Profile Updates<br />- Push Groups |
 | **HTTP Header → `Authorization: Bearer <token>`** | Enter the [Legacy token](access_tokens#Legacy-tokens) associated with the Owner account in Label Studio. <br />For Label Studio, `Token` and `Bearer` are the same tokens. However, it's important to use `Bearer` instead of `Token` in the request header. | 
 
 ### SCIM settings and application triggers

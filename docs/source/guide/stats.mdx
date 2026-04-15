@@ -1,6 +1,7 @@
 ---
 title: Task agreement
 description: Task agreement, or labeling consensus, and other data annotation statistics for data labeling and machine learning projects.
+sidebarTitle: Agreement
 ---
 
 In Label Studio Enterprise, you can apply different metrics to measure agreement between annotators. 
@@ -109,7 +110,7 @@ See [Non-categorical examples](#Non-categorical-examples) for an example of how 
 
 You can configure the methodology to use for each project under **Settings > Quality > Agreement** section.
 
-<img src="/images/review/agreement-methodology.png" class="gif-border" style="max-width:600px">
+<img src="/images/review/agreement-methodology.png" class="gif-border" style="max-width:600px" />
 
 You have the following methodologies to choose from:
 
@@ -399,9 +400,9 @@ You have the following raw IoU scores:
 
 **Binarize using the threshold (50%):**
 
-- Annotators 1 vs Annotator 2: `.53` >= `.50` → match = 1
-- Annotators 1 vs Annotator 3: `.24` <= `.50` → no match = 0
-- Annotators 2 vs Annotator 3: `.45` <= `.50` → no match = 0
+- Annotators 1 vs Annotator 2: `.53` \>= `.50` → match = 1
+- Annotators 1 vs Annotator 3: `.24` \<= `.50` → no match = 0
+- Annotators 2 vs Annotator 3: `.45` \<= `.50` → no match = 0
 
 Annotator 1 and Annotator 2 agree, giving us a consensus score of `2/3 = .66`.
 
@@ -498,7 +499,7 @@ Under **Settings > Quality > Agreement > Overall Agreement**, you can customize 
 
 This ensures that a critical control tag has more bearing on the overall agreement score than a less important control tag.
 
-<img src="/images/review/agreement-overall.png" class="gif-border" style="max-width:600px">
+<img src="/images/review/agreement-overall.png" class="gif-border" style="max-width:600px" />
 
 For example, if you have a project with the following control tags and weights:
 - RectangleLabels: 1.0
@@ -519,7 +520,7 @@ Then the overall agreement is calculated as:
 
 Under **Settings > Quality > Agreement > Agreement Columns**, you can customize how agreement is calculated for each control tag. 
 
-<img src="/images/review/agreement-column-settings.png" class="gif-border" style="max-width:600px">
+<img src="/images/review/agreement-column-settings.png" class="gif-border" style="max-width:600px" />
 
 Your options depend on the agreement methodology you have selected and what type of control tag you are configuring. 
 

@@ -215,7 +215,7 @@ annotator3 = ls.users.get(id=11551)
 ```
 
 ## 5) Create Annotations for Tasks
-This will create 3 annotations per task in the project. This will simulate strong consensus on some tasks, and disagreement on others. <br>
+This will create 3 annotations per task in the project. This will simulate strong consensus on some tasks, and disagreement on others. <br />
 __* Skip this step if you are using an existing project that already has annotations.__
 
 
@@ -266,7 +266,7 @@ for idx, task in enumerate(tasks):
 Label Studio Starter Cloud and Label Studio Enterprise provide a variety of features that allow you to see agreement at different levels. We will start with project level stats and work our way down into more detailed stats.
 
 ### Get Project-Level Agreement
-This is the average agreement score across all tasks in the project <br>
+This is the average agreement score across all tasks in the project <br />
 Gives you a sense of overall agreement at a high level
 
 
@@ -276,8 +276,8 @@ print(f"Total Agreement for Project: {response.total_agreement*100:.2f}%")
 ```
 
 ### Get Annotator-Level Agreement
-This is the average agreement score across all tasks, for a specific annotator. <br>
-This can provide you information on how well a single annotator is agreeing with others in the project. <br>
+This is the average agreement score across all tasks, for a specific annotator. <br />
+This can provide you information on how well a single annotator is agreeing with others in the project. <br />
 For example here we can see annotator 2 has a higher agreement across all other annotators.
 
 
@@ -358,7 +358,7 @@ for task in tasks:
         tasks_to_reannotate.append(task.id)
 ```
 
-**Note**: This bulk assign call requires that the user we are assigning to has signed in and used the platform. If you are using the programmatic flow from above to create users, we can only assign to the current_user. If you retrieved existing annotators, we can assign to one of those (annotator1, annotator2, annotator3) <br>
+**Note**: This bulk assign call requires that the user we are assigning to has signed in and used the platform. If you are using the programmatic flow from above to create users, we can only assign to the current_user. If you retrieved existing annotators, we can assign to one of those (annotator1, annotator2, annotator3) <br />
 To make sure this call works for everyone using this tutorial, we will assign them to the current user
 
 
@@ -393,8 +393,8 @@ for task in tasks:
 ```
 
 ## 9) Annotator-Ground Truth Agreement
-However you choose to add ground truth to your project - comparing annotators against ground truth allows you to really get an understanding of annotator performance. <br>
-Comparing an annotator versus other annotators can give you an idea of their performance, but comparing against ground truth is one of the most valuable metrics for an annotator. <br>
+However you choose to add ground truth to your project - comparing annotators against ground truth allows you to really get an understanding of annotator performance. <br />
+Comparing an annotator versus other annotators can give you an idea of their performance, but comparing against ground truth is one of the most valuable metrics for an annotator. <br />
 For example this can inform you on which annotators might need more training or education on how to properly label tasks in this project.
 
 
@@ -422,10 +422,10 @@ print(f"Annotator-Ground Truth Agreement for {annotator3.email}: {response.agree
 ```
 
 ## 10) Model-Annotator Agreement
-Comparing model predictions against annotators and/or ground truth is a useful way to see how well your model is performing. <br>
+Comparing model predictions against annotators and/or ground truth is a useful way to see how well your model is performing. <br />
 
 ### Add Predictions
-There are many ways to add predictions to a project in Label Studio, such as connecting a model, using prompts, or importing them manually. <br>
+There are many ways to add predictions to a project in Label Studio, such as connecting a model, using prompts, or importing them manually. <br />
 For this example we will import them directly into the project.
 We will add one prediction per task
 
@@ -467,7 +467,7 @@ for task in tasks:
 ```
 
 ### Get Agreement Between Model and Ground Truth
-Helps you easily understand how your model is performing against ground truth tasks <br>
+Helps you easily understand how your model is performing against ground truth tasks <br />
 
 
 ```python
@@ -482,7 +482,7 @@ print(f"Agreement between {model_version2} and ground truth: {response.agreement
 ```
 
 ### Get Agreement Between Model and All Annotators
-Helps you get a sense of how well your model is agreeing with your annotators <br>
+Helps you get a sense of how well your model is agreeing with your annotators <br />
 
 
 ```python
@@ -497,7 +497,7 @@ print(f"Agreement between {model_version2} and all annotators: {response.agreeme
 ```
 
 ### Get Agreement Between One Model and All Other Models
-Helps you understand agreement between models <br>
+Helps you understand agreement between models <br />
 In this case we created predictions from 2 different models, with both of them outputting different labels per-task so agreement will be 0%
 
 

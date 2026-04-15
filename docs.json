@@ -28,13 +28,23 @@
                 "group": "Install & Setup",
                 "pages": [
                   "docs/source/guide/quick_start",
-                  "docs/source/guide/install",
+                  {
+                    "group": "Installation",
+                    "pages": [
+                      {
+                        "group": "Install using Kubernetes",
+                        "pages": [
+                          "docs/source/guide/ingress_config",
+                          "docs/source/guide/install_k8s_airgapped",
+                          "docs/source/guide/helm_values"
+                        ],
+                        "root": "docs/source/guide/install_k8s"
+                      },
+                      "docs/source/guide/install_troubleshoot"
+                    ],
+                    "root": "docs/source/guide/install"
+                  },
                   "docs/source/guide/install_requirements",
-                  "docs/source/guide/install_k8s",
-                  "docs/source/guide/ingress_config",
-                  "docs/source/guide/install_k8s_airgapped",
-                  "docs/source/guide/helm_values",
-                  "docs/source/guide/install_troubleshoot",
                   "docs/source/guide/storedata",
                   "docs/source/guide/persistent_storage",
                   "docs/source/guide/start",
@@ -48,27 +58,47 @@
                 "pages": [
                   "docs/source/guide/setup_project",
                   "docs/source/guide/setup",
-                  "docs/source/guide/manage_projects_lso",
-                  "docs/source/guide/project_settings",
-                  "docs/source/guide/manage_data",
-                  "docs/source/guide/labeling",
-                  "docs/source/guide/hotkeys",
-                  "docs/source/guide/skip"
+                  {
+                    "group": "Manage projects",
+                    "pages": [
+                      "docs/source/guide/project_settings",
+                      "docs/source/guide/manage_data"
+                    ],
+                    "root": "docs/source/guide/manage_projects_lso"
+                  },
+                  {
+                    "group": "Labeling",
+                    "pages": [
+                      "docs/source/guide/hotkeys",
+                      "docs/source/guide/skip"
+                    ],
+                    "root": "docs/source/guide/labeling"
+                  }
                 ]
               },
               {
                 "group": "Import & Export",
                 "pages": [
-                  "docs/source/guide/storage",
-                  "docs/source/guide/storage_s3",
-                  "docs/source/guide/storage_gcp",
-                  "docs/source/guide/storage_azure",
-                  "docs/source/guide/storage_databricks",
-                  "docs/source/guide/storage_redis",
-                  "docs/source/guide/storage_local",
-                  "docs/source/guide/tasks",
-                  "docs/source/guide/task_format",
-                  "docs/source/guide/predictions",
+                  {
+                    "group": "Add project storage",
+                    "pages": [
+                      "docs/source/guide/storage_s3",
+                      "docs/source/guide/storage_gcp",
+                      "docs/source/guide/storage_azure",
+                      "docs/source/guide/storage_databricks",
+                      "docs/source/guide/storage_redis",
+                      "docs/source/guide/storage_local"
+                    ],
+                    "root": "docs/source/guide/storage"
+                  },
+                  {
+                    "group": "Import data",
+                    "pages": [
+                      "docs/source/guide/task_format",
+                      "docs/source/guide/predictions"
+                    ],
+                    "root": "docs/source/guide/tasks"
+                  },
                   "docs/source/guide/export"
                 ]
               },
@@ -82,22 +112,27 @@
                 ]
               },
               {
+                "group": "Machine Learning",
+                "pages": [
+                  "docs/source/guide/ml",
+                  "docs/source/guide/ml_create"
+                ]
+              },
+              {
                 "group": "Integrate & Extend",
                 "pages": [
                   "docs/source/guide/frontend",
                   "docs/source/guide/api",
                   "docs/source/guide/sdk",
-                  "docs/source/guide/webhooks",
-                  "docs/source/guide/webhook_create",
-                  "docs/source/guide/webhook_reference",
+                  {
+                    "group": "Webhooks",
+                    "pages": [
+                      "docs/source/guide/webhook_create",
+                      "docs/source/guide/webhook_reference"
+                    ],
+                    "root": "docs/source/guide/webhooks"
+                  },
                   "docs/source/guide/frontend_reference"
-                ]
-              },
-              {
-                "group": "Machine Learning",
-                "pages": [
-                  "docs/source/guide/ml",
-                  "docs/source/guide/ml_create"
                 ]
               }
             ]
@@ -398,15 +433,25 @@
               {
                 "group": "Install & Setup",
                 "pages": [
-                  "docs/source/guide/install_enterprise",
-                  "docs/source/guide/install_enterprise_k8s",
-                  "docs/source/guide/ingress_config",
-                  "docs/source/guide/install_prompts",
-                  "docs/source/guide/install_k8s_airgapped",
-                  "docs/source/guide/helm_values",
-                  "docs/source/guide/install_enterprise_docker",
-                  "docs/source/guide/upgrade_enterprise",
-                  "docs/source/guide/backup_enterprise",
+                  {
+                    "group": "Installation",
+                    "pages": [
+                      {
+                        "group": "Install using Kubernetes",
+                        "pages": [
+                          "docs/source/guide/ingress_config",
+                          "docs/source/guide/install_prompts",
+                          "docs/source/guide/install_k8s_airgapped",
+                          "docs/source/guide/helm_values"
+                        ],
+                        "root": "docs/source/guide/install_enterprise_k8s"
+                      },
+                      "docs/source/guide/install_enterprise_docker",
+                      "docs/source/guide/upgrade_enterprise",
+                      "docs/source/guide/backup_enterprise"
+                    ],
+                    "root": "docs/source/guide/install_enterprise"
+                  },
                   "docs/source/guide/persistent_storage",
                   "docs/source/guide/email_setup",
                   "docs/source/guide/saas",
@@ -420,30 +465,50 @@
                   "docs/source/guide/setup_project",
                   "docs/source/guide/project_states",
                   "docs/source/guide/setup",
-                  "docs/source/guide/manage_projects",
-                  "docs/source/guide/project_settings_lse",
-                  "docs/source/guide/manage_data",
-                  "docs/source/guide/labeling",
+                  {
+                    "group": "Manage projects",
+                    "pages": [
+                      "docs/source/guide/project_settings_lse",
+                      "docs/source/guide/manage_data"
+                    ],
+                    "root": "docs/source/guide/manage_projects"
+                  },
+                  {
+                    "group": "Labeling",
+                    "pages": [
+                      "docs/source/guide/labeling_bulk",
+                      "docs/source/guide/hotkeys",
+                      "docs/source/guide/skip"
+                    ],
+                    "root": "docs/source/guide/labeling"
+                  },
                   "docs/source/guide/dashboards",
-                  "docs/source/guide/labeling_bulk",
-                  "docs/source/guide/hotkeys",
-                  "docs/source/guide/skip",
                   "docs/source/guide/plugins"
                 ]
               },
               {
                 "group": "Import & Export",
                 "pages": [
-                  "docs/source/guide/storage",
-                  "docs/source/guide/storage_s3",
-                  "docs/source/guide/storage_gcp",
-                  "docs/source/guide/storage_azure",
-                  "docs/source/guide/storage_databricks",
-                  "docs/source/guide/storage_redis",
-                  "docs/source/guide/storage_local",
-                  "docs/source/guide/tasks",
-                  "docs/source/guide/task_format",
-                  "docs/source/guide/predictions",
+                  {
+                    "group": "Add project storage",
+                    "pages": [
+                      "docs/source/guide/storage_s3",
+                      "docs/source/guide/storage_gcp",
+                      "docs/source/guide/storage_azure",
+                      "docs/source/guide/storage_databricks",
+                      "docs/source/guide/storage_redis",
+                      "docs/source/guide/storage_local"
+                    ],
+                    "root": "docs/source/guide/storage"
+                  },
+                  {
+                    "group": "Import data",
+                    "pages": [
+                      "docs/source/guide/task_format",
+                      "docs/source/guide/predictions"
+                    ],
+                    "root": "docs/source/guide/tasks"
+                  },
                   "docs/source/guide/export"
                 ]
               },
@@ -454,24 +519,44 @@
                   "docs/source/guide/admin_logs",
                   "docs/source/guide/ask_ai",
                   "docs/source/guide/command_palette",
-                  "docs/source/guide/admin_settings",
-                  "docs/source/guide/admin_usage",
-                  "docs/source/guide/access_tokens",
-                  "docs/source/guide/support_reports",
-                  "docs/source/guide/model_providers",
-                  "docs/source/guide/admin_permissions",
-                  "docs/source/guide/admin_react",
-                  "docs/source/guide/manage_users",
-                  "docs/source/guide/admin_user",
-                  "docs/source/guide/admin_manage_lse",
-                  "docs/source/guide/admin_roles",
-                  "docs/source/guide/user_account",
-                  "docs/source/guide/admin_auth",
-                  "docs/source/guide/auth_ldap",
-                  "docs/source/guide/auth_setup",
-                  "docs/source/guide/google_saml",
-                  "docs/source/guide/scim_setup",
-                  "docs/source/guide/scim_workflow"
+                  {
+                    "group": "Settings",
+                    "pages": [
+                      "docs/source/guide/admin_usage",
+                      "docs/source/guide/access_tokens",
+                      "docs/source/guide/support_reports",
+                      "docs/source/guide/model_providers",
+                      "docs/source/guide/admin_permissions",
+                      "docs/source/guide/admin_react"
+                    ],
+                    "root": "docs/source/guide/admin_settings"
+                  },
+                  {
+                    "group": "User management",
+                    "pages": [
+                      "docs/source/guide/admin_user",
+                      "docs/source/guide/admin_manage_lse",
+                      "docs/source/guide/admin_roles",
+                      "docs/source/guide/user_account"
+                    ],
+                    "root": "docs/source/guide/manage_users"
+                  },
+                  {
+                    "group": "SSO, LDAP & SCIM",
+                    "pages": [
+                      "docs/source/guide/auth_ldap",
+                      "docs/source/guide/auth_setup",
+                      {
+                        "group": "SCIM2",
+                        "pages": [
+                          "docs/source/guide/scim_workflow"
+                        ],
+                        "root": "docs/source/guide/scim_setup"
+                      }
+                    ],
+                    "root": "docs/source/guide/admin_auth"
+                  },
+                  "docs/source/guide/google_saml"
                 ]
               },
               {
@@ -480,10 +565,15 @@
                   "docs/source/guide/frontend",
                   "docs/source/guide/api",
                   "docs/source/guide/sdk",
-                  "docs/source/guide/webhooks",
+                  {
+                    "group": "Webhooks",
+                    "pages": [
+                      "docs/source/guide/webhook_create",
+                      "docs/source/guide/webhook_reference"
+                    ],
+                    "root": "docs/source/guide/webhooks"
+                  },
                   "docs/source/guide/embed",
-                  "docs/source/guide/webhook_create",
-                  "docs/source/guide/webhook_reference",
                   "docs/source/guide/frontend_reference"
                 ]
               },
@@ -501,9 +591,14 @@
                   "docs/source/guide/quality",
                   "docs/source/guide/ground_truths",
                   "docs/source/guide/comments_notifications",
-                  "docs/source/guide/stats",
-                  "docs/source/guide/agreement_metrics",
-                  "docs/source/guide/custom_metric"
+                  {
+                    "group": "Agreement",
+                    "pages": [
+                      "docs/source/guide/agreement_metrics",
+                      "docs/source/guide/custom_metric"
+                    ],
+                    "root": "docs/source/guide/stats"
+                  }
                 ]
               },
               {
@@ -517,9 +612,14 @@
               {
                 "group": "Onboarding",
                 "pages": [
-                  "docs/source/guide/onboarding",
-                  "docs/source/guide/onboarding_annotator",
-                  "docs/source/guide/onboarding_reviewer"
+                  {
+                    "group": "Onboarding guides by role",
+                    "pages": [
+                      "docs/source/guide/onboarding_annotator",
+                      "docs/source/guide/onboarding_reviewer"
+                    ],
+                    "root": "docs/source/guide/onboarding"
+                  }
                 ]
               },
               {

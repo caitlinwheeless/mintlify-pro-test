@@ -15,7 +15,7 @@ description: Annotate edited text
 This plugin “binds” a `TextArea` to a `Text` field, keeping them in sync as you edit. You can then apply labels to the text in the `Text` field, allowing you annotate text that is unique from the text you imported. 
 
 <video style="max-width: 800px;" class="gif-border" autoplay loop muted>
-  <source src="/images/plugins/dynamic-text-spans.mp4">
+  <source src="/images/plugins/dynamic-text-spans.mp4" />
 </video>
 
 How this plugin works:
@@ -25,7 +25,7 @@ How this plugin works:
     - `TextArea` is `transcription` 
     - `Text` is `extraction_text`
 2. It captures the current annotation ID so that it can stop running when you switch regions. 
-3. In `init()`, it polls every 300 ms until it finds the <TextArea> whose name starts with "transcription" (Label Studio appends random suffixes). 
+3. In `init()`, it polls every 300 ms until it finds the `<TextArea>` whose name starts with "transcription" (Label Studio appends random suffixes). 
 4. Once found, it marks it `_already_loaded` and starts `tick()`, which runs every 300 ms: 
    - If the DOM node got replaced (e.g. you re-loaded or changed annotation), it re-queries for it. 
    - If you’ve moved to a different annotation ID, it stops. 

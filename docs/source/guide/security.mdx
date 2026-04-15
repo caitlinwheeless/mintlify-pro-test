@@ -13,7 +13,7 @@ Role-based access control is only available in Label Studio Enterprise.
 
 </div>
 
-<!--If you need to meet strong privacy regulations, legal requirements, or you want to make a custom installation within your infrastructure or any public cloud (AWS, Google, Azure, etc.), Label Studio Enterprise works on-premises. It is a self-contained version (no Internet connection is required) of the Platform, no data will leave your infrastructure. To make the installation the most accessible, we offer a Docker image.-->
+{/* If you need to meet strong privacy regulations, legal requirements, or you want to make a custom installation within your infrastructure or any public cloud (AWS, Google, Azure, etc.), Label Studio Enterprise works on-premises. It is a self-contained version (no Internet connection is required) of the Platform, no data will leave your infrastructure. To make the installation the most accessible, we offer a Docker image. */}
 
 Label Studio establishes secure connections to the web application by enforcing HTTPS and secured cookies.
 
@@ -224,8 +224,7 @@ rqworker:
 ### Add self-signed certificate to trusted root store for S3 storage
 
 Boto library is used to connect to cloud storage S3. `AWS_CA_BUNDLE` has to be set as environment variable.
-<div class="code-tabs">
-  <div data-name="Docker Compose">
+**Docker Compose:**
 
 1. Mount your self-signed certificate as a volume into `app` container: (has to be .pem file type)
 

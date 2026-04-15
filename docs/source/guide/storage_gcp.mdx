@@ -1,6 +1,9 @@
 ---
 title: Set up Google Cloud Storage
 description: "How to set up source and target storage for Google Cloud."
+sidebarTitle: Google Cloud
+parent: storage
+parent_enterprise: storage
 ---
 
 Dynamically import tasks and export annotations to Google Cloud Storage (GCS) buckets in Label Studio. For details about how Label Studio secures access to cloud storage, see [Secure access to cloud storage](security#Secure-access-to-cloud-storage).
@@ -273,7 +276,7 @@ See [Create service accounts](https://cloud.google.com/iam/docs/service-accounts
 There are several methods you can use to create a WIF pool. 
 
 <Accordion title="Using Terraform">
-<br>
+<br />
 
 An example script is provided below. Ensure all required variables are set: 
 
@@ -407,7 +410,7 @@ resource "google_service_account_iam_binding" "label-studio-sa-oidc" {
 </Accordion>
 
 <Accordion title="Using the gcloud command line">
-<br>
+<br />
 
 Replace the bracketed variables (`[PROJECT_ID]`, `[POOL_ID]`, `[PROVIDER_ID]`, etc.) with your own values.
 
@@ -470,7 +473,7 @@ Before setting up your connection in Label Studio, note what you provided for th
 </Accordion>
 
 <Accordion title="Using the Google Cloud Console">
-<br>
+<br />
 
 Before you begin, ensure you are in the correct project:
 
@@ -840,7 +843,7 @@ Use [GKE Workload Identity](https://cloud.google.com/kubernetes-engine/docs/how-
 For more information, see [Use Workload Identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) in the Google Cloud documentation.
 
 <Accordion title="Using Terraform">
-<br>
+<br />
 
 ```hcl
 resource "google_service_account" "lse_base" {
@@ -889,7 +892,7 @@ Grant the target service account the appropriate roles on the Google Cloud Stora
 5. Click **Save**.
 
 <Accordion title="Using gcloud">
-<br>
+<br />
 
 For source storage (read access):
 
@@ -923,7 +926,7 @@ Grant `roles/iam.serviceAccountTokenCreator` to the base service account on the 
 5. Click **Save**.
 
 <Accordion title="Using gcloud">
-<br>
+<br />
 
 ```shell
 gcloud iam service-accounts add-iam-policy-binding TARGET_SA_EMAIL \
@@ -1140,7 +1143,7 @@ Read more about [Source storage behind your VPC](security#Source-storage-behind-
 - Control access for third-party integrations by whitelisting their IPs
 
 <Accordion title="How to Set Up IP Filtering">
-<br>
+<br />
 
 1. First, create your GCS bucket through the console or CLI
 2. Create a JSON configuration file to define IP filtering rules. You have two options:
