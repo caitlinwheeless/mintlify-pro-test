@@ -1,0 +1,28 @@
+---
+title: Relation
+description: Customize Label Studio by using the Relation tag to add a single consistent label to relations between regions in machine learning and data science projects.
+---
+
+import Relation from "/docs/source/includes/tags/relation.mdx";
+
+The `Relation` tag represents a single relation label. Use with the `Relations` tag to specify the value of a label to apply to a relation between regions.
+
+<Relation />
+
+### Example
+
+Basic labeling configuration to apply the label "similar" to a relation identified between two labeled regions of text
+
+```html
+<View>
+  <Relations>
+    <Relation value="similar" />
+  </Relations>
+
+  <Text name="txt-1" value="$text" />
+  <Labels name="lbl-1" toName="txt-1">
+    <Label value="Relevant" />
+    <Label value="Not Relevant" />
+  </Labels>
+</View>
+```

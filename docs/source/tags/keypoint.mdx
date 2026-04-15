@@ -1,0 +1,23 @@
+---
+title: KeyPoint
+description: Customize Label Studio with the KeyPoint tag to add key points to images for computer vision machine learning and data science projects.
+---
+
+import Keypoint from "/docs/source/includes/tags/keypoint.mdx";
+
+The `KeyPoint` tag is used to add a key point to an image without selecting a label. This can be useful when you have only one label to assign to the key point.
+
+Use with the following data types: image.
+
+<Keypoint />
+
+### Example
+
+Basic keypoint image labeling configuration
+
+```html
+<View>
+  <KeyPoint name="kp-1" toName="img-1" />
+  <Image name="img-1" value="$img" />
+</View>
+```

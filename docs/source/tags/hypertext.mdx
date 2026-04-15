@@ -1,0 +1,35 @@
+---
+title: HyperText
+description: Label Studio Hypertext Tags customize Label Studio for hypertext markup (HTML) for machine learning and data science projects.
+---
+
+import Hypertext from "/docs/source/includes/tags/hypertext.mdx";
+
+The `HyperText` tag displays hypertext markup for labeling. Use for labeling HTML-encoded text and webpages for NER and NLP projects.
+
+Use with the following data types: HTML.
+
+<Hypertext />
+
+### Example
+
+Labeling configuration to label HTML content
+
+```html
+<View>
+  <HyperText name="text-1" value="$text" />
+  <Labels name="parts" toName="text-1">
+    <Label value="Caption" />
+    <Label value="Article" />
+    <Label value="Author" />
+  </Labels>
+</View>
+```
+### Example
+```html
+<View>
+  <HyperText name="p1">
+    <p>Some explanations <em>with style</em></p>
+  </HyperText>
+</View>
+```

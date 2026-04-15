@@ -1,0 +1,26 @@
+---
+title: PolygonLabels
+description: Customize Label Studio with the PolygonLabels tag and label polygons in images for semantic segmentation machine learning and data science projects.
+---
+
+import Polygonlabels from "/docs/source/includes/tags/polygonlabels.mdx";
+
+The `PolygonLabels` tag is used to create labeled polygons. Use to apply labels to polygons in semantic segmentation tasks.
+
+Use with the following data types: image.
+
+<Polygonlabels />
+
+### Example
+
+Basic labeling configuration for polygonal semantic segmentation of images
+
+```html
+<View>
+  <Image name="image" value="$image" />
+  <PolygonLabels name="labels" toName="image">
+    <Label value="Car" />
+    <Label value="Sign" />
+  </PolygonLabels>
+</View>
+```

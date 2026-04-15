@@ -1,0 +1,29 @@
+---
+title: VideoRectangle
+description: Customize Label Studio with the Video tag for basic video annotation tasks for machine learning and data science projects.
+---
+
+import Videorectangle from "/docs/source/includes/tags/videorectangle.mdx";
+
+VideoRectangle tag brings Object Tracking capabilities to videos. It works in combination with the `<Video/>` and the `<Labels/>` tags.
+
+Use with the following data types: video
+
+<Videorectangle />
+
+### Example
+
+Video Object Tracking
+
+```html
+<View>
+  <Header>Label the video:</Header>
+  <Video name="video" value="$video" />
+  <VideoRectangle name="box" toName="video" />
+
+  <Labels name="videoLabels" toName="video">
+    <Label value="Cell" background="#944BFF"/>
+    <Label value="Bacteria" background="#98C84E"/>
+  </Labels>
+</View>
+```
