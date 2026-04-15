@@ -295,13 +295,13 @@ You can also use the API to [sync export storage](https://api.labelstud.io/api-r
 </Tip>
 ## Amazon S3 with IAM role 
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 In Label Studio Enterprise, you can use an IAM role configured with an external ID to access S3 bucket contents securely. An 'external ID' is a unique identifier that enhances security by ensuring that only trusted entities can assume the role, reducing the risk of unauthorized access. See [Amazon S3 with IAM role](https://docs.humansignal.com/guide/storage_s3#Amazon-S3-with-IAM-role) in the Enterprise documentation.
 
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 If you want to use a revocable method to grant Label Studio access to your Amazon S3 bucket, use an IAM role and its temporary security credentials instead of an access key ID and secret. This added layer of security is only available in Label Studio Enterprise. 
 

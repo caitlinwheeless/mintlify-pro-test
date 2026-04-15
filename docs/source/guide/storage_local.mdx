@@ -6,7 +6,7 @@ parent: storage
 parent_enterprise: storage
 ---
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 <Note>
 Local Storages are available for on-premises deployments only. 
@@ -299,7 +299,7 @@ You can also use the API to programmatically create connections. [See our API do
 
 If you're using Label Studio in Docker, you need to mount the local directory that you want to access as a volume when you start the Docker container. See [Run Label Studio on Docker and use local storage](https://labelstud.io/guide/start#Run-Label-Studio-on-Docker-and-use-Local-Storage).
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 <Note title="Community Edition auto-detection for Docker">
 In the open source Community Edition, if `LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT` and `LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED` are not set, Label Studio automatically looks in the current working directory for folders named `mydata` or `label-studio-data`.

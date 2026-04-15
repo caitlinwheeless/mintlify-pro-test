@@ -22,7 +22,7 @@ See [Cloud Storage Client Libraries](https://cloud.google.com/storage/docs/refer
 
 Your account must have the **Service Account Token Creator** and **Storage Object Viewer** roles and **storage.buckets.get** access permission. See [Setting up authentication](https://cloud.google.com/storage/docs/reference/libraries#setting_up_authentication) and [IAM permissions for Cloud Storage](https://cloud.google.com/storage/docs/access-control/iam-permissions) in the Google Cloud Storage documentation. 
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 <Note>
 If you are using WIF, see [Service account permissions](#Service-account-permissions) below. 
@@ -238,7 +238,7 @@ The recommended way to to do this is by using the `GOOGLE_APPLICATION_CREDENTIAL
 
 ## Google Cloud Storage with Workload Identity Federation (WIF)
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 In Label Studio Enterprise, you can use Workload Identity Federation (WIF) pools with Google Cloud Storage.
 
@@ -248,7 +248,7 @@ For more information, see [Google Cloud Storage with Workload Identity Federatio
 
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 You can also use Workload Identity Federation (WIF) pools with Google Cloud Storage. 
 
@@ -735,7 +735,7 @@ You can also use the API to [sync export storage](https://api.labelstud.io/api-r
 
 ## Google Cloud Storage with service account impersonation for GKE
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 In Label Studio Enterprise, if you are deploying Label Studio in GKE, you can set up service account impersonation.
 
@@ -745,7 +745,7 @@ For more information, see [Google Cloud Storage with service account impersonati
 
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 Google Cloud Storage service account impersonation allows a Google Cloud service account to temporarily assume the permissions of another service account without requiring access to its keys. 
 
@@ -1161,7 +1161,7 @@ Read more about [Source storage behind your VPC](security#Source-storage-behind-
 }
 ```
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 <Note>
 If you're using Label Studio Enterprise at app.humansignal.com and accessing it from your office network:

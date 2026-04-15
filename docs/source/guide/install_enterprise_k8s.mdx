@@ -9,7 +9,7 @@ Deploy Label Studio Enterprise on a Kubernetes Cluster using Helm 3. You can use
 
 Your Kubernetes cluster can be self-hosted or installed somewhere such as Amazon EKS. See the Amazon tutorial on how to [Deploy a Kubernetes Application with Amazon Elastic Container Service for Kubernetes](https://aws.amazon.com/getting-started/hands-on/deploy-kubernetes-app-amazon-eks/) for more about deploying an app on Amazon EKS.
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 <Warning>
 To install Label Studio Community Edition, see <a href="https://labelstud.io/guide/install_k8s.html">Deploy Label Studio on Kubernetes</a>. This page is specific to the Enterprise version of Label Studio.
@@ -67,7 +67,7 @@ To plan the capacity of your Kubernetes cluster, refer to these guidelines.
 
 Label Studio Enterprise has the following default configurations for resource requests, resource limits, and replica counts:
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 ```yaml
 app:
@@ -134,7 +134,7 @@ Add the Helm chart repository to easily install and update Label Studio.
    helm search repo heartex/label-studio
    ```
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 ### Configure Kubernetes secrets
 
@@ -158,7 +158,7 @@ Add the Helm chart repository to easily install and update Label Studio.
    
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 ### Configure values.yaml 
 

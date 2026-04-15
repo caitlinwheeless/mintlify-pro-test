@@ -7,7 +7,7 @@ Label Studio provides many ways to secure access to your data and your deploymen
 
 All application component interactions are encrypted using the TLS protocol.
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 Role-based access control is only available in Label Studio Enterprise.
 
@@ -17,7 +17,7 @@ Role-based access control is only available in Label Studio Enterprise.
 
 Label Studio establishes secure connections to the web application by enforcing HTTPS and secured cookies.
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 If you're running the open source version in production, restrict access to the Label Studio server.
 Restrict access to the server itself by opening only the [required ports](/guide/install#Port_requirements) on the server.
@@ -30,19 +30,19 @@ Secure user access to Label Studio to protect data integrity and allow changes t
 
 Each user must create an account with a password between 8 and 128 characters, allowing you to track who has access to Label Studio and which actions they perform.
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 You can restrict signup to only those with a link to the signup page, and the invitation link to the signup page can be reset. See [Set up user accounts for Label Studio](/guide/signup) for more.
 
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 You can restrict signup to only those with a link to the signup page, and the invitation link to the signup page can be reset. See [Set up user accounts for Label Studio](/guide/manage_users#Signup) for more.
 
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 If you're using Label Studio Enterprise, you can further secure user access in many ways:
 
@@ -123,7 +123,7 @@ Once Label Studio tasks are created, users can view and edit tasks in their brow
 
 To ensure maximum security and isolation of your data behind a VPC, only allow access to the Label Studio backend and users within your internal network. To do this, you can use the following technique — especially effective with Label Studio SaaS (Cloud, `app.humansignal.com`):
 
-1. Set **IP restrictions** for your storage to **allow Label Studio to perform task synchronization and generate pre-signed URLs** for media file serving. IP restrictions enhance security by ensuring that only trusted networks can access your storage. GET (`s3:GetObject` for S3) and LIST (`s3:ListBucket` for S3) permissions are required. <span class="enterprise-only">The IP ranges for `app.humansignal.com` can be found in the documentation [here](saas#IP-range).</span>
+1. Set **IP restrictions** for your storage to **allow Label Studio to perform task synchronization and generate pre-signed URLs** for media file serving. IP restrictions enhance security by ensuring that only trusted networks can access your storage. GET (`s3:GetObject` for S3) and LIST (`s3:ListBucket` for S3) permissions are required. <span className="enterprise-only">The IP ranges for `app.humansignal.com` can be found in the documentation [here](saas#IP-range).</span>
 
 2. **Establish secure connection** between Storage and Users' Browsers:
     - Configure a VPC private endpoint and route VPN traffic to it so that users' browsers can securely access the S3 bucket using only your Virtual Private Network (VPN).
@@ -145,7 +145,7 @@ To ensure maximum security and isolation of your data behind a VPC, only allow a
 
 If you use Redis as an external storage database for data and annotations, the setup supports TLS/SSL and requires the Label Studio client to be authenticated to the database with a valid certificate.
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 ## Audit logging
 
@@ -157,7 +157,7 @@ Label Studio Enterprise automatically logs all user activities so that you can m
 
 Label Studio collects usage statistics including the number of page visits, number of annotations, and data types being used in labeling configurations that you set up. The information we collect helps us improve the experience of labeling data in Label Studio and helps us plan future data types and labeling configurations to support.
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 You can disable data collection by setting the environment variable `COLLECT_ANALYTICS` to `False`.
 

@@ -10,14 +10,14 @@ You can use an ML backend to integrate your model development pipeline with your
 - **Interactive labeling:** Integrate ML models into the platform to help humans label or annotate large datasets more efficiently and accurately.
 - **Model evaluation and fine-tuning:** Labelers review and analyze the model outputs to assess model accuracy and optimize performance.
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 <Warning title="enterprise">
 Label Studio Enterprise features an out-of-the-box solution for LLM-assisted auto-labeling and model evaluation. Compare LLMs based on accuracy and cost. For more information, see [Prompts](https://docs.humansignal.com/guide/prompts_overview).
 </Warning>
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 <Tip>
 Prompts is an out-of-the-box solution for LLM-assisted auto-labeling and model evaluation. For more information, see [Prompts](prompts_overview).
@@ -47,14 +47,14 @@ Ir you want to write your own model instead, see [Write your own ML backend](ml_
 
 ### Prerequisites
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 * [Label Studio](install)
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 * [Label Studio](install_enterprise)
 * [Docker Compose](https://docs.docker.com/compose/install/)
@@ -84,13 +84,13 @@ The model should begin running at `http://localhost:9090` (if you are using a Do
 {"model_class":"SamMLBackend","status":"UP"}
 ```
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 If you see any errors, see [Troubleshooting ML backends](troubleshooting#ML-backends) and the [Troubleshooting section in the README](https://github.com/HumanSignal/label-studio-ml-backend/tree/master/README.md#troubleshooting).
 
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 If you see any errors, see [Troubleshooting ML Backends & Predictions](https://support.humansignal.com/hc/en-us/sections/23627938255117-ML-Backend-Predictions) in the HumanSignal support center and see the [Troubleshooting section in the README](https://github.com/HumanSignal/label-studio-ml-backend/tree/master/README.md#troubleshooting).
 
@@ -104,13 +104,13 @@ If you are running Label Studio in a Docker container, `localhost` loops back to
 
 ### Connect the model to Label Studio
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 After you [create a project](setup_project), open the project settings and select [**Model**](project_settings_lse#Model). 
 
 </div>
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 After you [create a project](setup_project), open the project settings and select [**Model**](project_settings#Model). 
 
@@ -224,7 +224,7 @@ Note the following:
 
 To find your `LABEL_STUDIO_API_KEY`, open Label Studio and go to your [user account page](user_account#Access-token). 
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 Note that your user must also have access to the project that you are connecting to ML backend.
 
@@ -236,13 +236,13 @@ Training a model allows it to learn from submitted annotations and potentially i
 
 After you connect a model to Label Studio as a machine learning backend and annotate at least one task, you can start training the model. You can use automated or manual training. 
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 From the [**Model** page](project_settings_lse#Model) under project settings, select **Start Training** from the overflow menu next to the connected model. This manually initiates training. Use this action if you want to control when the model training occurs, such as after a specific number of annotations have been collected or at certain intervals.
 
 </div>
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 From the [**Model** page](project_settings#Model) under project settings, select **Start Training** from the overflow menu next to the connected model. This manually initiates training. Use this action if you want to control when the model training occurs, such as after a specific number of annotations have been collected or at certain intervals.
 
@@ -331,13 +331,13 @@ curl -H 'Authorization: Token <user-token-from-account-page>' -X POST \
 
 ### Choose which predictions to display to annotators
 
-<div class="opensource-only">
+<div className="opensource-only">
 
 You can choose which model or prediction set to display to annotators by default. This is available under the **Annotation > Live Predictions** in the project settings. 
 
 </div>
 
-<div class="enterprise-only">
+<div className="enterprise-only">
 
 You can choose which model or prediction set to display to annotators by default. This is available under the **Annotation > Live Predictions** in the project settings. 
 
