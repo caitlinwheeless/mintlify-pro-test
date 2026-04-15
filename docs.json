@@ -963,5 +963,6 @@
     "body": {
       "family": "Poppins"
     }
-  }
+  },
+  "logo": "/images/labelstudio.svg"
 }
