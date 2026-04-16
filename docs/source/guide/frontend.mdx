@@ -18,7 +18,6 @@ LSF is located as a separate GitHub repository: https://github.com/HumanSignal/l
 
 <i>Figure 1: Label Studio Frontend </i>
 
-
 ## Installation
 
 There are two ways to install the LSF as follows:
@@ -227,7 +226,6 @@ render(<App />, document.getElementById('root'));
 ```
 </Accordion>
 
-
 ## Frontend development
 
 Refer to the [Frontend Reference](frontend_reference) when developing with Label Studio Frontend.
@@ -249,45 +247,3 @@ cd label-studio/frontend
 yarn download:lsf <branch-name-from-official-lsf-repo>
 ```
 
-
-<div className="opensource-only">
-
-## Custom LSF in Label Studio
-
-LS Frontend (LSF) with Backend (LSB) integration is similar what is described in the [Frontend integration guide](#Frontend-integration-guide). The JavaScript integration script is placed in [lsf-sdk.js](https://github.com/HumanSignal/label-studio/blob/develop/label_studio/static/js/lsf-sdk.js) in the Label Studio Backend. The main idea of this integration based on LSF callbacks.
-
-Check out a quick guide on how to use custom LSF in Label Studio.
-
-<iframe width="800" height="500" src="https://www.youtube.com/embed/QSGgiXie2SE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
-### Prepare a custom LSF build
-1. Make your custom LSF build by following these [instructions](https://github.com/HumanSignal/label-studio-frontend#development).
-2. Finalize your development with `npm run build:module` to generate `main.css` and `main.js` files.
-3. Confirm files appearance in the `build/static` folder.
-
-### Integrate LSF into Label Studio
-All frontend-related files are stored under `label-studio/frontend` directory. You will also find `dist/` folder there that contains the latest builds of the external frontend libraries.
-
-Under `dist/` folder locate the `lsf/` folder and replace its contents with your custom LSF build.
-
-<Note>
-Inside every folder under `dist/` you will find a `version.json` file. Do not modify or remove it. Its presence is required for the Label Studio to operate.
-</Note>
-1. **Do not forget** to remove the old build from LSB:
-    ```bash
-    rm -rf label-studio/label_studio/frontend/dist/lsf/{js,css}
-    ```
-
-2. Copy build folder from LSF to LS:
-    ```bash
-    cp -r label-studio-frontend/build/static/{js,css} label-studio/label_studio/frontend/dist/lsf/
-    ```
-
-    If you installed LS as a pip package, replace `<env-path>/lib/python<version>/site-packages/label_studio/frontend/dist/lsf/`
-
-3. Run the LS instance as usual. It is now using the new LSF build:
-    ```bash
-    label-studio start <your-project>
-    ```
-
-</div>

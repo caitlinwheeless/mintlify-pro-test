@@ -78,7 +78,6 @@ Top-level events such as `labelStudioLoad` and `storageInitialized` cannot be us
 | `eventName` | string | A case-sensitive string representing the event type to listen for.                  |
 | `handler`  | function | A function that will be called when the event is triggered. This function can take arguments depending on the event.  |
 
-
 ##### `LSI.dataObj`
 
 Alias to `.task.data`. This is the core data structure for a task, and includes the original data that needs to be annotated.
@@ -97,7 +96,6 @@ A getter that returns the currently selected annotation.
 
 A getter that returns all regions of the current annotation.
 
-
 ## Frontend API implementation details
 
 The following implementation details may be useful when creating your own plugins. 
@@ -108,7 +106,6 @@ While these details are relatively stable, we make no guarantees that they will 
 For more information on how annotations are stored and formatted, see [How Label Studio saves results in annotations](/guide/task_format#How-Label-Studio-saves-results-in-annotations). 
 
 ### Regions
-
 
 ##### `.areas` 
 

@@ -121,7 +121,6 @@ This configuration includes the following elements:
 - `<Choices>` - The `Choices` tag presents a set of options for the annotator to choose from, specified by the `name` and `toName` parameters.
 - `<Choice>` - The `Choice` tag defines an individual option within the Choices tag. In this example, choices are stylized to appear as clickable thumbs up and thumbs down icons. 
 
-
 ## Input data
 
 In this example, you are including the prompt, the response, and the documents used for context.  
@@ -165,7 +164,6 @@ repo="label-studio",
 
 llama_debug = LlamaDebugHandler()
 callback_manager = CallbackManager([llama_debug])
-
 
 # check if storage already exists
 PERSIST_DIR = "./llama-index-storage"

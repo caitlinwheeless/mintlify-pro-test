@@ -132,7 +132,6 @@ Complete the following fields and then click **Load preview** to ensure you are 
 
 If everything looks correct, click **Save & Sync** to sync immediately, or click **Save** to save your settings and sync later.
 
-
 <Tip>
 You can also use the API to [sync import storage](https://api.labelstud.io/api-reference/api-reference/import-storage/azure/sync).
 </Tip>
@@ -196,16 +195,6 @@ You can also use the API to [sync export storage](https://api.labelstud.io/api-r
 </Tip>
 ## Azure blob storage with Service Principal
 
-<div className="opensource-only">
-
-In Label Studio Enterprise, you can use Azure Service Principal authentication to securely connect Label Studio to Azure Blob Storage without using storage account access keys.
-
-For more information, see [Azure Blob Storage with Service Principal](https://docs.humansignal.com/guide/storage_azure.html#Azure-Blob-Storage-with-Service-Principal) in our Enterprise documentation.
-
-</div>
-
-<div className="enterprise-only">
-
 You can use Azure Service Principal authentication to securely connect Label Studio Enterprise to Azure Blob Storage without using storage account access keys. 
 
 Service Principal authentication provides enhanced security through Entra (formerly "Azure Active Directory") identity and access management, allowing for fine-grained permissions and audit capabilities.
@@ -221,7 +210,6 @@ For more information, see [Microsoft - Application and service principal objects
 - A private container for your data (create one if needed)
 
 ### Set up a Service Principal in Entra
-
 
 #### Register an app in Entra
 
@@ -308,7 +296,6 @@ Complete the following fields and then click **Load preview** to ensure you are 
 
 </div>
 
-
 ##### Review & Confirm
 
 If everything looks correct, click **Save & Sync** to sync immediately, or click **Save** to save your settings and sync later.
@@ -351,9 +338,6 @@ You can also use the API to [sync export storage](https://api.labelstud.io/api-r
   - Storage account and container names (case-sensitive)
   - Role assignment: App Registration has Storage Blob Data Contributor on the Storage Account
   - CORS is set when using pre-signed URLs; try proxy mode if testing
-
-</div>
-
 
 ## Add storage with the Label Studio API
 

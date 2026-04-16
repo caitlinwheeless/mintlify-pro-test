@@ -6,7 +6,6 @@ parent: manage_users
 parent_enterprise: manage_users
 ---
 
-
 <Note>
 If you are using SSO/SAML or SCIM, you can map groups to roles on the organization level and the project level. For more information, see [Set up SSO authentication for Label Studio](auth_setup) and [Set up SCIM2 for Label Studio](scim_setup). 
 
@@ -30,13 +29,11 @@ You can use the role filter above the table to see all Pending users. Select the
 
 ![Screenshot of the role drop-down menu](/images/admin/assign_role.png)
 
-
 ## Programmatically assign roles
 
 To programmatically activate and assign roles to users, you can use the API:
 
 https://api.labelstud.io/api-reference/api-reference/organizations/members/update
-
 
 You can find user ID and organization ID from the **Organization** page:
 
@@ -67,8 +64,6 @@ sally@humansignal.com,"Finance, New York City"
 * Tags must be encapsulated in quotation marks. 
 * If you have multiple tags, separate them with a comma. 
 
-
-
 <Tip>
 If you are exporting the CSV from a spreadsheet editor, make sure you check the format in a text editor before uploading. Spreadsheet editors can add unnecessary formatting. 
 </Tip>
@@ -88,7 +83,6 @@ You can deactivate a user account by assigning them to the **Deactivated** role.
 
 You can reactivate a user by assigning them to an active user role.
 
-
 ## Delete users
 
 1. From the Organization page, select the user you want to delete. 
@@ -100,5 +94,4 @@ You can reactivate a user by assigning them to an active user role.
 Once deleted, any completed work or changes that the user made will appear as belonging to a "Deleted User."
 
 If you want to add the user again at a later date, you will need to re-invite them to the organization. 
-
 

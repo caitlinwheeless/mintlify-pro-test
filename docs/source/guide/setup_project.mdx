@@ -8,28 +8,6 @@ All labeling activities in Label Studio occur in the context of a project.
 
 ## Project setup workflow
 
-<div className="opensource-only">
-
-After you [start Label Studio](start) and [create an account](signup), create a project to start labeling your data.
-
-1. **[Create a project](#Create-a-project)**.
-2. **[Import data into Label Studio](tasks)**. 
-
-    For small projects, testing, or proof of concept work, you can import local files directly into Label Studio through the UI. You can do this during the project creation workflow. 
-    
-    However, for larger projects, we recommend setting up cloud storage. You will need to create the project first, and then add storage from the project settings. For more information, see [Sync data from external storage](storage). 
-3. **[Customize your labeling interface](setup)**. 
-
-    We recommend that you begin with a pre-configured template and modify it, but you can also create your own custom template using our [tag library](/tags). 
-    
-4. **[Configure project settings](project_settings)**. 
-
-    Finally, you can configure optional settings to such as task sampling and annotation instructions. 
-   
-</div>
-
-<div className="enterprise-only">
-
 1. **[Create a project](#Create-a-project)**.
 2. **[Import data into Label Studio](tasks)**. 
 
@@ -57,8 +35,6 @@ After you [start Label Studio](start) and [create an account](signup), create a 
 6. **[Publish your project](#Publish-project-to-annotators)**.
 
     Users in the Manager role can see unpublished projects if they are members of that project. But users in the Annotator or Reviewer role are unable to see or access a project until it is published. 
-
-</div>
 
 ## Create a project
 
@@ -101,50 +77,6 @@ You can do this now or after the project has been created.
 </dl>
 
 When you're done, click **Save**. 
-
-
-
-<div className="opensource-only">
-
-<Warning title="Enterprise">
-Workspaces are only available for Label Studio Enterprise users. Label Studio Enterprise also includes many additional configuration options for projects, such as role-based access control and workflow automation. For more information, see [Compare Community and Enterprise Features](label_studio_compare). 
-</Warning>
-</div>
-
-
-<div className="opensource-only">
-
-## Set up annotation settings for your project
-
-There are several things you can set up before users begin labeling:
-
-* [Instructions for data labelers](project_settings#Instructions)
-
-    You also can select whether to show these instructions in a pop-up message when users enter the labeling stream (the labeling stream is when a user clicks **Label All Tasks**). 
-* [Task sampling](project_settings#General)
-  
-    Task sampling determines the order in which tasks are shown to users in the labeling stream.  The default is to use sequential sampling, meaning the users see them in the same order they are sorted in the Data Manager. You can change this to show tasks in random order.  
-
-From the Data Manager, click **Settings** in the upper right. You can also access the settings from the overflow menu for each project:
-
-![Screenshot of project overflow menu](/images/project/project_menu_oss.png)
-
-
-For information on all available settings, see [Project settings](project_settings). 
-
-## Where Label Studio stores your project data and configurations
-
-All labeling activities in Label Studio occur in the context of a project.
-
-Starting in version 1.0.0, Label Studio stores your project data and configurations in a SQLite database. You can choose to use PostgreSQL instead. See [Set up database storage](storedata).
-
-In versions of Label Studio earlier than 1.0.0, when you start Label Studio for the first time, it launches from a project directory that Label Studio creates, called `./my_project` by default.
-
-`label-studio start ./my_project --init`
-
-</div>
-
-<div className="enterprise-only">
 
 ## Configure high-impact settings
 
@@ -224,4 +156,3 @@ In Label Studio Enterprise, you can hide projects from annotators so that you ca
 1. Open a project and select **Dashboard** in the upper right.
 2. Click **Publish**. 
 
-</div>

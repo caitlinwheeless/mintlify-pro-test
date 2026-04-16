@@ -14,7 +14,6 @@ Before you begin, ensure you have:
     * You must have the Owner role in Label Studio.
     * From **Organization > Settings > Access Token Settings**, ensure that at least one option is enabled.
 
-
 * Your external application:
     * Access to your server backend (to generate signed tokens).
     * The URL where your embed will be hosted.
@@ -32,7 +31,6 @@ At a high level, the embed process is a secure handshake between your app and La
 3. Your frontend initializes the Label Studio embed with `id`, `url`, and `token`.
 
 4. Label Studio validates the JWT and issues its own internal token.
-
 
 ```mermaid
 sequenceDiagram

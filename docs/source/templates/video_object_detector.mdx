@@ -33,14 +33,12 @@ The prerequisites to use the video object detection feature are as follows:
 3. Use the video player that is available for the video classification.
 4. Put all the bounding boxes onto the screen.
 
-
 ## Key features supported 
 
 The following key features are supported by the video player:
 
 * The video and object detection use case using the bounding box on the video. 
 * Video segmentation for the video by creating rectangles on the video.
-
 
 ## Labeling Configuration
 
@@ -58,7 +56,6 @@ The simplest way to get object detection and tracking project is to specify the 
      </Labels>
   </View>
 ```
-
 
 ## About the labeling configuration
 
@@ -91,7 +88,6 @@ Use the [Labels](/tags/labels) control tag to specify labels that can be added t
 </Labels>
 ```
 You can replace and add more labels inside `<Labels>` section that correspond to your annotation scenario.
-
 
 ## Input data
 
@@ -177,7 +173,6 @@ By default, only keyframes are included when exporting data.
 When exporting your annotations, you may want to include interpolated frames. This would ensure that every frame in the video is included.  
 
 You can accomplish this by using the `interpolate_key_frames` parameter and one of the following methods:
-
 
 #### Use the API to create an export snapshot with interpolation enabled 
 
@@ -281,7 +276,6 @@ label-studio export --host http://localhost:8080 --api-key YOUR_API_KEY PROJECT_
 - Replace `YOUR_API_KEY` and `PROJECT_ID` with your API key and project ID, respectively.
 - The exported data will be saved in the `data/export` directory by default.
 
-
 #### Use the export endpoint with query parameter
 
 You can directly export tasks with interpolation by using the export endpoint and passing `interpolate_key_frames` as a query parameter.
@@ -304,7 +298,6 @@ The video player functionality includes the following UI enhancements:
 3. More granular controls for each region, including the ability to precisely set bounding box width, height and coordinates to fit an object for pixel-perfect annotations.
 4. A cleaner interface to group, organize regions, link, add metadata, and delete regions, plus new functionality to lock regions.
 
-
 ## Use cases 
 
 The video player provides the following use cases: 
@@ -326,45 +319,36 @@ In the Label Studio UI, the video interface presents the main video canvas with 
 
 <i>Figure 1: Zoom options. </i>
 
-
 **Tracking zoom options.**
 <img src="../images/video-object-tracking-zoom-options.png" className="gif-border" />
 <i>Figure 2: Video object tracking zoom options. </i>
-
 
 **Go to the previous keyframe.**
 <img src="../images/go-to-previous-keyframe.png" className="gif-border" />
 <i>Figure 3: Go to the previous keyframe button. </i>
 
-
 **Go one step back.**
 <img src="../images/go-one-step-back.png" className="gif-border" />
 <i>Figure 4: Go one step back button. </i>
-
 
 **Play and pause.** 
 <img src="../images/play-pause.png" className="gif-border" />
 <i>Figure 5: Play and pause button. </i>
 
-
 **Go one step forward.**
 <img src="../images/go-one-step-forward.png" className="gif-border" />
 <i>Figure 6: Go one step forward button. </i>
-
 
 **Go to the next keyframe.**
 <img src="../images/goto-next-keyframe.png" className="gif-border" />
 <i>Figure 7: Go to the next keyframe button. </i>
 
-
 **Toggle timeline.** 
 <img src="../images/toggle-timeline.png" className="gif-border" />
 <i>Figure 8: Toggle timeline button. </i>
 
-
 ### Add keyframes
 In the video player, you can see the number of frames, total frames, and the current one. You can navigate from one frame to the other or a specific frame number. During navigation, key points are added so that you can jump to previous key points or the previous frame. 
-
 
 <img src="../images/total-frames-current-frame.png" className="gif-border" />
 <i>Figure 9: Working with frames. </i>
@@ -380,7 +364,6 @@ You can also adjust the rectangle frame to detect the object region of interest.
 To detect the object on a badge, select the label and draw a rectangle on it.
 <img src="../images/object-detection-badge.png" className="gif-border" />
 <i>Figure 12: Object detection badge. </i>
-
 
 ### Use timestamps
 
@@ -399,7 +382,6 @@ Enable the hot-key driven navigation to enhance the granularity in tracking obje
 <img src="../images/enable-shortcut-keys.png" className="gif-border" />
 <i>Figure15: Enable hotkey-driven navigation.</i>
 
-
 ### Fine-grained control actions
 Label and track objects across subsequent frames using the fine-grained control actions.
 
@@ -409,7 +391,6 @@ Shape transition occurs when you adjust the bounding box and the new keyframe ap
 
 <img src="../images/adjust-rectangle-frame-for-obj-detection.png" className="gif-border" />
 <i>Figure 16: Adjust the rectangle frame.</i>
-
 
 **Monitor the lifespan**
 

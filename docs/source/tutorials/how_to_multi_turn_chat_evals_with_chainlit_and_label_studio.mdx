@@ -25,16 +25,12 @@ First, install the Label Studio SDK if you haven't already.
 
 For more information about the SDK, see the [Label Studio Python SDK documentation](https://labelstud.io/guide/sdk).
 
-
-
 ```python
 %pip install label-studio-sdk
 ```
 
-
 ## Configure Credentials
 To support loading credentials from Google Colab Secrets with fallback to .env and environment sourced variables the following cell can be used.
-
 
 ```python
 %pip install python-dotenv
@@ -66,7 +62,6 @@ def get_credential(key, default=None):
 
     Requirement already satisfied: python-dotenv in /usr/local/lib/python3.12/dist-packages (1.1.1)
 
-
 Set your environment variables before running:
 
 ```bash
@@ -83,8 +78,6 @@ export LABEL_STUDIO_API_KEY="your-api-key-here"
 3. Go to "Account & Settings"
 4. Click "Access Token" (or "Personal Access Token")
 5. Copy the existing token or create a new one
-
-
 
 ```python
 import os
@@ -113,7 +106,6 @@ This is the label config from the [Evaluate Production Conversations for RLHF
 - A chat interface for viewing conversations
 - Overall quality of message rating
 - Additinal comments
-
 
 ```python
 LABEL_CONFIG = """
@@ -243,9 +235,7 @@ print("Label config loaded successfully")
 
     Label config loaded successfully
 
-
 With the label config set, we now use it to create the Chat Evaluation project
-
 
 ```python
 ## Create Project with Label Config
@@ -261,7 +251,6 @@ project = ls.projects.create(
     label_config=LABEL_CONFIG
 )
 ```
-
 
 ```python
 ## Get Project ID and URL
@@ -295,8 +284,6 @@ Now we'll set up a Chainlit chatbot that automatically syncs conversations to La
 
 We need Chainlit for the chat UI and Ollama for a local LLM.
 
-
-
 ```python
 %pip install chainlit ollama openai anthropic
 
@@ -311,8 +298,6 @@ We'll create three Python files:
 
 **Note:** Run these cells to create the files in your working directory.
 
-
-
 ```python
 %%writefile conversation_logger.py
 """Conversation logger for saving chats to JSON"""
@@ -320,7 +305,6 @@ import json
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Optional
-
 
 class ConversationLogger:
     """Logs conversations to JSON files"""
@@ -366,9 +350,6 @@ class ConversationLogger:
 
 ```
 
-
-
-
 ```python
 %%writefile auto_sync.py
 """Automatic Label Studio sync helper"""
@@ -380,7 +361,6 @@ from datetime import datetime
 from label_studio_sdk.client import LabelStudio
 from dotenv import load_dotenv
 load_dotenv()
-
 
 class LabelStudioSync:
     """Helper class to push conversations to Label Studio"""
@@ -394,7 +374,6 @@ class LabelStudioSync:
         self.url = url or os.getenv('LABEL_STUDIO_URL', 'https://app.humansignal.com')
         self.api_key = api_key or os.getenv('LABEL_STUDIO_API_KEY')
         self.project_id = project_id or int(os.getenv('LABEL_STUDIO_PROJECT_ID', None))
-
 
         if not self.project_id:
             print("⚠️  LABEL_STUDIO_PROJECT_ID not set - auto-sync disabled")
@@ -462,7 +441,6 @@ class LabelStudioSync:
             print(f"❌ Failed to sync {conversation_file.name}: {e}")
             return False
 
-
 # Global instance
 _sync = None
 
@@ -473,7 +451,6 @@ def get_sync() -> LabelStudioSync:
         _sync = LabelStudioSync()
     return _sync
 
-
 async def auto_push_conversation(conversation_file: Path):
     """Push a conversation to Label Studio (async wrapper)"""
     sync = get_sync()
@@ -481,7 +458,6 @@ async def auto_push_conversation(conversation_file: Path):
         await sync.push_conversation(conversation_file)
 
 ```
-
 
 ```python
 %%writefile chatbot_ui_auto_sync.py
@@ -521,10 +497,8 @@ except ImportError:
 from conversation_logger import ConversationLogger
 from auto_sync import get_sync
 
-
 # Configuration
 MIN_TURNS_FOR_SYNC = 2  # Minimum conversation length to sync
-
 
 def get_available_models() -> Dict[str, List[str]]:
     """Return available models by provider"""
@@ -547,7 +521,6 @@ def get_available_models() -> Dict[str, List[str]]:
             models["Ollama"] = ["llama3.2:3b"]
 
     return models
-
 
 async def generate_response(messages: List[Dict[str, str]], model: str) -> str:
     """Generate response from specified model"""
@@ -591,7 +564,6 @@ async def generate_response(messages: List[Dict[str, str]], model: str) -> str:
 
     return "Error: Unknown provider"
 
-
 def get_or_create_thread_id() -> str:
     """Get persistent thread ID for this conversation"""
     thread_id = cl.user_session.get("thread_id")
@@ -601,7 +573,6 @@ def get_or_create_thread_id() -> str:
         cl.user_session.set("thread_id", thread_id)
 
     return thread_id
-
 
 @cl.on_chat_start
 async def start():
@@ -639,7 +610,6 @@ async def start():
         f"Ask me anything!"
     ).send()
 
-
 @cl.on_chat_resume
 async def on_resume(thread: Dict):
     """Handle conversation resumption"""
@@ -669,7 +639,6 @@ async def on_resume(thread: Dict):
     await cl.Message(
         content=f"🔄 **Resumed** | Thread: `{thread_id}` | Previous turns: {turn_count}"
     ).send()
-
 
 @cl.on_message
 async def main(message: cl.Message):
@@ -701,7 +670,6 @@ async def main(message: cl.Message):
 
     except Exception as e:
         await cl.Message(content=f"❌ Error: {str(e)}").send()
-
 
 @cl.on_chat_end
 async def on_chat_end():
@@ -783,7 +751,6 @@ async def on_chat_end():
     except Exception as e:
         print(f"❌ Sync failed: {e}")
 
-
 if __name__ == "__main__":
     pass
 
@@ -811,12 +778,9 @@ ollama pull llama3.2:3b  # 3B model works on 16GB RAM
 ollama list
 ```
 
-
 ### Step 4: Set Environment Variables
 
 Set the project ID from earlier so the chatbot knows where to sync conversations.
-
-
 
 ```python
 # Set environment variables for auto-sync
@@ -864,12 +828,9 @@ Then:
 
 **Ready to annotate!** Visit your Label Studio project to start evaluating the conversations.
 
-
 ### Verify Files Created
 
 Let's check that all necessary files were created.
-
-
 
 ```python
 from pathlib import Path

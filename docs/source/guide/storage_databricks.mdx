@@ -6,16 +6,6 @@ parent: storage
 parent_enterprise: storage
 ---
 
-<div className="opensource-only">
-
-In Label Studio Enterprise, you can connect to Databricks Unity Catalog (UC) volumes for your source and target storage. 
-
-For more information, see [Databricks Files (UC Volumes)](https://docs.humansignal.com/guide/storage_databricks) in our Enterprise documentation.
-
-</div>
-
-<div className="enterprise-only">
-
 Connect Label Studio Enterprise to Databricks Unity Catalog (UC) Volumes to import files as tasks and export annotations as JSON back to your volumes. This connector uses the Databricks Files API and operates only in proxy mode ([presigned URLs](storage#Pre-signed-URLs-vs-Storage-proxies) are not supported by Databricks).
 
 ## Prerequisites
@@ -38,7 +28,6 @@ Connect Label Studio Enterprise to Databricks Unity Catalog (UC) Volumes to impo
 - Before you begin, review the information in [Cloud storage for projects](storage) and [Secure access to cloud storage](security#Secure-access-to-cloud-storage).
 
 ## Authentication options
-
 
 ### PAT (Personal Access Token)
 
@@ -70,7 +59,6 @@ Works on all cloud platforms (AWS, GCP, Azure).
 2. Generate an OAuth secret under the service principal settings (**Secrets > Generate secret**). 
 3. Save the `client_id` and generated secret.
 4. Assign the service principal to your workspace. 
-
 
 See [Manage service principals](https://docs.databricks.com/aws/en/admin/users-groups/manage-service-principals) and [Authorize service principal access to Databricks with OAuth](https://docs.databricks.com/en/dev-tools/auth/oauth-m2m.html).
 
@@ -153,7 +141,6 @@ Complete the following fields and then click **Load preview** to ensure you are 
 
 </div>
 
-
 #### Review & Confirm
 
 If everything looks correct, click **Save & Sync** to sync immediately, or click **Save** to save your settings and sync later.
@@ -196,6 +183,4 @@ You can also use the API to [sync export storage](https://api.labelstud.io/api-r
 ## Add storage with the Label Studio API
 
 You can also use the API to programmatically create connections. [See our API documentation.](https://api.labelstud.io/api-reference/introduction/getting-started).
-
-</div>
 

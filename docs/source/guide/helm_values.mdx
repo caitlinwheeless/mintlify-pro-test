@@ -8,19 +8,8 @@ parent_enterprise: install_enterprise_k8s
 
 {/* Style block for table formatting removed during Mintlify migration */}
 
-<div className="opensource-only">
-
-Refer to these tables with available Helm chart values for your `values.yaml` file
-when configuring your Label Studio deployment on Kubernetes. See [Deploy Label Studio on Kubernetes](install_k8s) for more.
-
-</div>
-
-<div className="enterprise-only">
-
 Refer to these tables with available Helm chart values for your `values.yaml` file
 when configuring your Label Studio deployment on Kubernetes. See [Deploy Label Studio on Kubernetes](install_enterprise_k8s) for more.
-
-</div>
 
 ## Global parameters
 
@@ -183,7 +172,6 @@ Parameters specific to the `app` portion of the Label Studio deployment.
 | `app.contextPath`                              | Context path appended for health/readiness checks                                                                    | `/`                      |
 | `app.cmdWrapper`                               | Additional commands to run prior to starting App. Useful to run wrappers before startup command                      | `""`                     |
 
-
 ## Rqworker parameters
 
 Parameters specific to the `rqworkers` service of your Label Studio Enterprise deployment.
@@ -244,8 +232,6 @@ Parameters specific to the `rqworkers` service of your Label Studio Enterprise d
 | `rqworker.rbac.rules`                            | Custom RBAC rules to set for rqworker service		                                                 | `[]`                                   |
 | `rqworker.cmdWrapper`                            | Additional commands to run prior to starting App. Useful to run wrappers before startup command | `""`                                   |
 
-<div className="enterprise-only">
-
 ## Label Studio Enterprise parameters
 
 | Parameter                                 | Description                                                                        | Default   |
@@ -253,8 +239,6 @@ Parameters specific to the `rqworkers` service of your Label Studio Enterprise d
 | `enterprise.enabled`                      | Enable Enterprise features                                                         | `false`   |
 | `enterprise.enterpriseLicense.secretName` | Name of an existing secret holding the Label Studio Enterprise license information | `""`      |
 | `enterprise.enterpriseLicense.secretKey`  | Key of an existing secret holding the enterprise license information               | `license` |
-
-</div>
 
 ## Sub-charts parameters
 

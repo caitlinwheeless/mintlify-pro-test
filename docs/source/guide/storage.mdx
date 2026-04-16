@@ -167,19 +167,15 @@ When set to "Files", Label Studio automatically lists files from the storage buc
 
 <img src="/images/source-storages-treat-on.png" className="make-intense-zoom" />
 
-
 ### Pre-signed URLs vs. Storage proxies
 
 There are two secure mechanisms in which Label Studio fetches media data from cloud storage: via pre-signed URLS and via proxy. Which one you use depends on whether you have **Use pre-signed URLs** toggled on or off when setting up your source storage. **Use pre-signed URLs** is used by default. Proxy storage is enabled when **Use pre-signed URLs** is OFF.
-
-<div className="enterprise-only">
 
 <Note>
 You can control whether your organization allows the use of storage proxy. Go to **Organization > Usage & License** and select **Enable Storage Proxy**. This must be done by the user in the Owner role. 
 
 When **Enable Storage Proxy** is disabled, users in your organization will not be able to create or modify source storage connections that have "Presigned URLs" turned OFF. This restriction ensures that all storage connections must use presigned URLs.
 </Note>
-</div>
 
 <br/>
 
@@ -192,7 +188,6 @@ The main benefit to using pre-signed URLs is if you want to ensure that your med
 <img src="/images/storages/storage-proxy-presigned.png" style={{maxWidth: '600px', margin: '0 auto'}} alt="Diagram of presigned URL flow" />
 
 The permissions required for this are already included in the cloud storage configuration documentation below. 
-
 
 #### Proxy storage
 
@@ -285,14 +280,4 @@ When working with an external cloud storage connection, keep the following in mi
 * We recommend using a separate bucket folder for each Label Studio project. 
 * Storage Regions: To minimize latency and improve efficiency, store data in cloud storage buckets that are geographically closer to your team rather than near the Label Studio server.
 
-<div className="opensource-only">
-
-For more troubleshooting information, see [Troubleshooting Label Studio](troubleshooting).
-
-</div>
-
-<div className="enterprise-only">
-
 For more troubleshooting information, see [Troubleshooting Import, Export, & Storage](https://support.humansignal.com/hc/en-us/sections/16982163062029-Import-Export-Storage) in the HumanSignal support center.
-
-</div>

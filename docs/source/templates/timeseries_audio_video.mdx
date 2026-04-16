@@ -21,7 +21,6 @@ There are two types of configurations, and configuration you use determines how 
 - **Time-based**: Converts to absolute timestamps
 - **Index-based**: Uses relative seconds as indices
 
-
 ## Handling length, duration, sample and frame rate mismatches
 
 **Timeseries length and video duration**
@@ -39,7 +38,6 @@ It's extremely important to set `frameRate` for your video. Otherwise, you will 
 We recommend converting your video using these scripts: https://labelstud.io/tags/video#Video-format.
 
 Also, it is recommended to use integer multiples for sample rates and frame rates in your time series, audio, and videos. This approach simplifies aligning samples and frames and allows for smooth navigation across various media sources. For example, if the video frame rate is _30 frames per second_, having _60 (or 90, 120, ...) samples per second_ for the time series is beneficial.
-
 
 ## Time-based time series
 
@@ -151,7 +149,6 @@ time,gyro_x,gyro_y
 ```
 </Accordion>
 
-
 ## Index-based time series
 
 - Uses direct indices as relative seconds
@@ -170,7 +167,6 @@ To specify an index-based time series, use the following format:
 - No actual timestamps are available.
 - Simple 1 sample \<=> 1 second mapping with media time is sufficient.
 
-
 #### Labeling configuration
 
 <br />
@@ -178,7 +174,6 @@ To specify an index-based time series, use the following format:
 <Accordion title="Index-based TimeSeries (no timestamps at X axis)">
 * Index-based TimeSeries + Video + TimeSeriesLabels
 * One value equals one second because the time axis is not specified in the `TimeSeries` tag. The video is synced with this idea — one sample equals one second if timestamps are not provided.
-
 
 ```html
 <View>

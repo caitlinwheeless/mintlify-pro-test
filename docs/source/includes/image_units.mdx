@@ -58,7 +58,6 @@ def convert_to_ls(x, y, width, height, original_width, original_height):
     return x / original_width * 100.0, y / original_height * 100.0, \
            width / original_width * 100.0, height / original_height * 100
 
-
 # convert from LS
 output = convert_from_ls(task['annotations'][0]['result'][0])
 if output is None:

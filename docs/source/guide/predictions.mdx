@@ -13,20 +13,10 @@ You can import pre-annotated tasks into Label Studio [using the UI](tasks#Import
 <Note>
 To generate interactive pre-annotations with a machine learning model while labeling, see [Set up machine learning with Label Studio](ml).
 </Note>
-<div className="opensource-only">
-
-<Warning title="enterprise">
-Label Studio Enterprise customers have access to a powerful tool called Prompts. With Prompts, you can leverage LLMs to automatically generate predictions for your Label Studio tasks. For more information, see [Prompts](https://docs.humansignal.com/guide/prompts_overview).
-</Warning>
-</div>
-
-<div className="enterprise-only">
 
 <Tip>
 With Prompts, you can leverage LLMs to automatically generate predictions for your Label Studio tasks. For more information, see [Prompts](prompts_overview).
 </Tip>
-</div>
-
 
 ## Prepare pre-annotations for Label Studio 
 
@@ -93,7 +83,6 @@ Predictions cannot be modified and are always read-only.
 If the "Show predictions to annotators in the Label Stream and Quick View" toggle in the project settings (Machine Learning section) is enabled, predictions will be automatically copied to newly created annotations. In Quick View mode, annotations can be created from predictions by using the special copy button on the editor tool panel: 
 <img src="/images/quickview-copy-button.png" className="gif-border" />
 
-
 ### Specific examples for pre-annotations
 
 Refer to the following examples for sample pre-annotation formats:
@@ -106,7 +95,6 @@ Refer to the following examples for sample pre-annotation formats:
 To format pre-annotations for Label Studio not represented in these examples, refer to the sample results JSON for the relevant object and control tags for your labeling configuration, such as the [Audio tag](/tags/audio) for audio classification tasks. Each tag must be represented in the JSON pre-annotations format to render predictions in the Label Studio UI. Not all object and control tags list sample results JSON. 
 
 You can also use the [Label Studio Playground](/playground) to preview the output JSON for a specific labeling configuration.
-
 
 ## Import bbox and choice pre-annotations for images
 
@@ -689,7 +677,6 @@ Import pre-annotated tasks into Label Studio [using the UI](tasks#Import-data-fr
 
 You can sort the prediction scores for each labeled region using the **Regions** pane options. 
 
-
 ## Import brush segmentation pre-annotations in RLE format
 
 If you want to import pre-annotations for brush mask image segmentation using the [BrushLabels tag](/tags/brushlabels), you must convert the masks to RLE format first. The [Label Studio Converter](https://github.com/HumanSignal/label-studio-converter) package has some helper functions for this. See the following for common conversion cases and guidance.
@@ -826,14 +813,4 @@ The image data in this example task references an uploaded file, identified by t
 </Note>
 ### Troubleshooting pre-annotations
 
-<div className="opensource-only">
-
-See [Troubleshooting pre-annotations](troubleshooting#Pre-annotations).
-
-</div>
-
-<div className="enterprise-only">
-
 See [Troubleshooting ML Backends & Predictions](https://support.humansignal.com/hc/en-us/sections/23627938255117-ML-Backend-Predictions) in the HumanSignal support center.
-
-</div>

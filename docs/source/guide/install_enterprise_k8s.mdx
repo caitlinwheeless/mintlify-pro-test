@@ -9,12 +9,9 @@ Deploy Label Studio Enterprise on a Kubernetes Cluster using Helm 3. You can use
 
 Your Kubernetes cluster can be self-hosted or installed somewhere such as Amazon EKS. See the Amazon tutorial on how to [Deploy a Kubernetes Application with Amazon Elastic Container Service for Kubernetes](https://aws.amazon.com/getting-started/hands-on/deploy-kubernetes-app-amazon-eks/) for more about deploying an app on Amazon EKS.
 
-<div className="enterprise-only">
-
 <Warning>
 To install Label Studio Community Edition, see <a href="https://labelstud.io/guide/install_k8s.html">Deploy Label Studio on Kubernetes</a>. This page is specific to the Enterprise version of Label Studio.
 </Warning>
-</div>
 
 <Note>
 On-prem deployments of Label Studio Enterprise are not supported for Academic licenses. 
@@ -67,8 +64,6 @@ To plan the capacity of your Kubernetes cluster, refer to these guidelines.
 
 Label Studio Enterprise has the following default configurations for resource requests, resource limits, and replica counts:
 
-<div className="enterprise-only">
-
 ```yaml
 app:
   replicas: 1
@@ -98,8 +93,6 @@ rqworker:
       memory: 1024Mi
       cpu: 1000m
 ```
-
-</div>
 
 Before you make changes to these values, familiarize yourself with the [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) guidelines in the Kubernetes documentation. 
 
@@ -134,8 +127,6 @@ Add the Helm chart repository to easily install and update Label Studio.
    helm search repo heartex/label-studio
    ```
 
-<div className="enterprise-only">
-
 ### Configure Kubernetes secrets
 
 1. Ensure that you have license key and Docker Hub credentials or request them from Heartex Team.
@@ -156,9 +147,6 @@ Add the Helm chart repository to easily install and update Label Studio.
    kubectl create secret generic lse-license --from-literal=license=https://lic.heartex.ai/db/<CUSTOMER_LICENSE_ID>
    ```
    
-</div>
-
-<div className="enterprise-only">
 
 ### Configure values.yaml 
 
@@ -251,11 +239,9 @@ redis:
 
 Adjust the included defaults to reflect your environment and copy these into a new file and save it as `ls-values.yaml`.
 
-
 <Note>
 For more complex configurations, you can create your own file based on the [list of all available Helm values](helm_values).
 </Note>
-</div>
 
 ## Optional: Set up TLS for PostgreSQL
 To configure Label Studio Enterprise to use TLS for end-client connections with PostgreSQL, do the following:
@@ -310,7 +296,6 @@ global:
 ```
 
 4. Install or upgrade Label Studio Enterprise using Helm.
-
 
 ## Optional: Set up username and password for Redis
 
@@ -389,7 +374,6 @@ kubectl rollout restart deployment/<RELEASE_NAME>-ls-rqworker
 ```shell
 kubectl rollout restart deployment/<RELEASE_NAME>-ls-app
 ```
-
 
 ## Uninstall Label Studio Enterprise using Helm
 

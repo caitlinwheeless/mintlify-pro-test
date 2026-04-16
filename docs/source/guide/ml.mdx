@@ -10,19 +10,9 @@ You can use an ML backend to integrate your model development pipeline with your
 - **Interactive labeling:** Integrate ML models into the platform to help humans label or annotate large datasets more efficiently and accurately.
 - **Model evaluation and fine-tuning:** Labelers review and analyze the model outputs to assess model accuracy and optimize performance.
 
-<div className="opensource-only">
-
-<Warning title="enterprise">
-Label Studio Enterprise features an out-of-the-box solution for LLM-assisted auto-labeling and model evaluation. Compare LLMs based on accuracy and cost. For more information, see [Prompts](https://docs.humansignal.com/guide/prompts_overview).
-</Warning>
-</div>
-
-<div className="enterprise-only">
-
 <Tip>
 Prompts is an out-of-the-box solution for LLM-assisted auto-labeling and model evaluation. For more information, see [Prompts](prompts_overview).
 </Tip>
-</div>
 
 For example, for an image classification task, the model pre-selects an image class for data annotators to verify. For audio transcriptions, the model displays a transcription that data annotators can modify. 
 
@@ -35,7 +25,6 @@ Once a model is connected, the way it works is:
 
 If you just need to load static pre-annotated data into Label Studio, running an ML backend might be overkill for you. Instead, you can [import preannotated data](predictions).
 
-
 <Tip>
 You can use [Label Studio Enterprise to build an automated active learning loop](https://docs.humansignal.com/guide/active_learning.html) with a machine learning model backend. If you use the open source Community Edition of Label Studio, you can manually sort tasks and retrieve predictions to mimic an active learning process.
 </Tip>
@@ -47,19 +36,8 @@ Ir you want to write your own model instead, see [Write your own ML backend](ml_
 
 ### Prerequisites
 
-<div className="opensource-only">
-
-* [Label Studio](install)
-* [Docker Compose](https://docs.docker.com/compose/install/)
-
-</div>
-
-<div className="enterprise-only">
-
 * [Label Studio](install_enterprise)
 * [Docker Compose](https://docs.docker.com/compose/install/)
-
-</div>
 
 ### Start the model
 
@@ -84,17 +62,7 @@ The model should begin running at `http://localhost:9090` (if you are using a Do
 {"model_class":"SamMLBackend","status":"UP"}
 ```
 
-<div className="opensource-only">
-
-If you see any errors, see [Troubleshooting ML backends](troubleshooting#ML-backends) and the [Troubleshooting section in the README](https://github.com/HumanSignal/label-studio-ml-backend/tree/master/README.md#troubleshooting).
-
-</div>
-
-<div className="enterprise-only">
-
 If you see any errors, see [Troubleshooting ML Backends & Predictions](https://support.humansignal.com/hc/en-us/sections/23627938255117-ML-Backend-Predictions) in the HumanSignal support center and see the [Troubleshooting section in the README](https://github.com/HumanSignal/label-studio-ml-backend/tree/master/README.md#troubleshooting).
-
-</div>
 
 #### localhost and Docker containers
 
@@ -104,17 +72,7 @@ If you are running Label Studio in a Docker container, `localhost` loops back to
 
 ### Connect the model to Label Studio
 
-<div className="enterprise-only">
-
 After you [create a project](setup_project), open the project settings and select [**Model**](project_settings_lse#Model). 
-
-</div>
-
-<div className="opensource-only">
-
-After you [create a project](setup_project), open the project settings and select [**Model**](project_settings#Model). 
-
-</div>
 
 Click **Connect Model** and complete the following fields:
 
@@ -224,11 +182,7 @@ Note the following:
 
 To find your `LABEL_STUDIO_API_KEY`, open Label Studio and go to your [user account page](user_account#Access-token). 
 
-<div className="enterprise-only">
-
 Note that your user must also have access to the project that you are connecting to ML backend.
-
-</div>
 
 ## Model training
 
@@ -236,17 +190,7 @@ Training a model allows it to learn from submitted annotations and potentially i
 
 After you connect a model to Label Studio as a machine learning backend and annotate at least one task, you can start training the model. You can use automated or manual training. 
 
-<div className="enterprise-only">
-
 From the [**Model** page](project_settings_lse#Model) under project settings, select **Start Training** from the overflow menu next to the connected model. This manually initiates training. Use this action if you want to control when the model training occurs, such as after a specific number of annotations have been collected or at certain intervals.
-
-</div>
-
-<div className="opensource-only">
-
-From the [**Model** page](project_settings#Model) under project settings, select **Start Training** from the overflow menu next to the connected model. This manually initiates training. Use this action if you want to control when the model training occurs, such as after a specific number of annotations have been collected or at certain intervals.
-
-</div>
 
 You can also initiate training programmatically using the following:
 
@@ -272,7 +216,6 @@ After you connect a model to Label Studio, you can see model predictions in the 
 
 * To manually add predictions, go to the Data Manager, select the tasks you want to get predictions for, and then select **Actions > Retrieve predictions**.
 * To automatically pre-label data with predictions, go to the project settings and enable **Annotation > Use predictions to prelabel tasks** and ensure that you have selected the appropriate model from the **Select which predictions or which model you want to use** drop-down menu. 
-
 
 <Note>
 For a large dataset, the HTTP request to retrieve predictions might be interrupted by a timeout. If you want to **get all predictions** for all tasks in a dataset from connected machine learning backends, make a [POST call to the predictions endpoint of the Label Studio API](/api/#operation/api_predictions_create) for each task to prompt the machine learning backend to create predictions for the tasks. 
@@ -331,19 +274,7 @@ curl -H 'Authorization: Token <user-token-from-account-page>' -X POST \
 
 ### Choose which predictions to display to annotators
 
-<div className="opensource-only">
-
 You can choose which model or prediction set to display to annotators by default. This is available under the **Annotation > Live Predictions** in the project settings. 
-
-</div>
-
-<div className="enterprise-only">
-
-You can choose which model or prediction set to display to annotators by default. This is available under the **Annotation > Live Predictions** in the project settings. 
-
-</div>
 
 Use the drop-down menu to select which model or predictions to use in your labeling workflow. 
-
-
 

@@ -46,7 +46,6 @@ Some examples include:
 * **Document Summarization**: Professionals often need to quickly understand the key points in lengthy contracts, research papers, and files.
 * **Educational Content Summarization**: EEducators and e-learning platforms need to distill complex material into accessible summaries for students. Auto-labeling can summarize key topics and categorize them under labels like “concept,” “example,” or “important fact.”
 
-
 ### Image captioning and classification
 
 Image captioning involves applying descriptive text for images. This has valuable applications across industries, particularly where visual content needs to be systematically organized, analyzed, or made accessible. 
@@ -116,7 +115,6 @@ You can change the subset of data being used (e.g. only data with Ground Truth a
 </Tip>
 6. Accept the [predictions as annotations](prompts_predictions#Create-annotations-from-predictions)!
 
-
 ### Evaluate LLM outputs for toxicity
 
 This example demonstrates how to set up Prompts to evaluate if the LLM-generated output text is classified as harmful, offensive, or inappropriate.
@@ -182,7 +180,6 @@ This example demonstrates how to set up Prompts to evaluate if the LLM-generated
 
     *`{comment_text}`*
 
-
 <Note>
 Ensure you include `{comment_text}` in your instructions. Click `comment_text` above the instruction field to insert it. 
 </Note>
@@ -209,7 +206,6 @@ Download the jigsaw_toxicity dataset, then downsample/format using the following
 ```python
 import pandas as pd
 import json
-
 
 def gen_task(row):
     labels = [
@@ -238,7 +234,6 @@ def gen_task(row):
             }
         ],
     }
-
 
 INPUT_PATH = "/Users/pakelley/Downloads/Jigsaw Toxicity Train.csv"
 OUTPUT_PATH = "/Users/pakelley/Downloads/toxicity-sample-ls-format.json"
@@ -317,7 +312,6 @@ Let’s expand on the Q&A use case above with an example demonstrating how to us
     *{answer}*
 
     *---*
-
 
 <Note>
 Ensure you include `{answer}` and `{context}` in your instructions. Click `answer`/`context` above the instruction field to insert them. 

@@ -30,7 +30,6 @@ Agreement is calculated at two levels:
 
 ![Screenshot](/images/review/agreement-annotated.png)
 
-
 ### Per-control-tag agreement
 
 Control tags are the tags that you use to annotate your data. Object tags are the tags that you use to identify the data to be annotated, such as `Image`, `Text`, and `Audio`.
@@ -94,7 +93,6 @@ Because two annotators rarely draw identical regions, the system uses continuous
 
 See [Non-categorical examples](#Non-categorical-examples) for an example of how agreement is calculated for non-categorical control tags.
 
-
 ##### Summary of differences
 
 | Aspect | Categorical Tags | Non-Categorical Tags |
@@ -104,7 +102,6 @@ See [Non-categorical examples](#Non-categorical-examples) for an example of how 
 | **Score type** | Binary (`0` or `1`) | Continuous (`0.0` to `1.0`) |
 | **Pairwise** | Works directly; averages binary scores | Works directly; averages continuous scores |
 | **Consensus** | Works directly; no threshold needed | Requires a user-defined threshold to binarize scores first |
-
 
 ## Methodology 
 
@@ -245,13 +242,11 @@ In extremely simple terms:
 
 * Requires thresholds for non-categorical control tags. Thresholds are how you define what "close enough" means. See [Non-categorical examples](#Non-categorical-examples) for an of consensus calculation with a threshold.
 
-
 ### Examples 
 
 #### Categorical examples 
 
 [Categorical control tags](#Categorical-control-tags) are control tags that have a fixed set of choices. For example, a control tag that has the choices "Opossum", "Cat", "Hamster".
-
 
 <div className="code-tabs">
   <div data-name="Pairwise">
@@ -431,7 +426,6 @@ In this example, we'll look at **Span Overlap** and **Span Overlap (Threshold)**
 
 Span Overlap measures how much annotators' highlighted regions coincide. For more information on how it's calculated, see [Span Overlap](agreement_metrics#Span-Overlap). 
 
-
 <div className="code-tabs">
   <div data-name="Pairwise">
 
@@ -478,7 +472,6 @@ Therefore, 2 out of 3 annotators agree, which gives us an agreement score of (`2
 
 You can find additional examples in the [built-in metrics reference](agreement_metrics#Examples).
 
-
 ## Other agreement settings
 
 With methodology selected, you can configure other settings for agreement under **Settings > Quality > Agreement**
@@ -515,7 +508,6 @@ Then the overall agreement is calculated as:
 
 `(1.0 * 83% + 0.3 * 33% + 0.2 * 33%) / (1.0 + 0.3 + 0.2) = 60.67%`
 
-
 ### Configure agreement for each control tag
 
 Under **Settings > Quality > Agreement > Agreement Columns**, you can customize how agreement is calculated for each control tag. 
@@ -525,11 +517,4 @@ Under **Settings > Quality > Agreement > Agreement Columns**, you can customize 
 Your options depend on the agreement methodology you have selected and what type of control tag you are configuring. 
 
 For information on the different metrics available for each control tag, see the [built-in metrics reference](agreement_metrics).
-
-
-
-
-
-
-
 

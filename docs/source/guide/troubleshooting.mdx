@@ -13,7 +13,6 @@ This page covers common user troubleshooting scenarios for Label Studio Communit
 
 See [Troubleshoot installation issues](install_troubleshoot).
 
-
 ## Projects
 
 ### Blank page when loading a project
@@ -174,7 +173,6 @@ Then go to the cloud storage settings page and click **Edit** next to the cloud 
 
 If there is only LIST permission, Label Studio can scan the bucket for the existence of objects without actually reading them. With GET permissions, Label Studio can read the data and extract your JSON files appropriately. 
 
-
 ### Tasks don't load the way I expect
 
 If the tasks sync to Label Studio but don't appear the way that you expect, maybe with URLs instead of images or with one task where you expect to see many, check the following:
@@ -301,7 +299,6 @@ If you wanted to add predicted text and suggested transcriptions for this labeli
 
 Because the TextArea tag applies to each labeled region, the IDs for the label results and the textarea results must match. 
 
-
 #### Read only and hidden regions
 
 In some situations it's very helpful to hide or to make `read-only` bounding boxes, text spans, audio segments, etc. You can put `"readonly": true` or `"hidden": true` in regions to achieve this (the dict inside of `annotations.result` list).  
@@ -377,7 +374,6 @@ Your ML backend server might not have started properly.
 2. If the health check doesn't respond, or you see errors, check the server logs.
 3. If you used Docker Compose to start the ML backend, check for requirements missing from the `requirements.txt` file used to set up the environment inside Docker.
 
-
 ### The ML backend seems to be connected, but after I click "Start Training", I see "Error. Click here for details." message
 
 Click the error message to review the traceback. Common errors that you might see include:
@@ -408,7 +404,6 @@ If you get a validation error when adding the ML backend URL to your Label Studi
 - Is your machine learning backend available from your Label Studio instance? It must be available to the instance running Label Studio.
 
 If you're running Label Studio in Docker, you must run the machine learning backend inside the same Docker container, or otherwise make it available to the Docker container running Label Studio. You can use the `docker exec` command to run commands inside the Docker container, or use `docker exec -it <container_id> /bin/sh` to start a shell in the context of the container. See the [docker exec documentation](https://docs.docker.com/engine/reference/commandline/exec/). 
-
 
 ### No such file or directory error on Windows
 
@@ -459,7 +454,6 @@ and `docker-compose.yml`. Then, proceed with the Docker commands:
 
 By following these steps, you should be able to resolve issues related to Docker not recognizing the `start.sh` script
 on Windows due to line ending conversions.
-
 
 ### Pip Cache Reset in Docker Images
 

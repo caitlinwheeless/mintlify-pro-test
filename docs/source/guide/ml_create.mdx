@@ -10,24 +10,13 @@ Follow the steps below to wrap custom machine learning model code with the Label
 
 For information on using one of Label Studio's example backends, see [Set up an example ML backend](ml#Set-up-an-example-ML-backend). 
 
-<div className="opensource-only">
-
-<Warning title="enterprise">
-Label Studio Enterprise features an out-of-the-box solution for LLM-assisted labeling. All you need to get set up is to connect one of our supported models. For more information, see [Prompts](https://docs.humansignal.com/guide/prompts_overview).
-</Warning>
-</div>
-
-<div className="enterprise-only">
-
 <Tip>
 Prompts is an out-of-the-box solution for LLM-assisted labeling. All you need to get set up is to connect one of our supported models. For more information, see [Prompts](prompts_overview).
 </Tip>
-</div>
 
 For a video tutorial, see the following:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cEwMNOlOUjI?si=sEPTUPOyyzZlA-n5" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-
 
 ## 1. Install the ML backend repo
 
@@ -70,7 +59,6 @@ Where:
 * `requirements.txt` is where you put your Python dependencies.
 * `requirements_base.txt` and `requirements_test.txt` are basic dependencies (you don't need to modify this)
 * `test_api.py` is where you put your model tests
-
 
 ## 3. Implement prediction logic
 
@@ -115,7 +103,6 @@ Refer to the code example linked above for more details about how this might be 
 
 For more information about enabling pre-annotations, see [Interactive pre-annotations](ml#Interactive-pre-annotations).
 
-
 ## 4. Implement training logic (optional)
 
 You can also implement the `fit` method to train your model. The `fit` method is typically used to train the model on the labeled data, although it can be used for any arbitrary operations that require data persistence (for example, storing labeled data in database, saving model weights, keeping LLM prompts history, etc).
@@ -151,7 +138,6 @@ Starting in version 1.4.1 of Label Studio, when you add an ML backend to your pr
 By default, the payload of the webhook event does not contain the annotation itself. You can either [modify the webhook event](webhooks) sent by Label Studio to send the full payload, or retrieve the annotation using the Label Studio API using the [get annotation by its ID endpoint](/api#operation/api_annotations_read), [SDK](sdk) using the [get task by ID method](https://labelstud.io/sdk/project.html#label_studio_sdk.project.Project.get_task), or by retrieving it from [target storage that you set up](storage) to store annotations.
 
 See the [annotation webhook event reference](webhook_reference#Annotation-Created) for more details about the webhook event.
-
 
 ### Other methods and parameters
 

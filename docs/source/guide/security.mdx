@@ -7,22 +7,11 @@ Label Studio provides many ways to secure access to your data and your deploymen
 
 All application component interactions are encrypted using the TLS protocol.
 
-<div className="enterprise-only">
-
 Role-based access control is only available in Label Studio Enterprise.
-
-</div>
 
 {/* If you need to meet strong privacy regulations, legal requirements, or you want to make a custom installation within your infrastructure or any public cloud (AWS, Google, Azure, etc.), Label Studio Enterprise works on-premises. It is a self-contained version (no Internet connection is required) of the Platform, no data will leave your infrastructure. To make the installation the most accessible, we offer a Docker image. */}
 
 Label Studio establishes secure connections to the web application by enforcing HTTPS and secured cookies.
-
-<div className="opensource-only">
-
-If you're running the open source version in production, restrict access to the Label Studio server.
-Restrict access to the server itself by opening only the [required ports](/guide/install#Port_requirements) on the server.
-
-</div>
 
 ## Secure user access to Label Studio
 
@@ -30,26 +19,12 @@ Secure user access to Label Studio to protect data integrity and allow changes t
 
 Each user must create an account with a password between 8 and 128 characters, allowing you to track who has access to Label Studio and which actions they perform.
 
-<div className="opensource-only">
-
-You can restrict signup to only those with a link to the signup page, and the invitation link to the signup page can be reset. See [Set up user accounts for Label Studio](/guide/signup) for more.
-
-</div>
-
-<div className="enterprise-only">
-
 You can restrict signup to only those with a link to the signup page, and the invitation link to the signup page can be reset. See [Set up user accounts for Label Studio](/guide/manage_users#Signup) for more.
-
-</div>
-
-<div className="enterprise-only">
 
 If you're using Label Studio Enterprise, you can further secure user access in many ways:
 
 - Assign specific roles to specific user accounts to set up role-based access control. For more about the different roles and permissions in Label Studio Enterprise, see [Manage access to Label Studio](/guide/manage_users).
 - Set up organizations, workspaces, and projects to separate projects and data across different groups of users. Users in one organization cannot see the workspaces or projects in other organizations. For more about how to use organizations, workspaces, and projects to secure access, see [Organize projects in Label Studio](/guide/manage_users#Roles-and-workspaces).
-
-</div>
 
 ## Secure API access to Label Studio
 
@@ -61,7 +36,6 @@ When deploying Label Studio into a production environment, set the `SSRF_PROTECT
 
 This variable is disabled by default to support users who are working with data in their local environments. However, it should be enabled in production usage.
 
-
 ## Secure access to data in Label Studio
 
 Data in Label Studio is stored in one or two places, depending on your deployment configuration.
@@ -69,7 +43,6 @@ Data in Label Studio is stored in one or two places, depending on your deploymen
 - Project settings and configuration details are stored in Label Studio's internal database.
 - Input data (texts, images, audio files) is hosted by external data storage and provided to the Label Studio by using URI links. The data is not stored in Label Studio directly, the content is retrieved client-side only.
 - Project annotations are stored in the internal database, and optionally can be stored in a local file directory, a Redis database, or cloud storage buckets on Amazon Web Services (AWS), Google Cloud Platform (GCP), or Microsoft Azure.
-
 
 <Tip>
 There are several advanced security options for AWS and GCP storage, including: 
@@ -139,29 +112,17 @@ To ensure maximum security and isolation of your data behind a VPC, only allow a
 
 <img width="49%" style={{display: 'inline-block'}} src="/images/storages/cloud-storage-vpn.jpg" alt="Label Studio + Cloud Storage VPC" className="make-intense-zoom" />
 
-
-
 ### Secure access to Redis storage
 
 If you use Redis as an external storage database for data and annotations, the setup supports TLS/SSL and requires the Label Studio client to be authenticated to the database with a valid certificate.
-
-<div className="enterprise-only">
 
 ## Audit logging
 
 Label Studio Enterprise automatically logs all user activities so that you can monitor the activities being performed in the application.
 
-</div>
-
 ## Information collected by Label Studio
 
 Label Studio collects usage statistics including the number of page visits, number of annotations, and data types being used in labeling configurations that you set up. The information we collect helps us improve the experience of labeling data in Label Studio and helps us plan future data types and labeling configurations to support.
-
-<div className="opensource-only">
-
-You can disable data collection by setting the environment variable `COLLECT_ANALYTICS` to `False`.
-
-</div>
 
 ## Add self-signed certificate to trusted root store
 
@@ -219,7 +180,6 @@ rqworker:
 ```
   </div>
 </div>
-
 
 ### Add self-signed certificate to trusted root store for S3 storage
 

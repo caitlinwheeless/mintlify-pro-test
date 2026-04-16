@@ -15,7 +15,6 @@ Label and annotate your data with the open source data labeling tool, Label Stud
 
 You can also [collaborate with other annotators](#Label-with-collaborators) to improve the quality of your labeled data. 
 
-
 ## Start labeling
 
 Some labeling tasks can be complicated to perform, for example, labeling that includes text, image, and audio data objects as part of one dataset and labeling task, or creating relations between annotations on a labeling task. This section includes guidance on how to perform more complex labeling tasks, such as labeling with relations, overlapping regions, selected tasks, or changing labels. 
@@ -103,16 +102,11 @@ If they are not done with their annotation, then they can simply check to make s
 
 <img src="../images/submit-and-exit.png" className="gif-border" />
 
-
 ## Label with collaborators
 
 In both Label Studio and Label Studio Enterprise, you can label tasks with collaborators. Tasks are locked while someone performs annotations so that you don't accidentally overwrite the annotations of another annotator. After the other annotator finishes with the task, it can appear in your queue for labeling if the minimum annotations per task is set to more than one. By default, tasks only need to be annotated by one annotator. 
 
-<div className="enterprise-only">
-
 If you're using Label Studio Enterprise and want more than one annotator to annotate tasks, <a href="setup_project.html">update the project settings</a>. After you update the minimum annotations required per task, annotators can use the Label Stream workflow to label their tasks.  
-
-</div>
 
 If you want to label tasks more than once, even if the minimum annotations required is set to one, do the following:
 
@@ -123,7 +117,6 @@ To label tasks multiple times while the minimum annotations required is set to o
 4. Click **Submit** to save your annotation.
 5. Click the next task in the data manager to open the quick labeling view for that task and repeat steps 2-4.
 
-
 ## Perform ML-assisted labeling with interactive preannotations
 
 If you have a machine learning backend set up to [get interactive preannotations](ml#Get-interactive-preannotations), you can choose whether to use those predictions while you label. 
@@ -131,20 +124,17 @@ If you have a machine learning backend set up to [get interactive preannotations
 1. After you start labeling, you can enable **Auto-Annotation** to see and use the smart option to assign a label to draw a shape, mask, or assign a keypoint. After using the smart option to draw on an image, or labeling a text or HTML span, the ML backend returns predictions.  
 2. For image labeling, you can choose whether to **Auto accept annotation suggestions** after you enable auto-annotation. If you automatically accept annotation suggestions, regions show up automatically and are immediately created. If you don't automatically accept suggestions, the regions appear, but you can reject or approve them manually, either individually or all at once. Predicted text regions are automatically accepted.
 
-
 ## Customize the labeling interface 
 
 Click the settings icon when labeling to configure the labeling interface to suit your labeling use case. 
 
 For example, keep a label selected after creating a region, display labels on bounding boxes, polygons and other regions while labeling, and show line numbers for text labeling.
 
-
 <img style={{maxWidth: '600px'}} src='../images/lsf-settings.png' className="gif-border" />
 <br/>
 <i>Figure 2: Customize the labeling interface  </i>
 
 You can also modify the layout of the screen, hide or show predictions, annotations, or the results panel, and hide or show various controls and buttons.
-
 
 ## Advanced image labeling
 
@@ -272,7 +262,6 @@ You can edit regions with a focus on labeling. You can zoom in and precise contr
 <br />
 <img src="/images/region-editor.png" style={{opacity: '0.8'}} className="gif-border"/>
 <i>Figure 12: Edit regions using different attributes</i>
-
 
 <Note>
 In the upcoming releases, video segmentation will be available to control keyframes, animations, and custom metadata. 

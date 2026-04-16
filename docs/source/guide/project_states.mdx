@@ -55,8 +55,6 @@ stateDiagram-v2
 | **In Review** | All tasks have received at least one review, but reviews have not yet been completed for all tasks. <br/><br/>Whether your project enters this state depends on your project settings and task states. See [Additional notes](#Additional-notes) below. |
 | **Done** | All tasks have been completed. |
 
-
-
 ## Task states
 
 ![Screenshot of tasks states](/images/project/task-states.png)
@@ -110,14 +108,12 @@ If your overlap is `1`, the task immediately progresses to the next state as soo
 
 If your overlap is greater than `1`, the task will sit in the **Annotating** state until you've reached the required number of annotations. 
 
-
 ##### Needs Review state
 
 There are two settings that can cause tasks (and by extension, the project) to skip the **Needs Review** state:
 
 * If you have [**Review > Reviewing Options > Review only manually assigned tasks**](project_settings_lse#reviewing-options) enabled, but have not assigned any reviewers. 
 * If you have [**Review > Task Ordering > Random**](project_settings_lse#task-ordering) selected and the **Task limit (%)** set to `0`. 
-
 
 ##### In Review state
 
@@ -154,14 +150,11 @@ For example, if you have 10 tasks:
 
 Your project will be in the **Annotating** state, even though you do not have any tasks in the **Annotating** state.
 
-
-
 ### API values
 
 If you are using the [SDK](https://api.labelstud.io/api-reference/introduction/getting-started), the API values for each state are as follows. 
 
 Projects:
-
 
 | Project state | API value | 
 |-----------|----------|

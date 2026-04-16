@@ -9,7 +9,6 @@ In this tutorial, you'll learn how to use **Label Studio** to create a high-qual
 
 By the end, you'll have a reproducible workflow to **measure and compare model performance** on your own data — moving beyond intuition and into measurable, data-driven insights.
 
-
 ## Label Studio Requirements
 
 This tutorial showcases one or more features available only in Label Studio paid products. We recommend [creating a Starter Cloud trial](https://app.humansignal.com/user/cloud-trial?offer=d9a5&) to follow the tutorial.
@@ -24,7 +23,6 @@ For example, if you're detecting phishing emails, your benchmark should include 
 
 👉 To learn more about the role of benchmarks in AI evaluation, see [**Why Benchmarks Matter for Evaluating LLMs**](https://labelstud.io/blog/why-benchmarks-matter-for-evaluating-llms/).
 
-
 ## ⚖️ Why are benchmarks important?
 
 Benchmarks are the backbone of **model evaluation and continuous improvement**. Without them, it’s hard to know if a new model or prompt version actually performs better — or just seems to.  
@@ -38,7 +36,6 @@ A good benchmark lets you:
 In other words, benchmarks turn subjective “it looks better” claims into **objective evidence**.  
 For a deeper look at this idea, check out [**How to Build AI Benchmarks That Evolve with Your Models**](https://labelstud.io/blog/how-to-build-ai-benchmarks-that-evolve-with-your-models/).
 
-
 ## ⚙️ How can I use Label Studio to create my benchmark?
 
 Label Studio gives you everything you need to create, manage, and evolve your benchmark — all in one platform.  
@@ -49,7 +46,6 @@ With it, you can:
 
 This makes your benchmarks *living assets* that adapt as your data and models grow.  
 For inspiration, see how others are building domain-specific benchmarks in [**How LegalBenchmarks.AI Built a Domain-Specific AI Benchmark**](https://labelstud.io/blog/how-legalbenchmarks-ai-built-a-domain-specific-ai-benchmark/).
-
 
 ## 🎓 What is this tutorial going to teach me?
 
@@ -81,7 +77,6 @@ You’ll need:
 - An **API key** from your user settings (you’ll use it to connect via the SDK)  
 - Access to a **workspace** where you can create projects
 
-
 ### 🧩 What you’ll be using
 We’ll use the **Label Studio SDK** to:
 - Connect to your Label Studio instance  
@@ -93,19 +88,14 @@ Everything happens programmatically — no need to click around the UI (though y
 
 Let's dive in 🚀
 
-
 ### ⚙️ Install the SDK and connect to Label Studio
 
 Let’s start by installing the SDK, configuring your connection details, and testing the connection.
-
-
-
 
 ```python
 # Run this cell to install the Label Studio SDK
 !pip install label-studio-sdk>=2.0.11
 ```
-
 
 ```python
 # Configure your connection details
@@ -120,7 +110,6 @@ API_KEY = '<Token>'
 # Find the Workspace ID in the URL when you click on it in the sidebar
 WORKSPACE_ID = 0
 ```
-
 
 ```python
 # Check you can connect to Label Studio
@@ -139,7 +128,6 @@ print(f'Connected as {user.email}')
 2. Next, we’ll **download a dataset of raw emails** that we’ll use as the benchmark data.
 
 3. Finally, we’ll **import the dataset as tasks into Label Studio**, so we can begin labeling and building our benchmark.
-
 
 ```python
 label_config = '''
@@ -197,7 +185,6 @@ project = ls.projects.create(
 )
 ```
 
-
 ```python
 # Download emails dataset
 import pandas as pd
@@ -206,18 +193,12 @@ raw_emails = pd.read_csv(DATASET_URL)
 raw_emails.head()
 ```
 
-
 ```python
 # Import raw emails as tasks to Label Studio
 ls.projects.import_tasks(project.id, request=raw_emails.to_dict(orient='records'))
 ```
 
-
-
-
     ProjectsImportTasksResponse(annotation_count=None, could_be_tasks_list=None, data_columns=None, duration=None, file_upload_ids=None, found_formats=None, predictions_count=None, task_count=None, import=3058032)
-
-
 
 ### Label Your Benchmark
 
@@ -235,14 +216,12 @@ These labeled tasks will serve as your **ground truth** — the foundation for e
 Mark your completed annotations as **ground truth**.  
 This tells Label Studio which annotations to treat as the **source of truth** — enabling more accurate and meaningful **agreement metrics** when comparing model predictions against human labels.
 
-
 ```python
 # Set your annotations as ground truth
 ls.actions.create(id='set_ground_truths', project=project.id, request_options={'additional_body_parameters': {'annotator': user.id}})
 ```
 
     None
-
 
 ### Configure Prompts for Model Predictions
 
@@ -262,7 +241,6 @@ We’ll create a **prompt** linked to our project, then generate a **model versi
 
 Each model version will run inference on **all tasks in the project**, producing **one prediction per model per task** — ready for comparison against the ground truth.
 
-
 ```python
 # Create new prompt for our project
 prompt = ls.prompts.create(
@@ -271,7 +249,6 @@ prompt = ls.prompts.create(
     input_fields=['raw_email'],
 )
 ```
-
 
 ```python
 # We will be testing with 4 models from 2 different providers
@@ -295,7 +272,6 @@ for provider in providers:
       models[provider.provider] = model_info
 
 ```
-
 
 ```python
 PROMPT = '''
@@ -331,7 +307,6 @@ for provider, info in models.items():
 
 ```
 
-
 ```python
 # Run inference for each version
 import time
@@ -364,12 +339,10 @@ wait_for_runs_to_complete(versions)
     version  46552  completed
     version  46549  completed
 
-
 ### Collect Run Costs
 
 Let’s retrieve the **costs for each model run** to include them as additional data points.  
 Tracking run costs alongside performance metrics helps you understand the **trade-off between accuracy and efficiency** for each model.
-
 
 ```python
 # Collect costs from each run
@@ -384,7 +357,6 @@ for version in versions:
       'Prompt Token Count': cost.values.get('prompt_tokens_count'),
   }
 ```
-
 
 ```python
 import pandas as pd
@@ -403,11 +375,9 @@ Now that all model predictions are complete, we can use the **agreement metrics*
 Let’s start by looking at the **overall agreement** each model achieved against the ground truth annotations.  
 This metric shows the **percentage of agreement** between each model’s predictions and your benchmark labels — giving a quick snapshot of model accuracy.
 
-
 ```python
 def get_version_name(prompt, version):
   return f'{prompt.title}__{version.title}'
-
 
 gt_agreements = []
 for version in versions:
@@ -415,7 +385,6 @@ for version in versions:
   agreement = ls.projects.stats.model_version_ground_truth_agreement(id=project.id, model_version=version_name)
   gt_agreements.append(agreement)
 ```
-
 
 ```python
 import matplotlib.pyplot as plt
@@ -453,7 +422,6 @@ This view highlights where models **aligned with** or **deviated from** the benc
 
 These insights are extremely valuable for identifying **where models struggle** and **which areas to focus on** when fine-tuning to achieve better results.
 
-
 ```python
 # Agreement per label
 
@@ -463,7 +431,6 @@ for version in versions:
   agreement = ls.projects.stats.model_version_ground_truth_agreement(id=project.id, model_version=version_name, per_label=True)
   per_label_agreements.append(agreement)
 ```
-
 
 ```python
 import pandas as pd
