@@ -107,7 +107,6 @@ For example, adjust your Text tag like follows:
 
 If you want to add context to specific NER spans, you can set up conditional **per-region labeling** with your NER template.
 
-
 For example, prompt annotators to choose the relevance of every text span in the text sample is:
 ```xml
 <Choices name="relevance" toName="text" perRegion="true">
@@ -139,7 +138,6 @@ If you want to filter a long list of labels, add the [Filter](/tags/filter) tag 
 </Labels>
 ```
 The `toName` parameter on the Filter tag references the `name` parameter for the [Labels](/tags/labels) tag. You can also specify a `hotkey` to use for the filter text box, and set the `minlength` parameter to specify the minimum number of characters typed into the filter before the list of labels is filtered. 
-
 
 ## Related tags
 

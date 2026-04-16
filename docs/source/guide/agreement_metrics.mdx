@@ -14,7 +14,6 @@ The following metrics are available for control tags out-of-the-box in Label Stu
 |--------|-------------|------|-------------|
 | **Exact Match** | Evaluates whether annotation results exactly match, with optional label weights | All tags | Pairwise, Consensus |
 
-
 ## Choices and taxonomy
 
 Categorical metrics are used for categorical control tags, such as `Choices` and `Taxonomy`.
@@ -400,7 +399,6 @@ For example, with a threshold of 0.5:
 With a threshold of 0.8:
 - Score 0.76 < 0.8 → **0.0** (no match)
 
-
 ### IoU for other region types
 
 The IoU concept applies to more than just rectangular bounding boxes. Label Studio adapts the same core idea for different annotation types:
@@ -488,8 +486,6 @@ With a threshold of 0.75:
 - Score `0.50` < `0.75` → **0.0** (no match)
 
 The threshold variant is required when using the consensus methodology.
-
-
 
 ### Text Similarity
 
@@ -769,6 +765,4 @@ Using the taxonomy above, here's how the three available metrics score the same 
 - **Exact Match** is strictest — any difference at all scores 0.0.
 - **Common Labels Matches** gives credit when some of the selected paths match exactly, but not for shared ancestry.
 - **Common Subtree Matches** is most lenient — it recognizes that selecting two items in the same branch of the taxonomy represents partial agreement.
-
-
 

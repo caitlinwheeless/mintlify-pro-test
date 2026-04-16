@@ -57,7 +57,6 @@ Use the [`Choice`](/tags/choice) tag to specify the taxonomy. Nest choices under
 </View>
 ```
 
-
 ## Taxonomies defined using a remote source
 
 You can modify the template to call an external taxonomy. There are two types of external taxonomies:
@@ -115,7 +114,6 @@ The `apiUrl` must be accessible to Label Studio. You can accomplish this in seve
 
 3. When configuring your labeling interface, format your `apiUrl` using the appropriate URL format for your cloud service provider: `gs://`, `s3://`, `azure-blob://`. 
 
-
 <Warning title="Note on setting up cloud storage">
 If you perform a sync operation on a storage connection that contains your taxonomy, then the entire taxonomy will be pulled into Label Studio as a task. The result may be severely degraded Label Studio performance, depending on the size of your taxonomy. This can present a problem when you are using cloud storage synchronization to populate Label Studio tasks. 
 
@@ -129,7 +127,6 @@ There are several workarounds for this issue:
 The basic requirements are to use JSON formatting, wrap the taxonomy structure in an `items` object, and include `value` properties for every item. 
 
 In this example, you are using `children` to specify child nodes. All values are loaded in a single request. 
-
 
 ```json
 {
@@ -167,23 +164,19 @@ In this example, you are using `children` to specify child nodes. All values are
 }
 ```
 
-
 ### API taxonomies - Beta 🧪
 
 When using this format, child nodes are only loaded when requested. Parent nodes are specified using `"isLeaf": false` and child nodes are called through the `path` parameter.
 
 For example, `taxonomy_api_url?path=node1` where `node1` is the alias (if specified) or the value (if no alias is specified). Therefore you must ensure that your API supports the `path` parameter. 
 
-
 #### Taxonomy API spec
-
 
 `GET /?[path=value1]&[path=value2]&...&[path=valueN]`
 
 Returns a JSON object with an `items` key, whose associated value is a list of Taxonomy items. 
 
 If `path` query params are provided, return the direct children of `valueN`. Note that for `i` in range `1..N-1`, `value[i+1]` must be a child node of `value[i]`.
-
 
 ```json
 {
@@ -256,8 +249,6 @@ See the following taxonomy (https://cities-nu.vercel.app/labels2) for an example
 ```
 
 When the user expands the "Africa" option, the following request is sent to retrieve the child values: https://cities-nu.vercel.app/labels2?path=AF
-
-
 
 ## Related tags
 

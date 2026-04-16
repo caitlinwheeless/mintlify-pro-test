@@ -10,7 +10,6 @@ This tutorial uses **ReactCode templates**, a feature available in **Label Studi
 
 After section 2, you will need a running Label Studio Enterprise instance and an API key from your account settings.
 
-
 ## 1. Installation & Setup
 
 First, install the required dependencies:
@@ -40,7 +39,6 @@ ANTHROPIC_API_KEY=your_anthropic_api_key
 **LangSmith Setup**: Visit [LangSmith Documentation](https://docs.langchain.com/langsmith/home) to create an account, get your API key, and set up a project.
 
 **Label Studio Setup**: Visit [Label Studio Documentation](https://labelstud.io/guide/access_tokens) for installation instructions and how to generate an API token from your account settings.
-
 
 ```python
 import os
@@ -86,7 +84,6 @@ This tutorial connects LangSmith's engineering-centric observability tooling wit
 - Collaborative workflow: multiple SMEs can annotate the same traces
 - Structured output feeds directly into quality reports, prompt improvements, and LLM-as-a-judge pipelines
 
-
 ## 2. Label Studio ReactCode Config
 
 > **Skip the setup — clone the project directly**
@@ -125,7 +122,6 @@ A **trace-level verdict** (Pass / Fail / Mixed) in the bottom bar captures overa
   <img src="https://hs-sandbox-pub.s3.us-east-1.amazonaws.com/blogs-draft/tutorial-llm-reactcode-langsmith.png" alt="ReactCode 3-panel trace review UI for Langsmith" style={{maxWidth: '1000px', width: '100%', height: 'auto', border: '1px solid #ddd', borderRadius: '8px'}} />
 </div>
 
-
 ```python
 # ReactCode 3-panel trace annotation config (self-contained — no external files needed)
 # The full ~40KB React component is inlined as _TEMPLATE_JS (see notebook for complete code).
@@ -160,7 +156,6 @@ Otherwise, this cell creates a ReAct agent with multiple tools and runs 4 multi-
 Extended thinking lets Claude reason through complex, ambiguous problems step-by-step before responding. The thinking content is captured in the trace and visible in the Label Studio UI.
 
 LangSmith auto-instruments all LangChain/LangGraph calls when `LANGSMITH_TRACING=true` is set — no callback handler needed.
-
 
 ```python
 GENERATE_TRACES = True  # Set to False if you already have traces in LangSmith
@@ -250,7 +245,6 @@ else:
 
 Uses the `langsmith` SDK to fetch traces (runs) from your project. LangSmith runs are hierarchical — each trace is a tree of runs sharing the same `trace_id`.
 
-
 ```python
 from langsmith import Client
 from typing import Any, Dict, List
@@ -269,17 +263,14 @@ LangSmith stores traces as a hierarchy of typed runs (`llm`, `tool`, `chain`). T
 
 Each turn carries: `role`, `content`, `tool_name`, `tool_input`, `tool_calls`, `model`, `usage` (token counts), `duration_ms`, and `thinking` (Claude extended thinking blocks, when present).
 
-
 ```python
 import json as _json
-
 
 def _to_str(x):
     if x is None: return ''
     if isinstance(x, str): return x
     try: return _json.dumps(x, indent=2, default=str)
     except: return str(x)
-
 
 def _extract_content(obj):
     if obj is None: return ''
@@ -294,7 +285,6 @@ def _extract_content(obj):
         return '\n'.join(parts) if parts else _to_str(obj)
     return str(obj)
 
-
 def _duration_ms(start_str, end_str):
     if not start_str or not end_str: return None
     try:
@@ -302,7 +292,6 @@ def _duration_ms(start_str, end_str):
         def _parse(s): return datetime.fromisoformat(str(s).replace('Z', '+00:00'))
         return int((_parse(end_str) - _parse(start_str)).total_seconds() * 1000)
     except: return None
-
 
 def _split_thinking(content):
     """Split Anthropic extended-thinking content blocks into (text, thinking)."""
@@ -316,7 +305,6 @@ def _split_thinking(content):
             elif isinstance(block, str): text_parts.append(block)
         return '\n\n'.join(text_parts), '\n\n'.join(thinking_parts) or None
     return str(content) if content else '', None
-
 
 def normalize_langsmith_trace(root_run, all_runs):
     """Convert LangSmith runs into the unified trace schema.
@@ -434,13 +422,11 @@ def normalize_langsmith_trace(root_run, all_runs):
         'turns': turns,
     }
 
-
 print('✓ Normalization functions defined')
 ```
 ## 6. Fetch, Normalize, and Import into Label Studio
 
 Fetches traces from LangSmith, normalizes them, creates a Label Studio project with the ReactCode config, and imports the tasks.
-
 
 ```python
 from label_studio_sdk import LabelStudio
@@ -449,17 +435,14 @@ from typing import Any, Dict, List
 
 _REQUEST_OPTS = RequestOptions(timeout_in_seconds=120)
 
-
 def create_project(ls_host: str, api_key: str, title: str, label_config: str) -> int:
     client = LabelStudio(base_url=ls_host, api_key=api_key)
     project = client.projects.create(title=title, label_config=label_config, request_options=_REQUEST_OPTS)
     return int(project.id)
 
-
 def import_tasks(ls_host: str, api_key: str, project_id: int, tasks: List[Dict[str, Any]]) -> Any:
     client = LabelStudio(base_url=ls_host, api_key=api_key)
     return client.projects.import_tasks(id=project_id, request=tasks, return_task_ids=True)
-
 
 if not LABEL_STUDIO_API_KEY:
     raise RuntimeError('Missing LABEL_STUDIO_API_KEY — set it in your .env file.')
@@ -523,7 +506,6 @@ print(f'\nDone! Open your project: {LABEL_STUDIO_HOST.rstrip("/")}/projects/{pro
 - **Custom taxonomy**: Edit the `_TEMPLATE_JS` variable in the label config cell to add failure modes specific to your domain
 - **Braintrust / Langfuse**: See companion tutorials for other observability platforms
 
-
 ## Summary
 
 This tutorial demonstrated the complete workflow from LangSmith traces to expert evaluation:
@@ -538,7 +520,6 @@ This tutorial demonstrated the complete workflow from LangSmith traces to expert
 ### Key Takeaway
 
 LangSmith excels at automatic trace instrumentation and hierarchical run inspection during development. Label Studio Enterprise provides the collaborative, expert-driven evaluation framework — with the ReactCode interface giving domain experts an intuitive turn-by-turn review experience. The two tools complement each other throughout the AI development lifecycle.
-
 
 ## References
 

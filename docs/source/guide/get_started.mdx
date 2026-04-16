@@ -12,21 +12,9 @@ Label Studio is an open source data labeling tool that supports multiple project
 
 - Integrate Label Studio with machine learning models to supply predictions for labels (pre-labels), or perform continuous active learning. See [Set up machine learning with your labeling process](ml).
 
-<div className="enterprise-only">
-
-- Use [Label Studio Enterprise as a cloud offering](https://humansignal.com/platform/).
-
-</div>
-
-<div className="opensource-only">
-
 Label Studio is also available an [Enterprise cloud service](https://humansignal.com/platform/) with enhanced security (SSO, RBAC, SOC2), team management features, data discovery, analytics and reporting, and support SLAs. A [free trial is available](https://humansignal.com/free-trial) to get started quickly and explore the enterprise cloud product.
 
-</div>
-
 ## Interface
-
-<div className="opensource-only">
 
 <br />
 <center><i>Project List Screenshot</i></center>
@@ -38,29 +26,9 @@ Label Studio is also available an [Enterprise cloud service](https://humansigna
 <center><i>Quick View Screenshot</i></center>
 <img className="make-intense-zoom" src="/images/terms/os/project--data-manager--quick-view-min.png" />
 
-</div>
-
-<div className="enterprise-only">
-
-<br />
-<center><i>Project List Screenshot</i></center>
-<img className="make-intense-zoom" src="/images/terms/ent/workspace-min.png" />
-<br /><br />
-<center><i>Data Manager Screenshot</i></center>
-<img className="make-intense-zoom" src="/images/terms/ent/project--data-manager-min.png" />
-<br /><br />
-<center><i>Quick View Screenshot</i></center>
-<img className="make-intense-zoom" src="/images/terms/ent/project--data-manager--quick-view-min.png" />
-
-</div>
-
-
-
 ## Labeling workflow
 
 Start and finish a labeling project with Label Studio by following these steps:
-
-<div className="opensource-only">
 
 1. [Install Label Studio](install).
 2. [Start Label Studio](start).
@@ -70,21 +38,6 @@ Start and finish a labeling project with Label Studio by following these steps:
 6. [Import data as labeling tasks](tasks).
 7. [Label and annotate the data](labeling).
 8. [Export the labeled data or the annotations](export).
-
-</div>
-
-<div className="enterprise-only">
-
-1. [Create accounts for Label Studio](manage_users#Signup). Create an account to manage and set up labeling projects.
-2. [Restrict access to the project](manage_users). Set up role-based access control. Only available in Label Studio Enterprise Edition.
-3. [Set up the labeling project](setup_project). Define the type of labeling to perform on the dataset and configure project settings.
-4. [Set up the labeling interface](setup). Add the labels that you want annotators to apply and customize the labeling interface.
-5. [Import data as labeling tasks](tasks).
-6. [Label and annotate the data](labeling).
-7. [Review the annotated tasks](quality). Only available in Label Studio Enterprise Edition.
-8. [Export the labeled data or the annotations](export).
-
-</div>
 
 ## Label Studio citations
 
@@ -106,15 +59,11 @@ If you would like to cite Label Studio, you can add the following information to
 
 ## Architecture
 
-<div className="opensource-only">
-
 <Warning title="Enterprise">
 You can use any of the Label Studio components in your own tools, or customize them to suit your needs. Before customizing Label Studio extensively, you might want to review Label Studio Enterprise Edition to see if it already contains the relevant functionality you want to build. See [Label Studio Features](https://labelstud.io/guide/label_studio_compare.html) for more.
 </Warning>
-</div>
 
 The component parts of Label Studio are available as modular extensible packages that you can integrate into your existing machine learning processes and tools.
-
 
 | Module   | Technology      | Description      |
 | --------------- | ----------------------------- | ------------------------------------------------------------- |
@@ -125,7 +74,4 @@ The component parts of Label Studio are available as modular extensible packages
 
 <br />
 <div style={{margin: 'auto', textAlign: 'center'}}><img src="/images/ls-modules-scheme.png"/></div>
-
-
-
 

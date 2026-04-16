@@ -20,7 +20,6 @@ Before upgrading, review the steps outlined in [Upgrade Label Studio Enterprise]
 
 *Mar 18, 2026*
 
-
 Helm Chart version: [2.0.1](https://github.com/HumanSignal/charts/blob/master/heartex/label-studio/Chart.yaml)
 
 ### Feature updates
@@ -45,13 +44,6 @@ A new [custom permission](admin_permissions) is available to control who can acc
 
 Fixed multiple issues related to SSO/SAML and SCIM setup, provisioning, and mapping. 
 
-
-
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2331md"></a>
 
@@ -66,11 +58,6 @@ Helm Chart version: [2.0.0](https://github.com/HumanSignal/charts/blob/master/he
 ### Bug fixes
 
 - Fixed an issue with unnecessary SDK endpoint caching in on-prem environments, leading to performance improvements. 
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2330md"></a>
@@ -170,7 +157,6 @@ Member details:
 
 ![Screenshot](/images/releases/2-33-members-details.avif)
 
-
 #### Interactive view for task source
 
 When clicking **Show task source \<\>** from the Data Manager, you will see a new **Interactive** view.
@@ -178,7 +164,6 @@ When clicking **Show task source \<\>** from the Data Manager, you will see a 
 From here you can filter, search, and expand/collapse sections in the task source. You can also selectively copy sections of the JSON and toggle whether to show the resolved URIs. 
 
 ![Screenshot](/images/releases/2-33-source.avif)
-
 
 #### Set strict overlap for annotators
 
@@ -196,8 +181,6 @@ Note that strict enforcement only applies towards annotations created by users i
 
 ![Screenshot](/images/releases/2-33-strict2.avif)
 
-
-
 #### Configure continuous annotator evaluation
 
 Previously, when configuring [**annotator evaluation**](https://docs.humansignal.com/guide/project_settings_lse#annotator-eval) against ground truth tasks, you could configure exactly how many ground truth tasks each annotator should see as they begin annotating. The remaining ground truth tasks would be shown to each annotator depending on where they are and the task ordering method.
@@ -214,8 +197,6 @@ You can use this as a way to ensure that not all annotators see the same ground 
 
 ![Screenshot](/images/releases/2-33-continuous2.avif)
 
-
-
 #### Restrict Prompts evaluation for tasks without predictions
 
 There is a new option to only run a Prompt against tasks that do not already have predictions.
@@ -223,7 +204,6 @@ There is a new option to only run a Prompt against tasks that do not already hav
 This is useful for when you have failed tasks or want to target newly added tasks.
 
 ![Screenshot](/images/releases/2-33-prompts.avif)
-
 
 #### Improvements to the template builder
 
@@ -240,7 +220,6 @@ This is useful for when you have failed tasks or want to target newly added task
     When working in the template builder, you can now use Ctrl + F to search the your labeling configuration XML.
 
     ![Screenshot](/images/releases/2-33-ctrf.png)
-
 
 #### Improvements to analytics
 
@@ -260,7 +239,6 @@ There have been several improvements to analytics charts:
 - When viewing the Member Performance dashboard, Managers will now only be able to see users who are members of projects or workspaces in which the Manager is also a member.
 
     Previously, Managers could see the full organization user list, but could only see user metrics for projects in which the Manager was also a member.
-
 
 #### Added support for latest Anthropic models
 
@@ -315,9 +293,6 @@ The following models have been deprecated:
     <img src="/images/releases/2-33-tooltip.png" style={{maxWidth: '500px'}} alt="Screenshot" /> 
 * Updated appearance and guidance text for the text area component. 
 
-
-
-
 **Project settings**
 
 * You can now set [annotation overlap](https://docs.humansignal.com/guide/project_settings_lse#overlap) up to 500 annotations. Previously this was restricted to 20 when setting it through the UI.
@@ -341,8 +316,6 @@ The following models have been deprecated:
 - If you have a published project that is in a shared workspace and you move it to your Personal Sandbox workspace, the project will automatically revert to an unpublished state.
 
     Note that published projects in Personal Sandboxes were never visible to other users. This change is simply to support upcoming enhancements to project work states.
-
-
 
 ### Security
 
@@ -458,12 +431,6 @@ The following models have been deprecated:
 
 - Fixed an issue with inconsistent expand/collapse icons on dashboard pages.
 
-
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2321md"></a>
 
@@ -479,12 +446,6 @@ Helm Chart version: [2.0.0](https://github.com/HumanSignal/charts/blob/master/he
 
 - Fixed an issue where the Owner role could not be updated in organizations that use Stripe billing.
 - Fixed an issue where API token creation was not generating activity log entries. 
-
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2320md"></a>
@@ -590,7 +551,6 @@ Annotation tabs have the following improvements:
 **After:**
 
 <img src="/images/releases/2-32-tabs-after.png" style={{maxWidth: '500px'}} alt="Screenshot" />
-
 
 #### Unskippable tasks
 
@@ -735,10 +695,6 @@ Improved permission checks when retrieving the workspaces list.
 
 - Fixed an issue where the **Copy region link** action from the overflow menu for a region disappeared on hover.
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2310md"></a>
 
@@ -763,7 +719,6 @@ For more information, see the [PDF tag documentation](/tags/pdf) and [Blog - Inl
 <video style={{maxWidth: '600px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/2-31-PDF.mp4" />
 </video>
-
 
 #### New Markdown tag
 
@@ -812,7 +767,6 @@ For more information, see [**Agreement and Agreement (Selected) columns**](http
 
 <img src="/images/releases/2-31-agreement-selected.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
-
 #### New Analytics navigation and improved performance dashboard
 
 The Member Performance dashboard has been moved to a location under Analytics in the navigation menu. This page now also features an improved UI and more robust information about annotating and reviewing activities, including:
@@ -827,7 +781,6 @@ For more information, see [Member Performance Dashboard](dashboard_annotator).
 ![Screenshot](/images/releases/2-31-analytics2.png)
 
 ![Screenshot](/images/releases/2-31-analytics1.png)
-
 
 ### Feature updates
 
@@ -854,7 +807,6 @@ Or even evaluate entire websites using an iframe:
 ![Screenshot](/images/releases/2-31-chat5.png)
 
 ![Screenshot](/images/releases/2-31-chat6.png)
-
 
 #### Additional chat improvements
 
@@ -944,7 +896,6 @@ You can now use personal access tokens as well.
 - Added user session IDs to activity logs.
 
 - Added a `none` option for the `decoder` param for Audio tags, which will allow you to skip audio decoding for use cases that require labeling on the timeline but the file size is far too large to decode at one time. 
-
 
 #### Performance improvements
 
@@ -1053,9 +1004,6 @@ Improved permission checks when retrieving projects.
 
 - Fixed an issue in the agreement matrix on the Members dashboard in which clicking links would open the Data Manager with incorrect filters set.
 
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2300md"></a>
 
@@ -1066,7 +1014,6 @@ Improved permission checks when retrieving projects.
 *Oct 15, 2025*
 
 Helm Chart version: [1.11.5](https://github.com/HumanSignal/charts/blob/master/heartex/label-studio/Chart.yaml)
-
 
 ### New features
 
@@ -1129,7 +1076,6 @@ Previously you could sort by time, but this would reflect the time that the regi
   <source src="/images/releases/media-start-time-sort.mp4" />
 </video>
 
-
 #### Support for latest Gemini models
 
 When you add Gemini or Vertex AI models to Prompts or to the organization model provider list, you will now see the latest Gemini models.
@@ -1139,7 +1085,6 @@ When you add Gemini or Vertex AI models to Prompts or to the organization model 
 **gemini-2.5-flash**
 
 **gemini-2.5-flash-lite**
-
 
 #### JSON array input for the Table tag
 
@@ -1189,23 +1134,19 @@ The [Video tag](/tags/video) now has the following optional parameters:
 
 The default value for both parameters is `1`.
 
-
 ### Miscellaneous UX improvements
 
 - Owners and Admins will now see a shortcut from the Home page to the Annotator Performance Dashboard.
 
 - On [images](/tags/image), the `smoothing` parameter is now automatically set to `false` by default when using with the [BitmaskLabels tag](/tags/bitmasklabels).
 
-
 #### Multiple SDK enhancements
 
 We have continued to add new endpoints to our SDK. See our [**SDK releases**](https://github.com/HumanSignal/label-studio-sdk/releases).
 
-
 #### Performance improvements and optimizations
 
 Multiple performance optimizations for pages and actions.
-
 
 ### Breaking changes
 
@@ -1287,10 +1228,6 @@ If you build on top of our image, update your `FROM` line and replace `apt-ge
 
 - Fixed an issue where the **Start Reviewing** button was broken for some users.
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2290md"></a>
 
@@ -1351,7 +1288,6 @@ When adding cloud storage, the modal has now been redesigned to add clarity and 
 For example, you can now preview a list of files that will be imported in order to verify your settings.
 
 <img style={{maxWidth: '800px'}} src="/images/releases/2-29-cloud-storage-modal.png" alt="Screenshot"/>
-
 
 #### Debug custom agreement metrics
 
@@ -1417,7 +1353,6 @@ This will allow you to view model agreement as compared to annotators, other mod
 
 ![Screenshot](/images/releases/2-29-show-models.png)
 
-
 #### Set model provider API keys for an organization
 
 There is a new **Model Providers** page available at the organization level where you can configure API keys to use with LLM tasks.
@@ -1427,7 +1362,6 @@ If you have previously set up model providers as part of your Prompts workflow, 
 For more information, see [Model provider API keys for organizations](https://docs.humansignal.com/guide/model_providers).
 
 ![Screenshot](/images/releases/2-29-model-providers.png)
-
 
 #### Improved UX on the Organization page
 
@@ -1450,7 +1384,6 @@ Administrators and Owners can now opt in to get an email notification when a new
 Like all email preferences, this can be disabled and hidden for the whole organization on the **Organization > Usage and License** page. 
 
 ![Screenshot](/images/releases/2-29-not-activated.png)
-
 
 #### Apply labels from multiple `<Labels>` controls
 
@@ -1567,11 +1500,6 @@ Multiple performance optimizations, fine-tuning, and dependency cleanup.
 
 - Fixed an issue where the Info panel was showing conditional choices that were not relevant to the selected region.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2280md"></a>
 
@@ -1602,7 +1530,6 @@ For more information, see [BitmaskLabels](/tags/bitmasklabels).
 You can now [**configure global hotkeys**](hotkeys) for each user account. These are available from the **Account & Settings** page.
 
 ![Screenshot of hotkeys](/images/releases/2-28-hotkeys.png)
-
 
 #### Annotation summary by task
 
@@ -1708,7 +1635,6 @@ There is a new option on the **Members** page to export Annotation Summary data 
 
 ![Screenshot](/images/releases/2-28-export.png)
 
-
 #### Support for high-frequency rate time series data
 
 You can now annotate time series data on the sub-second decimal level.
@@ -1766,20 +1692,17 @@ When listing organization members via the API, you can use two new query params 
 
 - Improved status visibility when duplicating projects. 
 
-
 ### Breaking changes
 
 - `/api/projects/{project_id}/export` is deprecated
 
 - Page size on `/api/projects` API is now limited to 100 projects
 
-
 ### Security
 
 - Fixed a Koa.js XSS vulnerability tied to a redirect function.
 
 - Added improved password validation.
-
 
 ### Bug fixes
 
@@ -1845,10 +1768,6 @@ When listing organization members via the API, you can use two new query params 
 - Fixed an issue where the layout was incorrect when pinning Data Manager filters to the sidebar.
 - Fixed an issue where sorting was not working as expected when Data Manager filters were pinned.
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2261md"></a>
 
@@ -1862,13 +1781,6 @@ Helm Chart version: [1.11.1](https://github.com/HumanSignal/charts/blob/master/h
 
 - Fixed an issue where task data appeared in notification emails.
 - Fixed an issue where Redis usernames were not supported in the wait-for-redis deploy script.
-
-
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2260md"></a>
@@ -1902,7 +1814,6 @@ The Multichannel tag significantly improves the usability and correlation of tim
 <video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/timeline.mp4" />
 </video>
-
 
 #### Spectrogram support for audio analysis
 
@@ -2011,7 +1922,6 @@ Organization owners can use the new **Session Timeout Policies** fields to con
 
 Owners can configure both the maximum session age (total duration of a session) and the maximum time between activity (inactivity timeout).
 
-
 #### Miscellaneous UX improvements
 
 - Improved the message text seen when building templates using Ask AI.
@@ -2037,7 +1947,6 @@ Owners can configure both the maximum session age (total duration of a session) 
 - Webhooks are restricted to administrators.
 
 - Addressed multiple security vulnerabilities.
-
 
 ### Bug fixes
 
@@ -2105,7 +2014,6 @@ Owners can configure both the maximum session age (total duration of a session) 
 
 - Fixed an issue where the step parameter on the `<Number>` tag was not working as expected.
 
-
 - Fixed an issue where NER entities were misplaced when using Prompts.
 
 - Fixed an issue where the API call for rotating tokens was not setting the expiration correctly on new tokens.
@@ -2140,11 +2048,6 @@ Owners can configure both the maximum session age (total duration of a session) 
 
 - Fixed an issue where task agreement was not always calculated in cases where annotators skipped tasks.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2250md"></a>
 
@@ -2170,7 +2073,6 @@ You can find out more here:
 * [Prompts product page](https://humansignal.com/platform/prompts/)
 * [Blog - How to Generate Synthetic Data with Prompts in Label Studio](https://humansignal.com/blog/how-to-generate-synthetic-data-with-prompts-in-label-studio/)
 
-
 Installing Prompts requires license enablement and [additional install steps](install_prompts). Reach out to your CSM to enable a free trial!
 
 ![Stylized image of Prompts](/images/releases/dog-prompts.png)
@@ -2195,8 +2097,6 @@ A [new PDF tag](/tags/pdf) lets you directly ingest PDF URLs for classificatio
 
 This also simplifies the process for using PDFs with Prompts for summarization and classification tasks. 
 
-
-
 ### Enhancements
 
 #### KeyPointLabels exports for COCO and YOLO
@@ -2211,7 +2111,6 @@ This restriction has been removed, and you can now specify multiple tasks per JS
 
 For more information, see the examples in our [our docs](https://docs.humansignal.com/guide/storage#Off).
 
-
 #### Miscellaneous
 
 - The **Export Underlying Data** option was recently introduced and is available from the Annotations chart in the [annotator performance dashboard](dashboard_annotator). This allows you to export information about the tasks that the selected users have annotated. 
@@ -2219,7 +2118,6 @@ For more information, see the examples in our [our docs](https://docs.humansigna
     Previously, users were only identified by user ID within the CSV. With this update, you can also identify users by email.
 
 - User interface enhancements for the AI Assistant, including a new icon.
-
 
 ### Bug fixes
 
@@ -2236,12 +2134,6 @@ For more information, see the examples in our [our docs](https://docs.humansigna
 - Fixed an issue with cloud storage in which tasks would not resolve correctly if they referenced data in different buckets.
 
 - Fixed an issue where the drop-down menu to select a user role was overflowing past the page edge.
-
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2240md"></a>
@@ -2274,7 +2166,6 @@ Dark mode is not available for environments that use white labeling.
 ![Animated gif of dark mode](/images/releases/2-24-darkmode.gif)
 
 ![Screenshot of dark mode](/images/releases/2-24-dark-mode2.png)
-
 
 #### New Label Studio Home page
 
@@ -2374,7 +2265,6 @@ When you install the Label Studio SDK, you can now use the `label-studio-convert
 
 - Added a new API call to rotate JWT tokens: [POST api/token/rotate](https://app.heartex.com/api/token/rotate/)
 
-
 ### Security
 
 - Addressed a CSP issue by removing `unsafe-eval` usage.
@@ -2395,8 +2285,6 @@ When you install the Label Studio SDK, you can now use the `label-studio-convert
       Same as above, except using regex. 
     - `CORS_ALLOW_ALL_ORIGINS`  
         Set to `false` or `0` to reject all Origin header values (that is, allow no cross-origin requests). By default this is set to `true`. 
-
-
 
 ### Bug fixes
 
@@ -2435,11 +2323,6 @@ When you install the Label Studio SDK, you can now use the `label-studio-convert
 - Fixed an issue where forward and rewind hotkeys for audio were not working.
 
 - Fixed an issue where the bars in the Tasks graph on the project dashboard were not accurately grouped by `reviewed_at` or `completed_at`.
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2230md"></a>
@@ -2489,7 +2372,6 @@ We have renamed "Custom Scripts" to "Plugins." This is reflected in the UI and [
 
 - Multiple performance improvements for our [AI Assistant](ask_ai).
 
-
 ### Security
 
 - Made security improvements around the verbosity of certain API calls.
@@ -2501,7 +2383,6 @@ We have renamed "Custom Scripts" to "Plugins." This is reflected in the UI and [
 - Made security improvements around exception error messages.
 
 - Made security improvements around workspace permission checks.
-
 
 ### Bug fixes
 
@@ -2521,17 +2402,6 @@ We have renamed "Custom Scripts" to "Plugins." This is reflected in the UI and [
 
 - Fixed several small issues with how labeled regions appear when completing OCR tasks.
 
-
-
-
-
-
-
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2221md"></a>
 
@@ -2546,11 +2416,6 @@ Helm Chart version: 1.9.8
 ### Bug fixes
 
 - Fixed an issue where role changes with LDAP were broken. 
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2220md"></a>
@@ -2602,7 +2467,6 @@ You can now link directly to specific annotations or regions within an annotatio
 ![Screenshot of linking annotation](/images/releases/2-22-link-annotation.png)
 
 ![Screenshot of linking region](/images/releases/2-22-link-region.png)
-
 
 ### Enhancements
 
@@ -2685,12 +2549,6 @@ Made security improvements regarding org membership visibility.
 
 - Fixed an issue with the signup link styling for white labeled applications.
 
-
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2210md"></a>
 
@@ -2701,7 +2559,6 @@ Made security improvements regarding org membership visibility.
 *Feb 25, 2025*
 
 Helm Chart version: 1.9.5
-
 
 ### New features
 
@@ -2724,7 +2581,6 @@ There is a new toggle on the **Billing & Usage** page (only available to users i
 ![Screenshot of enable AI](/images/releases/2-21-ai-enable.png)
 
 ![Screenshot of AI banner](/images/releases/2-21-ai.png)
-
 
 ### Enhancements
 
@@ -2841,9 +2697,6 @@ The following feature flags have been marked stale or deleted, meaning they can 
 `fflag_feat_optic_378_limit_projects_per_page_to_ten_short`  
 `fflag_feat_optic_67_drag_and_drop_charts`  
 
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2201md"></a>
 
@@ -2895,7 +2748,6 @@ There is a new hotkey available for pausing and starting audio: `ctrl`+`p` (Win
 
 The video frame classification template is now available in the Label Studio app as well as [the documentation](/templates/video_frame_classification).
 
-
 #### Performance improvements
 
 Optimized the API calls made from the frontend within the members management and Data Manager users lists. Also optimized the Projects page for faster load times. 
@@ -2932,12 +2784,6 @@ This release includes an upgrade to Django 5. As part of this change, Label Stud
 
 - Fixed an issue where skipped tasks were not being calculated as completed when the project Skip Queue setting was set to **Ignore Skipped**.
 
-
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2191md"></a>
 
@@ -2952,11 +2798,6 @@ Helm Chart version: 1.7.4
 ### Bug fixes
 - Fixed an issue where, in some cases, project roles were reset on SAML SSO login. 
 - Fixed an issue affecting Redis credentials with special characters. 
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2190md"></a>
@@ -3037,7 +2878,6 @@ By default, the task reservation time is set to one day (1440 minutes). This set
 
 - Fixed an issue where project-level roles did not affect role upgrades performed at the Organization level.
 
-
 ### Feature flag updates
 
 The following feature flags have been removed:
@@ -3045,12 +2885,6 @@ The following feature flags have been removed:
 - `fflag_feat_front_dev_2984_dm_draggable_columns_short`
 - `fflag-feat-front-dev-2982-label-weights-settings`
 - `ff_back_2070_inner_id_12052022_short`
-
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2180md"></a>
@@ -3151,11 +2985,6 @@ A new hotkey (**Ctrl + h**) has been added. Use this shortcut to hide all region
 
 - Fixed an issue where users were getting errors if using Redis passwords that included special characters.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2170md"></a>
 
@@ -3209,11 +3038,6 @@ For more information, see [Project settings - Review](#Review).
 - Fixed an issue where images were improperly spaced in the Annotator Agreement Matrix.
 - Fixed an issue in which **Label All Tasks** would not respect filters that had been applied in the Data Manager.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2160md"></a>
 
@@ -3224,7 +3048,6 @@ For more information, see [Project settings - Review](#Review).
 *Sep 24, 2024*
 
 Helm Chart version: 1.6.3
-
 
 ### New features
 
@@ -3237,7 +3060,6 @@ You can implement this feature using a new tag: [`<TimelineLabels>`](/tags/timel
 For more information, see [New! Video Frame Classification](https://humansignal.com/blog/video-frame-classification/).
 
 ![Video frame classification](/images/releases/2_16_video.png)
-
 
 ### Enhancements
 
@@ -3262,11 +3084,6 @@ For more information, see [New! Video Frame Classification](https://humansignal.
 - Fixed an issue with a missing `db` field for Redis storage, which caused issues for users adding Redis target storage.
 
 - Fixed an issue in which project-level roles could not be reverted once set.
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2150md"></a>
@@ -3375,10 +3192,6 @@ The following feature flags have been removed:
 
 - Fixed an issue where images were improperly resizing after loading due to how the original dimensions were set.
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2140post1md"></a>
 
@@ -3392,11 +3205,6 @@ Helm Chart version: 1.6.3
 
 ### Bug fixes
 - Fixed an issue that occurred with Chrome v128 where the Data Manager would not display correctly.
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2140md"></a>
@@ -3445,11 +3253,6 @@ This release includes a new UI with updated colors and fonts, giving it a sleek 
 
 - Fixed an issue where annotation history was not working correctly if `created_by` was null.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2130post1md"></a>
 
@@ -3463,10 +3266,6 @@ Helm Chart version: 1.6.3
 
 ### Bug fixes
 - Fixed an issue that occurred with Chrome v128 where the Data Manager would not display correctly.
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2130md"></a>
@@ -3499,7 +3298,6 @@ For more information, see [Annotator performance dashboard](dashboard_annotator)
 
 Improved performance on the Projects list page due to improvement on the API level.
 
-
 ### Breaking changes
 
 - Fixed an issue with Google Cloud Storage when the connection has the **Use pre-signed URLs** option disabled. In these situations, Google was sending pre-signed URLs with the format `https://storage.googleapis.com` rather than sending BLOBs.
@@ -3518,11 +3316,6 @@ Improved performance on the Projects list page due to improvement on the API lev
 - Fixed an issue where annotators were not being prompted to leave a comment when skipping a task, even though the project settings required them to do so.
 - Fixed an issue where sometimes actual usernames were being replaced by a generic “Admin” username in the annotation history.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2120md"></a>
 
@@ -3533,7 +3326,6 @@ Improved performance on the Projects list page due to improvement on the API lev
 *Jun 04, 2024*
 
 Helm Chart version: 1.4.8
-
 
 ### Enhancements
 
@@ -3584,11 +3376,6 @@ Helm Chart version: 1.4.8
 
 - Fixed an issue where the progress bar for projects was not properly accounting for tasks that required additional annotators due to low agreement settings.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2111post2md"></a>
 
@@ -3603,11 +3390,6 @@ Helm Chart version: 1.4.8
 ### Bug fixes
 - Fix Redis connection with SSL.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2111post1md"></a>
 
@@ -3621,11 +3403,6 @@ Helm Chart version: 1.4.6
 
 ### Bug fixes
 - The `COLLECT_ANALYTICS` environment variable can now be specified in uppercase or lowercase (`collect_analytics`).
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2111md"></a>
@@ -3668,7 +3445,6 @@ For more information, see [Integrate Label Studio into your machine learning pi
 
 ![Screenshot of the new ML backend screens](/images/releases/2-11-0-ml-backend.png)
 
-
 #### Remove Duplicated Tasks action
 
 There is a new Remove Duplicated Tasks action available from the Data Manager. This action had previously only been available as an experimental feature.  
@@ -3676,7 +3452,6 @@ There is a new Remove Duplicated Tasks action available from the Data Manager. T
 When you use this action, annotations from duplicated tasks are consolidated into one task (the first task found among the duplicated tasks). 
 
 ![Screenshot of the Remove Duplicated Tasks action](/images/releases/2-11-1-remove-duplicate.png)
-
 
 ### Enhancements
 
@@ -3686,13 +3461,11 @@ When you use this action, annotations from duplicated tasks are consolidated int
 
 - Multiple domains per organization are now supported for SSO login.
 
-
 ### Security
 
 - Enhanced validation to ensure that projects created through the API have workspaces within the active organization.
 
 - Fixed an issue in which insufficient permission checks were performed for certain API calls.
-
 
 ### Bug fixes
 
@@ -3722,11 +3495,6 @@ When you use this action, annotations from duplicated tasks are consolidated int
 
 - Fixed an issue in which some icons were not displayed correctly.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2110post1md"></a>
 
@@ -3740,11 +3508,6 @@ Helm Chart version: 1.4.4
 
 ### Bug fixes
 - Fixed an issue where application logging was not working. 
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2110md"></a>
@@ -3784,12 +3547,6 @@ For more information, see [Project-level roles](#Project-level-roles).
 - Fixed an issue where `/api/version` was not reporting all updates.
 - Fixed an issue where, after revoking an invite to users who are already in projects, the project failed to load.
 
-
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2101post2md"></a>
 
@@ -3804,10 +3561,6 @@ Helm Chart version: 1.4.0
 ### Bug fixes
 
 - Fixed an issue that prevented the docker-compose instance from starting due to a misconfiguration in the internal discovery settings.
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2101post1md"></a>
@@ -3824,9 +3577,6 @@ Helm Chart version: 1.4.0
 
 - Upgrade vulnerable versions of Pillow and Cryptography
 - Remove unused `requirements.*.txt` files that referred to old packages with CVEs
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2101md"></a>
@@ -3865,11 +3615,6 @@ Fixed an issue where sensitive information was available in activity logs.
 
 - Fixed an issue where sometimes the **Refresh** action on the project dashboard would be stuck in a loading state.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2100md"></a>
 
@@ -3895,7 +3640,6 @@ Helm chart version:  1.4.0
 
     - Added a confirmation message after deleting a user.
 
-
 ### Security
 
 - Implemented comprehensive HTML sanitization to safeguard against vulnerabilities and ensure a secure user experience.
@@ -3906,7 +3650,6 @@ Helm chart version:  1.4.0
         - `USER_ADDITIONAL_BANNED_SUBNETS` — Use this to specify additional IP addresses or CIDR blocks to ban from server-side requests (e.g. the URL-based file uploader).
         - `USE_DEFAULT_BANNED_SUBNETS` — This is set to `True` by default. If you would like to have full control over banned subnets, you can set this to `False` and use `USER_ADDITIONAL_BANNED_SUBNETS` to specify all the IP addresses/CIDR blocks you’d like to disallow instead.
     - We have also improved our error messages to make it clearer when an action is being blocked due to SSRF protections.
-
 
 ### Bug fixes
 
@@ -3958,11 +3701,6 @@ Helm chart version:  1.4.0
 
 - Fixed an issue where invite signup links were missing `http` validation.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="290-2md"></a>
 
@@ -3977,11 +3715,6 @@ Helm chart version: 1.3.3
 ### Bug fixes
 - Fixed an issue where users were unable to use the **View all annotations** option when the project included images that had an empty URL.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="290-1md"></a>
 
@@ -3995,11 +3728,6 @@ Helm chart version: 1.3.3
 
 ### Bug fixes
 - Hotfix for displaying non-string values in Text tag
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="290md"></a>
@@ -4022,7 +3750,6 @@ Helm chart version: 1.3.3
 
 - When hovering over the **Submitted Annotations** card on the project dashboard, the tooltip will make it clear when the number includes skipped and empty annotations.
 
-
 ### Security
 
 - Fixed an issue with HTML sanitization to address a vulnerability identified by CodeQL.
@@ -4035,11 +3762,6 @@ Helm chart version: 1.3.3
 - Fixed an issue where, when labeling tasks, hiding a region would create a draft and display the **Fix and Accept** action, even if no other changes had been made.
 
 - Fixed an issue where credential validation was failing in the Label Studio interface for cloud storages configured using SDK.
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="280md"></a>
@@ -4082,7 +3804,6 @@ Helm chart version: 1.3.2
 
 - Due to an XSS vulnerability, we previously added a requirement that users must log in to view the Label Studio API doc reference and Swagger. You can now view the [API docs](https://app.heartex.com/docs/api/) without logging in. However, the Swagger version is still only available to logged in users. 
 
-
 ### Bug fixes
 
 - Fixed an issue where reviewers could not see annotation ID column.
@@ -4111,11 +3832,6 @@ Helm chart version: 1.3.2
 
 - Fixed an issue where the **Auto accept annotation suggestions** toggle was not working as expected in some situations.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="270-1md"></a>
 
@@ -4127,10 +3843,6 @@ Helm chart version: 1.3.2
 
 ### Bug fixes
 - Fix UWSGI config to support IPv4 only host networks.
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="270md"></a>
@@ -4209,11 +3921,6 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 - Fixed an issue where a duplicate project would incorrectly contain an annotation count with no annotations copied.
 - Fixed an issue where agreement groundtruth API calls were using excess resources.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="260-2md"></a>
 
@@ -4225,11 +3932,6 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 
 ### Enhancements
 - Improved label and review stream task counter to reflect the total available tasks for the user. 
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="260-1md"></a>
@@ -4243,10 +3945,6 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 ### Bug fixes
 
 - Fixed an issue where `PATCH api/tasks/<id>` was returning errors. 
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="260md"></a>
@@ -4284,11 +3982,6 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 - Fixed an issue where `<Choice selected="true">` was not working within the `Taxonomy` tag.
 - Fixed an issue that would cause a blank draft to be created when using hot-keyed annotation submit.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="250-1md"></a>
 
@@ -4300,10 +3993,6 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 
 ### Security
 - Security fix for Data Manager
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="250md"></a>
@@ -4341,9 +4030,6 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 - Fixed an issue with login page indexing that was preventing users from being added to projects. 
 - Fixed an issue where the predictions counter was not correct when using project-level role mapping. 
 
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2410md"></a>
 
@@ -4352,7 +4038,6 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 <div className="onprem-highlight">Contextual scrolling for audio and video, search field on the Projects page, autocomplete prompt when editing the labeling configuration</div>
 
 *Sep 13, 2023*
-
 
 ### New features
 
@@ -4436,10 +4121,6 @@ This release addresses a vulnerability regarding how SECRET_KEY is set.
 - Fixed an issue where annotators were able to access tasks to which they were not assigned. 
 - Fixed an issue causing deadlocks on task import when running parallel jobs. 
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-7md"></a>
 
@@ -4455,11 +4136,6 @@ This release addresses a vulnerability regarding how SECRET_KEY is set.
 ### Security
 - GH 4483 (in Label Studio repo) made existing SSRF defenses more robust
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-6md"></a>
 
@@ -4473,11 +4149,6 @@ This release addresses a vulnerability regarding how SECRET_KEY is set.
 - Fixed the splitchannel audio option.
 - Fixes SCIM group push so workspaces are not created from groups if role to group mappings already exist.
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-5md"></a>
 
@@ -4489,11 +4160,6 @@ This release addresses a vulnerability regarding how SECRET_KEY is set.
 
 ### Bug fixes
 - Fixed an issue where pre-signed urls could become double encoded and break signatures.
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-4md"></a>
@@ -4512,12 +4178,6 @@ Add Draft Column to the Data Manager
 ### Bug fixes
 
 * Fixed a TLS issue for older LDAPs.
-
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-2md"></a>
@@ -4558,10 +4218,6 @@ Add Draft Column to the Data Manager
 - Inconsistent behavior when adding New project to the archived workspace
 - Tooltip is missing when expanding / collapsing "Archived Workspaces" section
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="248-1md"></a>
 
@@ -4573,11 +4229,6 @@ Add Draft Column to the Data Manager
 
 ### Bug fixes
 - Fix Review N Tasks with URI too long
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="248md"></a>
@@ -4686,10 +4337,6 @@ Add Draft Column to the Data Manager
 - Fix XSS in wrong task data
 - Shorten ordered by title in outliner to allow for filters
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="247md"></a>
 
@@ -4712,11 +4359,6 @@ Add Draft Column to the Data Manager
 - Fixed an issue with null appearing while using video config
 - Conversion of project exports are now async
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="246-1md"></a>
 
@@ -4728,11 +4370,6 @@ Add Draft Column to the Data Manager
 
 ### Bug fixes
 - Fixes an issue with using local file upload with cloud storage urls causing errors.
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="246md"></a>
@@ -4754,11 +4391,6 @@ Add Draft Column to the Data Manager
 - Properly handle missing keywords: reviewed
 - Hidden video regions do not move when adding new visible regions above
 - Scroll to image regions if needed, but don’t scroll unnecessarily (UX improved)
-
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="245md"></a>
@@ -4786,11 +4418,6 @@ Add Draft Column to the Data Manager
 - Fix Video Rectangles to display while drawing
 - Fixed import several tasks from one csv file
 
-
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="244md"></a>
 
@@ -4817,10 +4444,6 @@ Add Draft Column to the Data Manager
 - AttributeError: 'GCSExportStorage' object has no attribute 'links_count'
 - Disable file proxy for cloud using FILE_PROXY_ENABLED environment variable
 - Audio playback and playhead remain in sync.
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="243md"></a>
@@ -4853,10 +4476,6 @@ Add Draft Column to the Data Manager
 - Unclear error about unknown tag
 - Migration for fixing organization id in activity logs
 - The first Audio V3 region created is not added to the undo stack
-
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="242md"></a>
@@ -4901,10 +4520,6 @@ Add Draft Column to the Data Manager
 - Region is selected when user drag the region
 - Saving model version on Machine Learning settings doesn't work
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="241md"></a>
 
@@ -4941,9 +4556,6 @@ Add Draft Column to the Data Manager
 - Prevent annotation duplicates when 'Re-queue skipped tasks back to the annotator' parameter is selected
 - Add Google project ID to Source/Target GCS form
 
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="240md"></a>
 
@@ -4960,7 +4572,6 @@ This section highlights the new features and enhancements, and bug fixes in Labe
 - Cancel old import jobs when a new one is created.
 - Support for numpad hotkeys (letter/number keys and keyboard shortcuts) that allows you to label or classify the materials faster in productivity/metrics.
 - Support for environment files from Vault ca-injector.
-
 
 ### Bug fixes
 - Accept/Reject action does not update `updated_by` field of task.
@@ -5027,9 +4638,6 @@ This section highlights the new features and enhancements, and bug fixes in Labe
 - SCIM was broken and always returned a logout page.
 - Filtering failed to work for Annotation results.
 - Returned `400` bad requests on incorrect XML.
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="231md"></a>
@@ -5296,9 +4904,6 @@ Label Studio 2.3.1 includes the following bug fixes:
 - Updated swagger docs for `AllStorage` APIs.
 - Added example output for `HyperTextLabels` in the Label Studio documentation suite.
 
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2210md"></a>
 
@@ -5319,9 +4924,6 @@ Label Studio 2.2.10 includes the following bug fixes:
 #### Frontend
 - Fixed an issue when the Safari browser stopped working.
 - Fixed scrollable area in **Review** mode.
-
-
-
 
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="229md"></a>
@@ -5399,9 +5001,6 @@ Label Studio 2.2.9 includes the following bug fixes:
 - Fixed synchronization speed between video and audio.
 - Fixed an issue with prop `whenChoiceValue`.
 
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="228md"></a>
 
@@ -5478,10 +5077,6 @@ Label Studio 2.2.8 includes the following bug fixes:
 - After annotations from predictions `is_labeled` should be recalculated.
 - Fixed 404 on skip.
 
-
-
-
-
 </div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="220md"></a>
 
@@ -5495,7 +5090,6 @@ This section highlights the new features and enhancements in Label Studio Enterp
 Label Studio Enterprise 2.2.0 introduces the following new features and enhancements.
 
 - Label Studio Enterprise 2.2.0 introduces the System for Cross-domain Identity Management (SCIM) version 2.0 standard. System for Cross-domain Identity Management (SCIM) is a popular protocol to manage access for services and applications across an organization. Use the [SCIM guide](scim_setup) to set up SCIM integration to manage access to Label Studio Enterprise in your organization.
-
 
    <i>Check the following video tutorial about SCIM and Okta setup.</i>
    <iframe width="560" height="315" src="https://www.youtube.com/embed/MA3de3gu18A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>

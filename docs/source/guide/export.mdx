@@ -19,8 +19,6 @@ Some export formats export only the annotations and not the data from the task. 
 </Note>
 <AnnotationIds />
 
-<div className="opensource-only">
-
 ### Export using the UI in Community Edition of Label Studio
 
 Use the following steps to export data and annotations from the Label Studio UI. 
@@ -57,36 +55,9 @@ To enable logs:
 DEBUG=1 LOG_LEVEL=DEBUG label-studio export <project-id> <export-format> --export-path=<output-path>
 ```
 
-</div>
-
-<div className="enterprise-only">
-
-### Export snapshots using the UI
-
-<img src="/images/lse-export-snapshots-ui.png" alt="" className="gif-border" />
-<br />
-
-In Label Studio Enterprise, create a snapshot of your data and annotations. Create a snapshot to export exactly what you want from your data labeling project. This delayed export method makes it easier to export large labeling projects from the Label Studio UI.  
-
-1. Within a project in the Label Studio UI, click **Export**.
-2. Click **Create New Snapshot**.
-3. **Apply filters from tab ...**: Select **Default** from the drop-down list. 
-4. (Optional) **Snapshot Name**: Enter a snapshot name to make it easier to find in the future. By default, export snapshots are named `PROJECT-NAME-at-YEAR-MM-DD-HH-MM`, where the time is in UTC.
-5. **Include in the Snapshot…**: Choose which type of data you want to include in the snapshot. Select **All tasks**, **Only annotated** tasks, or **Only reviewed** tasks. 
-6. **Drafts**: Choose whether to export the complete draft annotations (**Complete drafts**) for tasks, or only the IDs (**Only IDs**) of draft annotations, to indicate that drafts exist. 
-7. **Predictions**: Choose whether to export the complete predictions (**Complete predictions**) for tasks, or only the IDs (**Only IDs**) of predictions to indicate that the tasks had predictions.
-8. **Annotations**: Enable the types of annotations that you want to export. You can specify **Annotations**, **Ground Truth** annotations, and **Skipped** annotations. By default, only annotations are exported.
-9. (Optional) Enable the **Remove user details** option to remove the user's details. 
-10. Click **Create a Snapshot** to start the export process.
-11. You see the list of snapshots available to download, with details about what is included in the snapshot, when it was created, and who created it. 
-12. Click **Download** and select the export format that you want to use. Now, the snapshot file downloads to your computer. 
-
-</div>
-
 ### Export using the Easy Export API
 
 You can call the Label Studio API to export annotations. For a small labeling project, call the [export endpoint](https://api.labelstud.io/api-reference/api-reference/projects/exports/download-sync) to export annotations.
-
 
 #### Export all tasks including tasks without annotations
 
@@ -97,14 +68,12 @@ curl -X GET https://localhost:8080/api/projects/{id}/export?exportType=JSON&down
 
 If your project is large, you can use a [snapshot export](https://api.labelstud.io/api-reference/api-reference/projects/exports/create) to avoid timeouts in most cases. Snapshots include all tasks without annotations by default.
 
-
 ### Export snapshots using the Snapshot API 
 
 For a large labeling project with hundreds of thousands of tasks, do the following:
 1. Make a POST request to [create a new export file or snapshot](https://api.labelstud.io/api-reference/api-reference/projects/exports/create). The response includes an `id` for the created file.
 2. [Check the status of the export file created](https://api.labelstud.io/api-reference/api-reference/projects/exports/get) using the `id` as the `export_pk`. 
 3. Using the `id` from the created snapshot as the export primary key, or `export_pk`, make a GET request to [download the export file](https://api.labelstud.io/api-reference/api-reference/projects/exports/download).
-
 
 ## Export formats supported by Label Studio
 
@@ -125,7 +94,6 @@ Export your brush mask labels as NumPy 2d arrays and PNG images. Each label outp
 ### COCO
 
 A popular machine learning format used by the [COCO dataset](http://cocodataset.org/#home) for object detection and image segmentation tasks. Supports bounding box and polygon image labeling projects that use the `BrushLabels`, `RectangleLabels`, `KeyPointLabels` (see note below), or `PolygonLabels` tags.
-
 
 <Accordion title="KeyPointLabels Export Support">
 If using `KeyPointLabels`, you will need to add the following to your labeling config:
@@ -261,7 +229,6 @@ This establishes a parent–child hierarchy (via parentID), which is necessary f
 </div>
 </Accordion>
 
-
 ### CoNLL2003
 
 A popular format used for the [CoNLL-2003 named entity recognition challenge](https://www.clips.uantwerpen.be/conll2003/ner/). Supports text labeling projects that use the `Text` and `Labels` tags.
@@ -392,7 +359,6 @@ First check the network access to your Label Studio instance when you send API r
 1. Check that you have mounted the same disk as your Label Studio instance. Then check your files' existence in Label Studio instance first. 
 
 2. Check `LOCAL_FILES_DOCUMENT_ROOT` environment variable in your Label Studio instance and add it to your accessing data script.
-
 
 #### Question #3: How to modify order of categories for COCO and YOLO exports? 
 

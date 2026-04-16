@@ -64,8 +64,6 @@ Let's get started.
 
 Whether you're an admin or ML engineer, run these cells first to install dependencies and configure credentials.
 
-
-
 ```python
 # Install what we need
 %pip install -q label-studio-sdk pandas matplotlib seaborn cryptography PyJWT datasets requests python-dotenv
@@ -107,8 +105,6 @@ export EMBED_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY
 **Using Google Colab?**  
 Click the 🔑 icon in the sidebar → Add secrets → Toggle "Notebook access" ON for each
 
-
-
 ```python
 %pip install python-dotenv
 
@@ -136,7 +132,6 @@ def get_credential(key, default=None):
         # Fallback to environment variables (for local Jupyter)
         return environ.get(key, default)
 ```
-
 
 ```python
 LABEL_STUDIO_URL = get_credential('LABEL_STUDIO_URL', 'https://app.humansignal.com')
@@ -198,8 +193,6 @@ After running this cell:
 3. **Share with your team** so they can set `EMBED_PRIVATE_KEY` in their environment
 
 **🔬 ML ENGINEERS**: If you already have the `EMBED_PRIVATE_KEY` from your admin, skip to **Part 2** below.
-
-
 
 ```python
 def generate_rsa_key_pair():
@@ -322,11 +315,9 @@ except Exception as e:
 
 Set your credentials and connect:
 
-
 **🔬 ML ENGINEERS START HERE**: This cell generates your embed token using the private key.
 
 Make sure you have `EMBED_PRIVATE_KEY` set (get it from your admin who ran Part 1).
-
 
 ```python
 # ML ENGINEERS: Generate embed token using private key from environment
@@ -422,8 +413,6 @@ except Exception as e:
 
 We'll use the **MedQuAD** dataset - a collection of medical questions and answers from trusted sources like NIH and CDC. This simulates the evaluation scenario of assessing an LLM's ability to answer patient health questions.
 
-
-
 ```python
 # Load medical Q&A dataset from HuggingFace
 display(HTML("""
@@ -483,13 +472,11 @@ display(HTML(f"""
 </div>
 """))
 
-
 ```
 
 # 🏷️ Create Project
 
 We will create a Label Studio Enterprise project with a labelling config that will allow us to evaluate the responses.
-
 
 ```python
 labeling_config = """
@@ -703,14 +690,11 @@ try:
 except Exception as e:
     display(HTML(f'<div style="padding: 15px; background: #f8d7da; color: #856404; border: 1px solid #f5c6cb; border-radius: 5px;"><strong>Error:</strong> {e}</div>'))
 
-
 ```
 
 # 📊 Import Dataset into Project
 
 Now we'll import all 100 medical Q&A pairs into our evaluation project:
-
-
 
 ```python
 import time
@@ -766,7 +750,6 @@ display(HTML(f"""
 </div>
 """))
 
-
 ```
 
 # 🎯 Embedded Evaluation Interface
@@ -787,7 +770,6 @@ The embedded interface is fully functional:
 The SDK is programmatically loaded into each cell, so it works across all notebook environments. This is the same embed SDK that you would normally get from https://app.humansignal.com/react-app/embed-sdk.js (for on-opremise, replace `app.humansignal.com` with your deployment domain). Same security model, same API, same data format.
 
 Let's load your first task:
-
 
 ```python
 # Global state for tracking evaluation progress
@@ -1038,14 +1020,11 @@ def create_auto_embed(project_id, task_id=None, embed_id="medical-eval-embed", h
     </script>
     """
 
-
 ```
 
 ## Start Evaluating
 
 The interface below loads tasks automatically. Evaluate as many as you'd like - all annotations are saved to Label Studio Enterprise:
-
-
 
 ```python
 # Get the next task
@@ -1092,8 +1071,6 @@ else:
 
 After evaluating tasks, let's export the data and perform comprehensive analysis using modern data tools:
 
-
-
 ```python
 # Export annotations using Label Studio Enterprise's native Pandas export
 try:
@@ -1137,8 +1114,6 @@ This is where embedded evaluation pays off. One line of code exports everything 
 Label Studio Enterprise's `.as_pandas()` method handles all the JSON parsing for you. Ratings, recommendations, free-text notes—it's all structured and ready for analysis.
 
 Let's see what patterns emerge from the evaluations:
-
-
 
 ```python
 if 'df' in locals() and len(df) > 0:
@@ -1193,14 +1168,11 @@ else:
     </div>
     """))
 
-
 ```
 
 ## Visualize Evaluation Patterns
 
 Let's create visualizations to understand model performance:
-
-
 
 ```python
 if 'df' in locals() and len(df) > 0:
@@ -1302,7 +1274,6 @@ else:
         Complete some evaluations to see visualizations and analysis!
     </div>
     """))
-
 
 ```
 

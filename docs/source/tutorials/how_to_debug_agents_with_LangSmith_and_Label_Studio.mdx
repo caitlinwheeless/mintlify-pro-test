@@ -8,11 +8,9 @@ duration: 10-15 mins
 
 After section 5, this tutorial showcases one or more features available only in Label Studio paid products. We recommend [creating a Starter Cloud trial](https://app.humansignal.com/user/cloud-trial?offer=d9a5&) to follow the tutorial.
 
-
 ## 1. Installation & Setup
 
 First, install the required dependencies:
-
 
 ```python
 !pip install langchain langchain-openai langchain-community langsmith label-studio-sdk python-dotenv arxiv
@@ -50,7 +48,6 @@ for installation instructions and how to generate an API token from your account
 |-------------|------------------|
 | <img src="https://hs-sandbox-pub.s3.us-east-1.amazonaws.com/blogs-draft/smith-trace.jpg" alt="Langsmith trace view for AI engineers" /> | <img src="https://hs-sandbox-pub.s3.us-east-1.amazonaws.com/blogs-draft/ls-trace.jpg" alt="Label Studio trace view for domain experts" /> |
 
-
 ## Problem: Where Did My Agent Fail?
 
 AI agent apps become hard to debug and improve as they grow more complex. Teams commonly struggle with:
@@ -65,7 +62,6 @@ However, who should look at the data is often unclear, yet this determines proje
 ## Our Solution: Give it to your Domain Expert
 
 We bridge this gap with a domain expert-centric UI that enables non-technical subject matter experts to systematically evaluate agent performance, complementing existing observability tools. This tutorial shows how to create an intuitive evaluation interface that transforms domain expertise into actionable improvements for your AI agents.
-
 
 ## Setup: Build Your Agent Evaluation Pipeline
 
@@ -96,7 +92,6 @@ This tutorial demonstrates a complementary pipeline design for AI agent evaluati
 - Combines technical metrics with human domain expertise for comprehensive assessment
 - Note: While we use Langsmith as our demo observability tool, this approach works with any trace collection system
 
-
 ```python
 import os
 from dotenv import load_dotenv
@@ -116,7 +111,6 @@ else:
 
     ✓ All environment variables loaded successfully
 
-
 ## 2. Running the Agent
 
 We'll create a simple ReAct agent that can search academic papers on Arxiv.
@@ -127,7 +121,6 @@ The agent uses:
 - **GPT-4o** as the reasoning engine
 - **Arxiv tool** to search academic papers
 - **LangSmith tracing** to capture all interactions automatically
-
 
 ```python
 from langchain import hub
@@ -157,11 +150,9 @@ print("✓ Agent initialized and ready")
 
     ✓ Agent initialized and ready
 
-
 ### Running Agent Examples
 
 Let's simulate a user asking questions about latest research:
-
 
 ```python
 questions = [
@@ -501,7 +492,6 @@ Now that we've generated several agent interactions, we'll:
 2. Filter for relevant run types (AgentExecutor, LLM, Tool, Retriever)
 3. Convert traces to [Label Studio format with predictions](https://docs.humansignal.com/guide/predictions)
 
-
 ```python
 from langsmith import Client
 import json
@@ -540,13 +530,11 @@ print(f"  Total runs: {len(runs)}")
     ✓ Collected 24 traces from Langsmith
       Total runs: 149
 
-
 ### 4. Handler Functions for Different Run Types
 
 These functions convert different types of Langsmith runs into Label Studio's
 chat message format. Each run type has specific data structures that need to be
 transformed appropriately.
-
 
 ```python
 # Agent requests LLM provider
@@ -558,7 +546,6 @@ AGENT_TOOL_CALL = 'agent_tool_call'
 # Agent calls retriever
 AGENT_RETRIEVER_CALL = 'agent_retriever_call'
 ```
-
 
 ```python
 def handle_llm(run, messages):
@@ -606,7 +593,6 @@ def handle_llm(run, messages):
                         }
                     })
 
-
 def handle_tool(run, messages):
     """
     Handler for Tool runs (run_type: "tool").
@@ -647,7 +633,6 @@ def handle_tool(run, messages):
             "tool_call_id": tool_call_id
         })
 
-
 def handle_retriever(run, messages):
     """
     Handler for Retriever runs (run_type: "retriever").
@@ -668,7 +653,6 @@ print("✓ Handler functions defined")
 
     ✓ Handler functions defined
 
-
 ### 5. Convert Traces to Label Studio Format
 
 This function transforms Langsmith traces into Label Studio's task format.
@@ -680,7 +664,6 @@ can review and modify, speeding up the evaluation process.
 - Maintains timestamps for temporal analysis
 - Structures data to match [Label Studio's Chat interface](https://labelstud.io/tags/chat)
 - Creates predictions for each message (except the initial user query)
-
 
 ```python
 def convert_trace_to_messages(trace_id, trace_runs, mode="input", from_name="chat"):
@@ -862,7 +845,6 @@ def convert_trace_to_messages(trace_id, trace_runs, mode="input", from_name="cha
 
     return {"trace_id": str(trace_id_str), "messages": messages}
 
-
 # Convert all traces to Label Studio format
 tasks = []
 for trace_id, trace_data in traces.items():
@@ -873,7 +855,6 @@ print(f"✓ Converted {len(tasks)} traces to Label Studio format")
 ```
 
     ✓ Converted 24 traces to Label Studio format
-
 
 ## 6. Evaluate Traces
 
@@ -890,7 +871,6 @@ To run evaluation on the collected agent traces, use [Label Studio XML configura
 
 This configuration enables Subject Matter Experts (SMEs) to perform detailed
 failure mode analysis on each step of the agent's reasoning process.
-
 
 ```python
 label_config = """<View>
@@ -963,7 +943,6 @@ print("✓ Label configuration defined")
 
     ✓ Label configuration defined
 
-
 ### 7. Push Tasks to Label Studio
 
 Now we'll create or update the Label Studio project and import all our traces.
@@ -983,7 +962,6 @@ that appear in the labeling interface. This is powerful because:
 - **Maintains context**: All agent steps are visible and evaluable
 - **Enables comparison**: Multiple annotators can independently assess the same trace
 - **Quality control**: Supports consensus-based evaluation workflows
-
 
 ```python
 from label_studio_sdk.client import LabelStudio
@@ -1029,7 +1007,6 @@ with open('tasks.json', mode='w') as f:
     ✓ Successfully imported 24 tasks to Label Studio
     Go to: https://app.humansignal.com/projects/193998/data
 
-
 ### 8. Access the Labeling Interface
 
 #### The Evaluation Workflow
@@ -1057,7 +1034,6 @@ Your traces are now ready for evaluation! The labeling interface provides:
 3. **LLM-as-a-Judge**: [Create evaluation prompts based on SME feedback](https://docs.humansignal.com/guide/prompts_predictions)
 4. **Quality Metrics**: [Track error rates over time as you iterate](https://docs.humansignal.com/guide/dashboards)
 5. **Dataset Creation**: [Build high-quality datasets for fine-tuning](https://docs.humansignal.com/guide/ml)
-
 
 ```python
 # Generate the labeling URL
@@ -1089,7 +1065,6 @@ print("\n" + "="*80)
     
     ================================================================================
 
-
 ## Summary
 
 This tutorial demonstrated the complete workflow from agent execution to expert evaluation:
@@ -1113,7 +1088,6 @@ production AI systems. The combination creates a powerful workflow:
 - **Iteration**: Insights from both feed back into agent improvements
 
 Happy evaluating! 🚀
-
 
 ## References
 

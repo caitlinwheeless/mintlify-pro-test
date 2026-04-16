@@ -36,13 +36,11 @@ We are going to lean on the Label Studio SDK for the whole project so you will n
 1. The base url (`LS_URL`) where your Label Studio instance is running.
 2. An `LS_API_KEY` to authenticate your requests.
 
-
 If Colab can't reach your localhost you can:
 1. Run this notebook locally with Jupyter
 2. Tunnel the connection with services like ngrok or cloudflared ([ngrok example](https://dashboard.ngrok.com/get-started/setup/macos))
 
 You can create a valid `API_KEY` in the Account & Settings menu of your Label Studio UI (top right corner clicking the you user avatar)
-
 
 ```python
 !pip -q install label-studio-sdk pandas numpy matplotlib scipy
@@ -82,7 +80,6 @@ print("LS_URL:", LS_URL)
 This project shows: the question, two answers (Model A & B), and a rubric: Winner (A/B/Tie), Overall quality (1–5), and optional Notes.
 
 ![Labelling](https://github.com/HumanSignal/awesome-label-studio-tutorials/blob/main/tutorials/how-to-compare-two-ai-models-with-label-studio/how-to-compare-two-ai-models-with-label-studio-files/figure_1.png?raw=true)
-
 
 ```python
 LABEL_CONFIG = r"""
@@ -135,7 +132,6 @@ print("Project created with id:", project.id, "| title:", project.title)
 
     Project created with id: 36 | title: A/B Model Comparison — Movie Science Fact-Check
 
-
 ### ✨ LabelStudio Enterprise tip: when this scales up
 
 > Enterprise features help you run larger, faster, higher-quality evaluations:
@@ -150,7 +146,6 @@ print("Project created with id:", project.id, "| title:", project.title)
 ## 2. Prepare a tiny dataset and model outputs
 
 For portability, we fabricate 20 prompts and used the output from two LLMs. Replace these functions with your real models or load CSVs.
-
 
 ```python
 np.random.seed(7)
@@ -240,7 +235,6 @@ df
 
 Use task bulk creation for speed.
 
-
 ```python
 tasks: List[Dict[str, Any]] = df.to_dict(orient="records")
 resp = ls.projects.import_tasks(id=project.id, request=tasks, return_task_ids=True)
@@ -249,12 +243,9 @@ print("Imported tasks:", resp)
 
     Imported tasks: annotation_count=0 could_be_tasks_list=False data_columns=[] duration=0.04078197479248047 file_upload_ids=[] found_formats=[] predictions_count=None task_count=20 prediction_count=0 task_ids=[483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502]
 
-
 After importing the tasks you will be able to see them in the LabelStudio UI
 
 ![Project Tasks](https://github.com/HumanSignal/awesome-label-studio-tutorials/blob/main/tutorials/how-to-compare-two-ai-models-with-label-studio/how-to-compare-two-ai-models-with-label-studio-files/figure_2.png?raw=true)
-
-
 
 ## 4. Human annotation round
 
@@ -263,9 +254,7 @@ After importing the tasks you will be able to see them in the LabelStudio UI
 
 ![Labelling](https://github.com/HumanSignal/awesome-label-studio-tutorials/blob/main/tutorials/how-to-compare-two-ai-models-with-label-studio/how-to-compare-two-ai-models-with-label-studio-files/figure_3.png?raw=true)
 
-
 ## 5. Export annotations & flatten results
-
 
 ```python
 from label_studio_sdk.core.api_error import ApiError
@@ -323,8 +312,6 @@ print("Items loaded:", len(export_json))
     Export completed. File saved to: /content/project_36_export_5.json
     Items loaded: 20
 
-
-
 ```python
 # Flatten into a DataFrame
 rows = []
@@ -365,7 +352,6 @@ res_df.head()
 
 ## 6. Basic analysis: win-rate, CI, and charts
 
-
 ```python
 labeled = res_df.dropna(subset=["winner"])
 total = len(labeled)
@@ -405,8 +391,6 @@ else:
     Decisive votes: 16 | A: 10 B: 6
     p-value: 0.454498291015625
     A win-rate: 0.625 (95% CI: 0.354–0.848)
-
-
 
 ```python
 # Bar chart: A vs B vs Tie
@@ -462,7 +446,6 @@ Turn these into a mini taxonomy (2–6 tags) and measure win-rates per tag next 
 
 - **Question type** categorizes the kind of judgment required (Factual/Physical claim, Engineering judgment, Speculative/Conceptual, Ethics/Societal).
 
-
 **Why these segments?**
 
 They map to real routing and modeling choices:
@@ -477,7 +460,6 @@ They map to real routing and modeling choices:
 - For weak segments, sample examples → read Notes → extract failure themes → fix (prompt/RAG/training), then re-run a small eval to confirm.
 
 ### 8.1 Segment analysis - by scientific domain
-
 
 ```python
 def infer_domain(p: str) -> str:
@@ -512,7 +494,6 @@ seg_domain.sort_values("win_rate_A", ascending=False)
 
 ```
 
-
 ```python
 ax = seg_domain["win_rate_A"].plot(kind="barh", figsize=(8,4))
 ax.set_title("Model A win-rate by scientific domain (A over A+B)")
@@ -523,7 +504,6 @@ plt.tight_layout(); plt.show()
 ```
 
 ### 8.2 Segment analysis - by question type
-
 
 ```python
 def infer_qtype(p: str) -> str:
@@ -549,7 +529,6 @@ seg_qtype.sort_values("win_rate_A", ascending=False)
 
 ```
 
-
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -574,7 +553,6 @@ plt.show()
 ```
 
 ## 9. Markdown report
-
 
 ```python
 summary = f"""
@@ -626,7 +604,6 @@ print("\nSaved report.md at", datetime.now())
     
     
     Saved report.md at 2025-10-03 10:08:15.757664
-
 
 ## Conclusion: what we learned & what to do next
 

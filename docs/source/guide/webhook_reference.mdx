@@ -347,7 +347,6 @@ The webhook payload includes the name of the action and some additional annotati
 
 ### Example payload
 
-
 <br/>
 <Accordion title="Click to expand the example payload">
 ```json
@@ -466,7 +465,6 @@ Sent when an annotation is deleted. See how to [set up a webhook for this event]
 
 ### Example payload
 
-
 <br/>
 <Accordion title="Click to expand the example payload">
 ```json
@@ -533,7 +531,6 @@ You must [enable organization-level webhooks](webhooks#Enable-organization-level
 ### Webhook payload details
 
 The webhook payload includes the name of the action and some additional project data. The project-relevant data is the same as is included in the [response when you create a project using the API](/api#operation/api_projects_create).
-
 
 | Key | Type | Description |
 | --- | ---  | --- |
@@ -674,7 +671,6 @@ You must [enable organization-level webhooks](webhooks#Enable-organization-level
 }
 ```
 
-
 ### Start Training 
 
 This webhook is triggered when a user clicks `Start Training` button on the ML Model card in the Project Settings page.
@@ -694,5 +690,4 @@ class MyModel(LabelStudioMLBase):
 | action | string | Name of the action: `START_TRAINING`. | 
 | id | integer | ID of the project where training is started. |
 | project | JSON dictionary | All fields related to the project that was updated. See the [API documentation for updating a project](/api#operation/api_projects_partial_update). |
-
 

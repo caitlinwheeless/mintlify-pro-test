@@ -14,7 +14,7 @@
       "family": "Poppins"
     }
   },
-  "name": "Label Studio Enterprise",
+  "name": "Label Studio",
   "navigation": {
     "tabs": [
       {
@@ -25,49 +25,49 @@
             "pages": [
               "docs/source/guide/get_started",
               "docs/source/guide/glossary",
-              "docs/source/guide/label_studio_compare"
+              "docs/source/guide/label_studio_compare",
+              "docs/source/guide/enterprise_features"
             ]
           },
           {
             "group": "Install & Setup",
             "pages": [
+              "docs/source/guide/quick_start",
               {
                 "group": "Installation",
-                "root": "docs/source/guide/install_enterprise",
+                "root": "docs/source/guide/install",
                 "pages": [
                   {
                     "group": "Install using Kubernetes",
-                    "root": "docs/source/guide/install_enterprise_k8s",
+                    "root": "docs/source/guide/install_k8s",
                     "pages": [
                       "docs/source/guide/ingress_config",
-                      "docs/source/guide/install_prompts",
                       "docs/source/guide/install_k8s_airgapped",
                       "docs/source/guide/helm_values"
                     ]
                   },
-                  "docs/source/guide/install_enterprise_docker",
-                  "docs/source/guide/upgrade_enterprise",
-                  "docs/source/guide/backup_enterprise"
+                  "docs/source/guide/install_troubleshoot"
                 ]
               },
+              "docs/source/guide/install_requirements",
+              "docs/source/guide/storedata",
               "docs/source/guide/persistent_storage",
-              "docs/source/guide/email_setup",
-              "docs/source/guide/saas",
-              "docs/source/guide/security"
+              "docs/source/guide/start",
+              "docs/source/guide/upgrade_community",
+              "docs/source/guide/security",
+              "docs/source/guide/troubleshooting"
             ]
           },
           {
             "group": "Create & Manage Projects",
             "pages": [
-              "docs/source/guide/workspaces",
               "docs/source/guide/setup_project",
-              "docs/source/guide/project_states",
               "docs/source/guide/setup",
               {
                 "group": "Manage projects",
-                "root": "docs/source/guide/manage_projects",
+                "root": "docs/source/guide/manage_projects_lso",
                 "pages": [
-                  "docs/source/guide/project_settings_lse",
+                  "docs/source/guide/project_settings",
                   "docs/source/guide/manage_data"
                 ]
               },
@@ -75,13 +75,10 @@
                 "group": "Labeling",
                 "root": "docs/source/guide/labeling",
                 "pages": [
-                  "docs/source/guide/labeling_bulk",
                   "docs/source/guide/hotkeys",
                   "docs/source/guide/skip"
                 ]
-              },
-              "docs/source/guide/dashboards",
-              "docs/source/guide/plugins"
+              }
             ]
           },
           {
@@ -113,48 +110,17 @@
           {
             "group": "Manage Your Organization",
             "pages": [
-              "docs/source/guide/organization",
-              "docs/source/guide/admin_logs",
-              "docs/source/guide/ask_ai",
-              "docs/source/guide/command_palette",
-              {
-                "group": "Settings",
-                "root": "docs/source/guide/admin_settings",
-                "pages": [
-                  "docs/source/guide/admin_usage",
-                  "docs/source/guide/access_tokens",
-                  "docs/source/guide/support_reports",
-                  "docs/source/guide/model_providers",
-                  "docs/source/guide/admin_permissions",
-                  "docs/source/guide/admin_react"
-                ]
-              },
-              {
-                "group": "User management",
-                "root": "docs/source/guide/manage_users",
-                "pages": [
-                  "docs/source/guide/admin_user",
-                  "docs/source/guide/admin_manage_lse",
-                  "docs/source/guide/admin_roles",
-                  "docs/source/guide/user_account"
-                ]
-              },
-              {
-                "group": "SSO, LDAP & SCIM",
-                "root": "docs/source/guide/admin_auth",
-                "pages": [
-                  "docs/source/guide/auth_ldap",
-                  "docs/source/guide/auth_setup",
-                  {
-                    "group": "SCIM2",
-                    "root": "docs/source/guide/scim_setup",
-                    "pages": [
-                      "docs/source/guide/scim_workflow"
-                    ]
-                  }
-                ]
-              },
-              "docs/source/guide/google_saml"
+              "docs/source/guide/signup",
+              "docs/source/guide/admin_manage",
+              "docs/source/guide/user_account",
+              "docs/source/guide/access_tokens"
+            ]
+          },
+          {
+            "group": "Machine Learning",
+            "pages": [
+              "docs/source/guide/ml",
+              "docs/source/guide/ml_create"
             ]
           },
           {
@@ -171,77 +137,7 @@
                   "docs/source/guide/webhook_reference"
                 ]
               },
-              "docs/source/guide/embed",
               "docs/source/guide/frontend_reference"
-            ]
-          },
-          {
-            "group": "Machine Learning",
-            "pages": [
-              "docs/source/guide/ml",
-              "docs/source/guide/ml_create",
-              "docs/source/guide/active_learning"
-            ]
-          },
-          {
-            "group": "Review & Measure Quality",
-            "pages": [
-              "docs/source/guide/quality",
-              "docs/source/guide/ground_truths",
-              "docs/source/guide/comments_notifications",
-              {
-                "group": "Agreement",
-                "root": "docs/source/guide/stats",
-                "pages": [
-                  "docs/source/guide/agreement_metrics",
-                  "docs/source/guide/custom_metric"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Analytics",
-            "pages": [
-              "docs/source/guide/dashboard_overview",
-              "docs/source/guide/dashboard_annotator",
-              "docs/source/guide/dashboard_distribution"
-            ]
-          },
-          {
-            "group": "Onboarding",
-            "pages": [
-              {
-                "group": "Onboarding guides by role",
-                "root": "docs/source/guide/onboarding",
-                "pages": [
-                  "docs/source/guide/onboarding_annotator",
-                  "docs/source/guide/onboarding_reviewer"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Prompts",
-            "pages": [
-              "docs/source/guide/prompts_overview",
-              "docs/source/guide/prompts_create",
-              "docs/source/guide/prompts_keys",
-              "docs/source/guide/prompts_draft",
-              "docs/source/guide/prompts_predictions",
-              "docs/source/guide/prompts_examples"
-            ]
-          },
-          {
-            "group": "Project Management",
-            "pages": [
-              "docs/source/guide/dashboard_project",
-              "docs/source/guide/dashboard_members"
-            ]
-          },
-          {
-            "group": "What's New",
-            "pages": [
-              "docs/source/guide/release_notes"
             ]
           }
         ]
@@ -496,32 +392,6 @@
               "docs/source/tags/markdown",
               "docs/source/tags/style",
               "docs/source/tags/view"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Plugins",
-        "groups": [
-          {
-            "group": "Plugins",
-            "pages": [
-              "docs/source/plugins/faq",
-              "docs/source/plugins/custom",
-              "docs/source/plugins/bulk_labeling",
-              "docs/source/plugins/pause_annotator",
-              "docs/source/plugins/llm_backend",
-              "docs/source/plugins/dynamic_text_spans",
-              "docs/source/plugins/json_validation",
-              "docs/source/plugins/moderation",
-              "docs/source/plugins/span_overlap",
-              "docs/source/plugins/spellcheck",
-              "docs/source/plugins/wordcount",
-              "docs/source/plugins/plotly",
-              "docs/source/plugins/markdown_to_html",
-              "docs/source/plugins/images_per_label",
-              "docs/source/plugins/redact_pii",
-              "docs/source/plugins/frame_offset"
             ]
           }
         ]

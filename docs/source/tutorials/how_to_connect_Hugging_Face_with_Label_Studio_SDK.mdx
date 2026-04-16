@@ -90,8 +90,6 @@ This integration creates a powerful, automated ML workflow that transforms how y
 
 **Ready to build this workflow?** Let's get started! 👇
 
-
-
 ```python
 # Install required packages
 %pip install -q label-studio-sdk datasets transformers torch huggingface_hub accelerate
@@ -112,7 +110,6 @@ export LABEL_STUDIO_API_KEY="your-api-key-here"
 ```
 
 To get your API key: Go to Label Studio → Account & Settings → Personal Access Token
-
 
 ```python
 import os
@@ -144,7 +141,6 @@ export HF_TOKEN="your-hf-token-here"
 
 Get your token at: https://huggingface.co/settings/tokens
 
-
 ```python
 from huggingface_hub import login
 
@@ -169,7 +165,6 @@ else:
 ### Step 3: Create Label Studio Project
 
 We'll create a Named Entity Recognition project with labels for Person (PER), Organization (ORG), Location (LOC), and Miscellaneous (MISC) entities.
-
 
 ```python
 # Define Label Studio labeling configuration for NER
@@ -201,7 +196,6 @@ print(f'   Project URL: {ls_url}/projects/{project.id}')
 We'll load the WikiANN dataset (a multilingual NER dataset) from Hugging Face. WikiANN provides high-quality NER annotations for English and 175+ other languages.
 
 **Why this matters:** Direct dataset import eliminates manual data preparation, ensures consistency, and makes it easy to update your annotation project with new data.
-
 
 ```python
 from datasets import load_dataset
@@ -262,7 +256,6 @@ Once you've labeled some data, continue to the next cell.
 We'll export the labeled data and convert it to Hugging Face format for model training.
 
 **Why this matters:** This automated conversion saves hours of manual data preparation and ensures your annotations are correctly aligned with model tokenization.
-
 
 ```python
 from transformers import AutoTokenizer
@@ -361,7 +354,6 @@ print(f'   Sample tokens: {tokenizer.convert_ids_to_tokens(hf_dataset[0]["input_
 **Note:** This step demonstrates training a custom model. You can skip this and jump to Part 3 to use pre-trained models instead.
 
 **Why train:** Fine-tuning on your labeled data creates domain-specific models that outperform general models on your specific use case.
-
 
 ```python
 from transformers import (
@@ -473,7 +465,6 @@ Now we'll connect a Hugging Face model as an ML backend to provide pre-annotatio
 
 We'll use a pre-trained NER model from Hugging Face. You can also use your custom trained model from Step 7.
 
-
 ```python
 from transformers import pipeline
 import time
@@ -543,7 +534,6 @@ for pred in predictions:
 ### Step 9: Generate Pre-annotations
 
 Now let's use our Hugging Face model to generate predictions for unlabeled tasks in Label Studio!
-
 
 ```python
 # Get unlabeled tasks from Label Studio
@@ -640,7 +630,6 @@ Want to adapt this workflow for other tasks? Check out:
 
 - Label Studio Community: https://slack.labelstudio.heartex.com/
 - HuggingFace Forums: https://discuss.huggingface.co/
-
 
 ---
 

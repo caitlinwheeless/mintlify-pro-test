@@ -8,7 +8,6 @@ parent_enterprise: webhooks
 
 If you want to trigger custom events for webhooks in Label Studio, you can extend the webhook event model.
 
-
 ## Create a custom webhook event
 
 To create a custom webhook event, add your own action to the `WebhookActions` model.
@@ -60,11 +59,4 @@ You can use decorators with the CRUD REST methods to send event actions to webho
 | --- | --- | --- | 
 | `@api_webhook()` | `POST`/`PUT`/`PATCH` requests | Expects a response with an `id` and uses the `.get_object()` function after the request to send that information. |
 | `@api_webhook_for_delete()` | `DELETE` | Sends only the `id` field after a successfully delete operation. | 
-
-
-
-
-
-
-
 

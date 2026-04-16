@@ -51,30 +51,13 @@ The options that users see on their **Account & Settings** page depend on your s
 
 From the **Organization** page, select **Settings > Access Token Settings**. 
 
-<div className="enterprise-only">
-
-<Note>
-The **Organization** page is only available to users in the Admin and Owner role.
-</Note>
-</div>
-
 From here you can enable and disable token types. 
 
 * When a certain token type is disabled, existing tokens will not be able to authenticate to the Label Studio platform. 
 
 * Use the Personal Access Token Time-to-Live to set an expiration date for personal access tokens. (Enterprise only)
 
-<div className="enterprise-only">
-
-<img src="/images/admin/token-settings.png" style={{maxWidth: '668px'}} alt="Screenshot of Access Token window" />
-
-</div>
-
-<div className="opensource-only">
-
 <img src="/images/admin/token-settings-lso.png" style={{maxWidth: '475px'}} alt="Screenshot of Access Token window" />
-
-</div>
 
 ## "API keys" vs. "Access tokens"
 
@@ -141,7 +124,6 @@ exp = decoded.get("exp")
 token_is_expired = (exp <= datetime.now(timezone.utc).timestamp())
 ```
 
-
 ## Legacy tokens
 
 Generally speaking, the legacy tokens are not as secure as personal access tokens because they must be manually revoked. 
@@ -149,7 +131,6 @@ Generally speaking, the legacy tokens are not as secure as personal access token
 ### SDK
 
 There is no difference in how you use legacy tokens and personal access tokens with the Python SDK. See the example above. 
-
 
 ### HTTP API
 

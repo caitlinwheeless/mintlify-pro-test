@@ -8,7 +8,6 @@ Follow this tutorial to set up an active learning loop with Label Studio.
 
 Use Label Studio Enterprise Edition to build an automated active learning loop with a machine learning model backend. If you use the open source Community Edition of Label Studio, you can manually sort tasks and retrieve predictions to mimic an active learning process. If you're using Label Studio Community Edition, see how to [manually manage your active learning loop](#Set-up-manual-active-learning).
 
-
 ## About Active Learning
 
 Creating annotated training data for supervised machine learning models can be expensive and time-consuming. Active Learning is a branch of machine learning that seeks to **minimize the total amount of data required for labeling by strategically sampling observations** that provide new insight into the problem. 
@@ -83,5 +82,4 @@ If you're using Label Studio Community Edition, data annotators can't experience
 3. Select **Label Tasks As Displayed** when labeling tasks. 
 
 This manual active learning loop does not automatically update the order of tasks presented to annotators as the ML backend trains with each new annotation and produces new predictions. Therefore, instead of on-the-fly automated active learning, you can perform a form of batched active learning, where you perform annotation for a period, stop to train the model, then retrieve new predictions and start annotating tasks again.
-
 

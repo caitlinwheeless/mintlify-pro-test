@@ -26,7 +26,6 @@ It works as follows:
    Then, it finds all clickable label elements (with the CSS class `.lsf-label_clickable`) and attaches a click event listener to each one.
 4. When any label is clicked, the corresponding event listener uses the label’s value (determined by its index in the labels array) to look up the appropriate image URL from the `images` mapping. It then sets the `src` attribute of the image element to that URL. If no matching image exists, the `src` might be empty.
 
-
 ## Plugin
 
 This plugin will work as-is with the demo check images. For your own purposes, you will want host images that Label Studio can access. 
