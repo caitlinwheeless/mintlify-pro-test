@@ -8,7 +8,7 @@ import Pdf from "/docs/source/includes/tags/pdf.mdx";
 The `Pdf` tag displays a PDF document in the labeling interface. You can use this tag to:
 
 - Perform document-level annotations such as classification, transcription, and summarization. 
-- Perform OCR validation on supported PDFs. <span class="badge"></span>
+- Perform OCR validation on supported PDFs. <span className="badge"></span>
 
 Supports:
 * Zoom
@@ -45,7 +45,7 @@ Labeling configuration apply document-level classification to PDF documents:
 }
 ```
 
-## Example: OCR <span class="badge"></span>
+## Example: OCR <span className="badge"></span>
 
 <Warning title="Enterprise">
 Label Studio Enterprise only. 
@@ -113,6 +113,6 @@ When you are rotating within the UI, it appears to originate from the center of 
 <br/>
 <br/>
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/tags/pdf-ocr.mp4" />
 </video>

@@ -11,12 +11,12 @@ The release notes for Label Studio Community Edition are available from the <a h
 <Note>
 Before upgrading, review the steps outlined in [Upgrade Label Studio Enterprise](upgrade_enterprise) and ensure that you complete the recommended tests after each upgrade. 
 </Note>
-<div class="release-note"><button class="release-note-toggle"></button>
+<div className="release-note"><button className="release-note-toggle"></button>
 <a name="2332md"></a>
 
 ## Label Studio Enterprise 2.33.2
 
-<div class="onprem-highlight">Updates for SSO/SCIM, control ReactCode availability</div>
+<div className="onprem-highlight">Updates for SSO/SCIM, control ReactCode availability</div>
 
 *Mar 18, 2026*
 
@@ -52,12 +52,12 @@ Fixed multiple issues related to SSO/SAML and SCIM setup, provisioning, and mapp
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2331md"></a>
 
 ## Label Studio Enterprise 2.33.1
 
-<div class="onprem-highlight">Bug fix for performance improvements</div>
+<div className="onprem-highlight">Bug fix for performance improvements</div>
 
 *Mar 09, 2026*
 
@@ -72,12 +72,12 @@ Helm Chart version: [2.0.0](https://github.com/HumanSignal/charts/blob/master/he
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2330md"></a>
 
 ## Label Studio Enterprise 2.33.0
 
-<div class="onprem-highlight">Programmable interfaces with React, vectors, Databricks Service Principals, and stronger quality settings</div>
+<div className="onprem-highlight">Programmable interfaces with React, vectors, Databricks Service Principals, and stronger quality settings</div>
 
 *Feb 26, 2026*
 
@@ -231,7 +231,7 @@ This is useful for when you have failed tasks or want to target newly added task
     
     You can now click and drag to adjust panel widths when configuring your labeling interface.
 
-    <video style="max-width: 600px;" class="gif-border" autoplay loop muted>
+    <video style={{maxWidth: '600px'}} className="gif-border" autoplay loop muted>
       <source src="/images/releases/2-33-code.mp4" />
     </video>
     
@@ -312,7 +312,7 @@ The following models have been deprecated:
 
 * When you hover over an annotation tab in Quick View, you will now see metadata for the annotation. 
 
-    <img src="/images/releases/2-33-tooltip.png" style="max-width: 500px" alt="Screenshot" /> 
+    <img src="/images/releases/2-33-tooltip.png" style={{maxWidth: '500px'}} alt="Screenshot" /> 
 * Updated appearance and guidance text for the text area component. 
 
 
@@ -464,12 +464,12 @@ The following models have been deprecated:
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2321md"></a>
 
 ## Label Studio Enterprise 2.32.1
 
-<div class="onprem-highlight">Bug fixes</div>
+<div className="onprem-highlight">Bug fixes</div>
 
 *Jan 22, 2026*
 
@@ -486,12 +486,12 @@ Helm Chart version: [2.0.0](https://github.com/HumanSignal/charts/blob/master/he
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2320md"></a>
 
 ## Label Studio Enterprise 2.32.0
 
-<div class="onprem-highlight">Support reports, granular permission options, new command palette</div>
+<div className="onprem-highlight">Support reports, granular permission options, new command palette</div>
 
 *Jan 14, 2026*
 
@@ -527,7 +527,7 @@ The command palette is an enhanced search tool that you can use to navigate to r
 
 For more information, see [Command palette](command_palette).
 
-<img src="/images/releases/2-32-command-palette.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-32-command-palette.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 ### Feature updates
 
@@ -543,11 +543,11 @@ Enhancements include:
 
 **Before:**
 
-<img src="/images/releases/2-32-ann-eval-before.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-32-ann-eval-before.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 **After:**
 
-<img src="/images/releases/2-32-ann-eval-after.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-32-ann-eval-after.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 <Tip>
 You can disallow skipping in all project tasks. But if you want to allow skipping while ensuring that annotators cannot skip ground truth tasks, you can use the new unskippable task feature described below. 
@@ -558,11 +558,11 @@ We have made a number of improvements to task summaries.
 
 **Before:**
 
-<img src="/images/releases/2-32-task-summary-before.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-32-task-summary-before.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 **After:**
 
-<img src="/images/releases/2-32-task-summary-after.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-32-task-summary-after.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 Improvements include:
 
@@ -585,11 +585,11 @@ Annotation tabs have the following improvements:
 
 **Before:**
 
-<img src="/images/releases/2-32-tabs-before.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-32-tabs-before.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 **After:**
 
-<img src="/images/releases/2-32-tabs-after.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-32-tabs-after.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 
 #### Unskippable tasks
@@ -653,7 +653,7 @@ When you add OpenAI models to Prompts or to the organization model provider list
 
 - To better utilize space, the annotation ID and the navigation controls for the labeling stream have been moved to below the labeling interface.
 
-    <img src="/images/releases/2-32-task-nav.png" style="max-width: 500px" alt="Screenshot" />
+    <img src="/images/releases/2-32-task-nav.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 #### Performance improvements
 
@@ -739,12 +739,12 @@ Improved permission checks when retrieving the workspaces list.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2310md"></a>
 
 ## Label Studio Enterprise 2.31.0
 
-<div class="onprem-highlight">Inline OCR labeling for PDFs, Markdown tag, better visibility into agreement and member performance</div>
+<div className="onprem-highlight">Inline OCR labeling for PDFs, Markdown tag, better visibility into agreement and member performance</div>
 
 *Dec 03, 2025*
 
@@ -760,7 +760,7 @@ This new functionality also supports displaying PDFs natively within the label
 
 For more information, see the [PDF tag documentation](/tags/pdf) and [Blog - Inline PDF Labeling in Label Studio Enterprise for OCR](https://humansignal.com/blog/inline-pdf-labeling-in-label-studio-enterprise-for-ocr/).
 
-<video style="max-width: 600px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '600px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/2-31-PDF.mp4" />
 </video>
 
@@ -798,7 +798,7 @@ code block
 
 Produces this:
 
-<img src="/images/releases/2-31-markdown.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-31-markdown.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 #### New Agreement (Selected) column
 
@@ -810,7 +810,7 @@ Also note that now when you click on a comparison between annotators in the [**
 
 For more information, see [**Agreement and Agreement (Selected) columns**](https://docs.humansignal.com/guide/manage_data#Agreement-and-Agreement-Selected-columns).
 
-<img src="/images/releases/2-31-agreement-selected.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-31-agreement-selected.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 
 #### New Analytics navigation and improved performance dashboard
@@ -871,13 +871,13 @@ The [**Quality section**](https://docs.humansignal.com/guide/project_settings_l
 - Clearer text and setting names
 - Settings that are not applicable are now hidden unless enabled
 
-<img src="/images/releases/2-31-quality.png" style="max-width: 650px" alt="Screenshot" />
+<img src="/images/releases/2-31-quality.png" style={{maxWidth: '650px'}} alt="Screenshot" />
 
 #### Additional validation when performing destructive actions in projects
 
 When deleting a project, resetting the project cache, or dropping all project tabs, users will now be asked to enter text in the confirmation window:
 
-<img src="/images/releases/2-31-delete.png" style="max-width: 500px" alt="Screenshot" />
+<img src="/images/releases/2-31-delete.png" style={{maxWidth: '500px'}} alt="Screenshot" />
 
 #### Improved project onboarding checklist
 
@@ -1056,12 +1056,12 @@ Improved permission checks when retrieving projects.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2300md"></a>
 
 ## Label Studio Enterprise 2.30.0
 
-<div class="onprem-highlight">Databricks storage, Reviewer metrics, multiple UX enhancements</div>
+<div className="onprem-highlight">Databricks storage, Reviewer metrics, multiple UX enhancements</div>
 
 *Oct 15, 2025*
 
@@ -1125,7 +1125,7 @@ You can now sort regions by media start time.
 
 Previously you could sort by time, but this would reflect the time that the region was created. The new option reflects the start time in relation to the media.
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/media-start-time-sort.mp4" />
 </video>
 
@@ -1291,12 +1291,12 @@ If you build on top of our image, update your `FROM` line and replace `apt-ge
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2290md"></a>
 
 ## Label Studio Enterprise 2.29.0
 
-<div class="onprem-highlight">New Chat tag, Azure Blob Storage with Service Principal authentication, filtering enhancements, improved UX</div>
+<div className="onprem-highlight">New Chat tag, Azure Blob Storage with Service Principal authentication, filtering enhancements, improved UX</div>
 
 *Sep 26, 2025*
 
@@ -1332,7 +1332,7 @@ There is a new button that you can click to apply the selected label to the enti
 
 While you can still adjust the default height in the labeling configuration, now users can drag and drop to adjust the height as needed.
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/2_29_adjust.mp4" />
 </video>
 
@@ -1342,7 +1342,7 @@ You can now connect your projects to Azure Blob Storage using Service Principa
 
 Service Principal authentication uses Entra ID to authenticate applications rather than account keys, allowing you to grant specific permissions and can be easily revoked or rotated. For more information, see [Azure Blob Storage with Service Principal authentication](https://docs.humansignal.com/guide/storage#Azure-Blob-Storage-with-Service-Principal-authentication).
 
-<img style="max-width: 825px" src="/images/releases/2-29-azure.png" alt="Screenshot"/>
+<img style={{maxWidth: '825px'}} src="/images/releases/2-29-azure.png" alt="Screenshot"/>
 
 #### Redesigned cloud storage modal
 
@@ -1350,14 +1350,14 @@ When adding cloud storage, the modal has now been redesigned to add clarity and 
 
 For example, you can now preview a list of files that will be imported in order to verify your settings.
 
-<img style="max-width: 800px" src="/images/releases/2-29-cloud-storage-modal.png" alt="Screenshot"/>
+<img style={{maxWidth: '800px'}} src="/images/releases/2-29-cloud-storage-modal.png" alt="Screenshot"/>
 
 
 #### Debug custom agreement metrics
 
 There is a new **See Logs** option for [custom agreement metrics](custom_metric), which you can use to view log history and error messages.
 
-<img style="max-width: 500px" src="/images/releases/2-29-debug-metrics.png" alt="Screenshot"/>
+<img style={{maxWidth: '500px'}} src="/images/releases/2-29-debug-metrics.png" alt="Screenshot"/>
 
 #### Nested annotator filter
 
@@ -1393,7 +1393,7 @@ This setting allows you to hide unused Data Manager columns from any Annotator o
 
 For example, you may include meta or system data that you want to view as part of a project, but you don't necessarily want to expose that data to Annotators and Reviewers.
 
-<img style="max-width: 600px" src="/images/releases/2-29-dm-columns.png" alt="Screenshot"/>
+<img style={{maxWidth: '600px'}} src="/images/releases/2-29-dm-columns.png" alt="Screenshot"/>
 
 #### Manager and Reviewer access to the Annotator Dashboard
 
@@ -1473,7 +1473,7 @@ When you have a labeling configuration that includes multiple `<Labels>` blocks,
 
 You can now choose multiple labels to apply to the selected region. 
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/2-29-multilabels.mp4" />
 </video>
 
@@ -1572,12 +1572,12 @@ Multiple performance optimizations, fine-tuning, and dependency cleanup.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2280md"></a>
 
 ## Label Studio Enterprise 2.28.0
 
-<div class="onprem-highlight">Bitmasks, custom hotkeys, annotation summaries, project page improvements, and more</div>
+<div className="onprem-highlight">Bitmasks, custom hotkeys, annotation summaries, project page improvements, and more</div>
 
 *Aug 28, 2025*
 
@@ -1591,7 +1591,7 @@ We’ve introduced a new BitMask tag to support pixel-level image annotation usi
 
 Additionally, Mac users can now use two fingers to pinch zoom and pan images for all annotation tasks.
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/bitmask.mp4" />
 </video>
 
@@ -1636,7 +1636,7 @@ From here you can specify the following:
 - Playback speed for the video
 - Whether to loop timeline regions
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/2-28-settings.mp4" />
 </video>
 
@@ -1849,12 +1849,12 @@ When listing organization members via the API, you can use two new query params 
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2261md"></a>
 
 ## Label Studio Enterprise 2.26.1
 
-<div class="onprem-highlight">Bug fixes</div>
+<div className="onprem-highlight">Bug fixes</div>
 
 *Aug 25, 2025*
 
@@ -1870,12 +1870,12 @@ Helm Chart version: [1.11.1](https://github.com/HumanSignal/charts/blob/master/h
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2260md"></a>
 
 ## Label Studio Enterprise 2.26.0
 
-<div class="onprem-highlight">Time series sync, new Multichannel tag for time series, spectrograms, playground 2.0, annotation result filtering</div>
+<div className="onprem-highlight">Time series sync, new Multichannel tag for time series, spectrograms, playground 2.0, annotation result filtering</div>
 
 *Jul 21, 2025*
 
@@ -1889,7 +1889,7 @@ You can now use the sync parameter to align audio and video streams with time-se
 
 For more information, see [Time Series Labeling with Audio and Video Synchronization](/templates/timeseries_audio_video).
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/video-time-series-light.mp4" />
 </video>
 
@@ -1899,7 +1899,7 @@ There is a new [Multichannel tag](#MultiChannel) for visualizing time series dat
 
 The Multichannel tag significantly improves the usability and correlation of time series data, making it easier for users to analyze and pinpoint relationships across different signals.
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/timeline.mp4" />
 </video>
 
@@ -1943,7 +1943,7 @@ For more information, see [Filter annotation results](#Filter-annotation-result
 
 The **View All** feature when reviewing annotations has been improved so that you can now interact with all annotation elements side-by-side, making it easier to review annotations. For example, you can now play video and audio, move through timelines, and highlight regions.
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/viewall.mp4" />
 </video>
 
@@ -2145,12 +2145,12 @@ Owners can configure both the maximum session age (total duration of a session) 
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2250md"></a>
 
 ## Label Studio Enterprise 2.25.0
 
-<div class="onprem-highlight">Prompts on-prem availability, storage proxies, PDF tag, KeyPointLabels support, multi-task JSON imports for cloud</div>
+<div className="onprem-highlight">Prompts on-prem availability, storage proxies, PDF tag, KeyPointLabels support, multi-task JSON imports for cloud</div>
 
 *Jun 17, 2025*
 
@@ -2243,12 +2243,12 @@ For more information, see the examples in our [our docs](https://docs.humansigna
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2240md"></a>
 
 ## Label Studio Enterprise 2.24.0
 
-<div class="onprem-highlight">Dark mode, new home page, annotator evaluation settings, plugins library, and multiple usability enhancements</div>
+<div className="onprem-highlight">Dark mode, new home page, annotator evaluation settings, plugins library, and multiple usability enhancements</div>
 
 *May 20, 2025*
 
@@ -2293,7 +2293,7 @@ When there are ground truth annotations within the project, an annotator will be
 
 For more information, see [**Annotator Evaluation**](https://docs.humansignal.com/guide/project_settings_lse#annotator-eval).
 
-<img src="/images/releases/2-24-evaluation.png" style="max-width:600px; margin: 0 auto" alt="Screenshot of evaluation settings" />
+<img src="/images/releases/2-24-evaluation.png" style={{maxWidth: '600px', margin: '0 auto'}} alt="Screenshot of evaluation settings" />
 
 #### New Insert Plugins menu and Testing interface
 
@@ -2326,7 +2326,7 @@ You can now click and drag to adjust text span regions.
 
 The cursor now adjusts dynamically to brush size to allow for more precision in segmentation tasks.
 
-<video style="max-width: 800px;" class="gif-border" autoplay loop muted>
+<video style={{maxWidth: '800px'}} className="gif-border" autoplay loop muted>
   <source src="/images/releases/brush-size.mp4" />
 </video>
  
@@ -2338,13 +2338,13 @@ You can now export polygons created using the BrushLabels tag to COCO format.
 
 If you have AI Assistant enabled and ask multiple questions without coming to a resolution, it will offer to create a support ticket on your behalf:
 
-<img src="/images/releases/2-24-ai-ticket.png" style="max-width:600px; margin: 0 auto" alt="Screenshot of AI assistant" />
+<img src="/images/releases/2-24-ai-ticket.png" style={{maxWidth: '600px', margin: '0 auto'}} alt="Screenshot of AI assistant" />
 
 #### Clear chat history in AI Assistant
 
 You can now clear your chat history to start a new chat.
 
-<img src="/images/releases/2-24-ai-new.png" style="max-width:600px; margin: 0 auto" alt="Screenshot of AI assistant" />
+<img src="/images/releases/2-24-ai-new.png" style={{maxWidth: '600px', margin: '0 auto'}} alt="Screenshot of AI assistant" />
 
 #### Export underlying data from the Annotator Performance dashboard
 
@@ -2356,13 +2356,13 @@ There is a new **Export Underlying Data** action for the Annotations chart.
 
 When logging in, annotators will now see a link to the Annotator performance dashboard, where they can see their own performance metrics. 
 
-<img src="/images/releases/2-24-annotator-dashboard.png" style="max-width:600px; margin: 0 auto" alt="Screenshot of annotator dashboard button" />
+<img src="/images/releases/2-24-annotator-dashboard.png" style={{maxWidth: '600px', margin: '0 auto'}} alt="Screenshot of annotator dashboard button" />
 
 #### Improved drop-down selectors
 
 When there are a large number of options in a drop-down menu, you can now search through the list of available options.
 
-<img src="/images/releases/2-24-drop-down.png" style="max-width:400px; margin: 0 auto" alt="Screenshot of annotator dashboard button" />
+<img src="/images/releases/2-24-drop-down.png" style={{maxWidth: '400px', margin: '0 auto'}} alt="Screenshot of annotator dashboard button" />
 
 #### Label Studio Converter CLI
 
@@ -2441,12 +2441,12 @@ When you install the Label Studio SDK, you can now use the `label-studio-convert
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2230md"></a>
 
 ## Label Studio Enterprise 2.23.0
 
-<div class="onprem-highlight">Google Cloud Storage WIF, drag-and-drop for video timelines, multiple security enhancements</div>
+<div className="onprem-highlight">Google Cloud Storage WIF, drag-and-drop for video timelines, multiple security enhancements</div>
 
 *Apr 22, 2025*
 
@@ -2532,12 +2532,12 @@ We have renamed "Custom Scripts" to "Plugins." This is reflected in the UI and [
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2221md"></a>
 
 ## Label Studio Enterprise 2.22.1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Apr 07, 2025*
 
@@ -2552,12 +2552,12 @@ Helm Chart version: 1.9.8
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2220md"></a>
 
 ## Label Studio Enterprise 2.22.0
 
-<div class="onprem-highlight">Pause annotators, set annotation limits, new API tokens, deep linking for annotation and regions, usability improvements for audio</div>
+<div className="onprem-highlight">Pause annotators, set annotation limits, new API tokens, deep linking for annotation and regions, usability improvements for audio</div>
 
 *Mar 25, 2025*
 
@@ -2691,12 +2691,12 @@ Made security improvements regarding org membership visibility.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2210md"></a>
 
 ## Label Studio Enterprise 2.21.0
 
-<div class="onprem-highlight">Bulk labeling, enable AI features, and multiple labeling and Data Manager enhancements</div>
+<div className="onprem-highlight">Bulk labeling, enable AI features, and multiple labeling and Data Manager enhancements</div>
 
 *Feb 25, 2025*
 
@@ -2844,12 +2844,12 @@ The following feature flags have been marked stale or deleted, meaning they can 
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2201md"></a>
 
 ## Label Studio Enterprise 2.20.1
 
-<div class="onprem-highlight">Security-related fixes</div>
+<div className="onprem-highlight">Security-related fixes</div>
 
 *Feb 12, 2025*
 
@@ -2868,12 +2868,12 @@ Separate multiple domains with a comma. For example, if the endpoints you are us
 
 `S3_TRUSTED_STORAGE_DOMAINS=mys3endpoint.net,myothers3endpoint.biz`
 </Note>
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2200md"></a>
 
 ## Label Studio Enterprise 2.20.0
 
-<div class="onprem-highlight">Taxonomy for labeling, new audio hotkey, performance improvements, bug fixes </div>
+<div className="onprem-highlight">Taxonomy for labeling, new audio hotkey, performance improvements, bug fixes </div>
 
 *Jan 28, 2025*
 
@@ -2938,12 +2938,12 @@ This release includes an upgrade to Django 5. As part of this change, Label Stud
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2191md"></a>
 
 ## Label Studio Enterprise 2.19.1
 
-<div class="onprem-highlight">Bug fixes </div>
+<div className="onprem-highlight">Bug fixes </div>
 
 *Jan 02, 2025*
 
@@ -2958,12 +2958,12 @@ Helm Chart version: 1.7.4
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2190md"></a>
 
 ## Label Studio Enterprise 2.19.0
 
-<div class="onprem-highlight">Paginated multi-image labeling and a new Task Reservation setting </div>
+<div className="onprem-highlight">Paginated multi-image labeling and a new Task Reservation setting </div>
 
 *Dec 17, 2024*
 
@@ -3052,12 +3052,12 @@ The following feature flags have been removed:
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2180md"></a>
 
 ## Label Studio Enterprise 2.18.0
 
-<div class="onprem-highlight">Link comments to fields, export information from the Annotator Performance dashboard </div>
+<div className="onprem-highlight">Link comments to fields, export information from the Annotator Performance dashboard </div>
 
 *Nov 19, 2024*
 
@@ -3156,12 +3156,12 @@ A new hotkey (**Ctrl + h**) has been added. Use this shortcut to hide all region
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2170md"></a>
 
 ## Label Studio Enterprise 2.17.0
 
-<div class="onprem-highlight">New reviewer workflow options, streamlined layout for the Projects page, and other UI improvements </div>
+<div className="onprem-highlight">New reviewer workflow options, streamlined layout for the Projects page, and other UI improvements </div>
 
 *Oct 22, 2024*
 
@@ -3214,12 +3214,12 @@ For more information, see [Project settings - Review](#Review).
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2160md"></a>
 
 ## Label Studio Enterprise 2.16.0
 
-<div class="onprem-highlight">Video frame classification, user activation through SCIM, and bug fixes </div>
+<div className="onprem-highlight">Video frame classification, user activation through SCIM, and bug fixes </div>
 
 *Sep 24, 2024*
 
@@ -3268,12 +3268,12 @@ For more information, see [New! Video Frame Classification](https://humansignal.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2150md"></a>
 
 ## Label Studio Enterprise 2.15.0
 
-<div class="onprem-highlight">Reviewer workflow updates, drag-and-drop tab reordering, usability enhancements for the <b>Show region labels</b> option, and upgrading to Django 4.2 </div>
+<div className="onprem-highlight">Reviewer workflow updates, drag-and-drop tab reordering, usability enhancements for the <b>Show region labels</b> option, and upgrading to Django 4.2 </div>
 
 *Sep 03, 2024*
 
@@ -3379,12 +3379,12 @@ The following feature flags have been removed:
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2140post1md"></a>
 
 ## Label Studio Enterprise 2.14.0.post1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Aug 27, 2024*
 
@@ -3398,12 +3398,12 @@ Helm Chart version: 1.6.3
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2140md"></a>
 
 ## Label Studio Enterprise 2.14.0
 
-<div class="onprem-highlight">Refreshed interface for the HumanSignal platform and bug fixes</div>
+<div className="onprem-highlight">Refreshed interface for the HumanSignal platform and bug fixes</div>
 
 *Jul 30, 2024*
 
@@ -3450,12 +3450,12 @@ This release includes a new UI with updated colors and fonts, giving it a sleek 
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2130post1md"></a>
 
 ## Label Studio Enterprise 2.13.0.post1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Aug 27, 2024*
 
@@ -3468,12 +3468,12 @@ Helm Chart version: 1.6.3
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2130md"></a>
 
 ## Label Studio Enterprise 2.13.0
 
-<div class="onprem-highlight">Annotator performance dashboards, potential breaking change for Google Cloud Storage users, feature flag changes</div>
+<div className="onprem-highlight">Annotator performance dashboards, potential breaking change for Google Cloud Storage users, feature flag changes</div>
 
 *Jul 02, 2024*
 
@@ -3523,12 +3523,12 @@ Improved performance on the Projects list page due to improvement on the API lev
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2120md"></a>
 
 ## Label Studio Enterprise 2.12.0
 
-<div class="onprem-highlight">New experimental Cache Labels action in the Data Manager, annotation history in snapshots, new setting to restrict local imports into Label Studio, and changes to how the Hide Storage Settings for Manager environment variable works. </div>
+<div className="onprem-highlight">New experimental Cache Labels action in the Data Manager, annotation history in snapshots, new setting to restrict local imports into Label Studio, and changes to how the Hide Storage Settings for Manager environment variable works. </div>
 
 *Jun 04, 2024*
 
@@ -3589,12 +3589,12 @@ Helm Chart version: 1.4.8
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2111post2md"></a>
 
 ## Label Studio Enterprise 2.11.1.post2
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *May 30, 2024*
 
@@ -3608,12 +3608,12 @@ Helm Chart version: 1.4.8
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2111post1md"></a>
 
 ## Label Studio Enterprise 2.11.1.post1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *May 07, 2024*
 
@@ -3627,12 +3627,12 @@ Helm Chart version: 1.4.6
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2111md"></a>
 
 ## Label Studio Enterprise 2.11.1
 
-<div class="onprem-highlight">Improved machine learning & LLM integrations, action to remove duplicated tasks, Redis ACL support, and other enhancements and bug fixes</div>
+<div className="onprem-highlight">Improved machine learning & LLM integrations, action to remove duplicated tasks, Redis ACL support, and other enhancements and bug fixes</div>
 
 *Apr 30, 2024*
 
@@ -3727,12 +3727,12 @@ When you use this action, annotations from duplicated tasks are consolidated int
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2110post1md"></a>
 
 ## Label Studio Enterprise 2.11.0.post1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Apr 29, 2024*
 
@@ -3746,12 +3746,12 @@ Helm Chart version: 1.4.4
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2110md"></a>
 
 ## Label Studio Enterprise 2.11.0
 
-<div class="onprem-highlight">New ability to configure project-level roles, setting to hide the Cloud Storage page from Manager roles, other enhancements and bug fixes </div>
+<div className="onprem-highlight">New ability to configure project-level roles, setting to hide the Cloud Storage page from Manager roles, other enhancements and bug fixes </div>
 
 *Apr 09, 2024*
 
@@ -3790,12 +3790,12 @@ For more information, see [Project-level roles](#Project-level-roles).
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2101post2md"></a>
 
 ## Label Studio Enterprise 2.10.1.post2
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Apr 02, 2024*
 
@@ -3809,12 +3809,12 @@ Helm Chart version: 1.4.0
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2101post1md"></a>
 
 ## Label Studio Enterprise 2.10.1.post1
 
-<div class="onprem-highlight">Security-related fixes</div>
+<div className="onprem-highlight">Security-related fixes</div>
 
 *Mar 13, 2024*
 
@@ -3828,12 +3828,12 @@ Helm Chart version: 1.4.0
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2101md"></a>
 
 ## Label Studio Enterprise 2.10.1
 
-<div class="onprem-highlight">New <b>Reset Cache</b> action for projects, security update for activity logs, various bug fixes</div>
+<div className="onprem-highlight">New <b>Reset Cache</b> action for projects, security update for activity logs, various bug fixes</div>
 
 *Mar 12, 2024*
 
@@ -3870,12 +3870,12 @@ Fixed an issue where sensitive information was available in activity logs.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2100md"></a>
 
 ## Label Studio Enterprise 2.10.0
 
-<div class="onprem-highlight">Granular API-level control over annotation history, UI enhancements for performance and user experience, security updates, bug fixes</div>
+<div className="onprem-highlight">Granular API-level control over annotation history, UI enhancements for performance and user experience, security updates, bug fixes</div>
 
 *Feb 13, 2024*
 
@@ -3963,12 +3963,12 @@ Helm chart version:  1.4.0
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="290-2md"></a>
 
 ## Label Studio Enterprise 2.9.0-2
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Jan 26, 2024*
 
@@ -3982,12 +3982,12 @@ Helm chart version: 1.3.3
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="290-1md"></a>
 
 ## Label Studio Enterprise 2.9.0-1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Jan 23, 2024*
 
@@ -4001,12 +4001,12 @@ Helm chart version: 1.3.3
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="290md"></a>
 
 ## Label Studio Enterprise 2.9.0
 
-<div class="onprem-highlight">Improved webhook performance and various UI improvements</div>
+<div className="onprem-highlight">Improved webhook performance and various UI improvements</div>
 
 *Jan 16, 2024*
 
@@ -4041,12 +4041,12 @@ Helm chart version: 1.3.3
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="280md"></a>
 
 ## Label Studio Enterprise 2.8.0
 
-<div class="onprem-highlight">Improved member list filtering from the Organization page, collapsible Ranker items, various UI improvements</div>
+<div className="onprem-highlight">Improved member list filtering from the Organization page, collapsible Ranker items, various UI improvements</div>
 
 *Dec 19, 2023*
 
@@ -4116,12 +4116,12 @@ Helm chart version: 1.3.2
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="270-1md"></a>
 
 ## Label Studio Enterprise 2.7.0-1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Dec 06, 2023*
 
@@ -4132,12 +4132,12 @@ Helm chart version: 1.3.2
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="270md"></a>
 
 ## Label Studio Enterprise 2.7.0
 
-<div class="onprem-highlight">External taxonomy, group visibility in label distribution charts, soft delete users</div>
+<div className="onprem-highlight">External taxonomy, group visibility in label distribution charts, soft delete users</div>
 
 *Nov 21, 2023*
 
@@ -4214,12 +4214,12 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="260-2md"></a>
 
 ## Label Studio Enterprise 2.6.0-2
 
-<div class="onprem-highlight">Improved label and review stream counter</div>
+<div className="onprem-highlight">Improved label and review stream counter</div>
 
 *Oct 27, 2023*
 
@@ -4231,12 +4231,12 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="260-1md"></a>
 
 ## Label Studio Enterprise 2.6.0-1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Oct 26, 2023*
 
@@ -4248,12 +4248,12 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="260md"></a>
 
 ## Label Studio Enterprise 2.6.0
 
-<div class="onprem-highlight">New <code>snap</code> parameter for KeyPoint, KeyPointLabels, Polygon, and PolygonLabels tags, improved usability when reviewing video in Outliner </div>
+<div className="onprem-highlight">New <code>snap</code> parameter for KeyPoint, KeyPointLabels, Polygon, and PolygonLabels tags, improved usability when reviewing video in Outliner </div>
 
 *Oct 24, 2023*
 
@@ -4289,12 +4289,12 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="250-1md"></a>
 
 ## Label Studio Enterprise 2.5.0-1
 
-<div class="onprem-highlight">Security fix</div>
+<div className="onprem-highlight">Security fix</div>
 
 *Sep 30, 2023*
 
@@ -4305,12 +4305,12 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="250md"></a>
 
 ## Label Studio Enterprise 2.5.0
 
-<div class="onprem-highlight">Project-level roles for SAML/SCIM, ability to pause annotation sessions</div>
+<div className="onprem-highlight">Project-level roles for SAML/SCIM, ability to pause annotation sessions</div>
 
 *Sep 28, 2023*
 
@@ -4344,12 +4344,12 @@ For more information, see [Introducing Label Distribution Charts for Label Group
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2410md"></a>
 
 ## Label Studio Enterprise 2.4.10
 
-<div class="onprem-highlight">Contextual scrolling for audio and video, search field on the Projects page, autocomplete prompt when editing the labeling configuration</div>
+<div className="onprem-highlight">Contextual scrolling for audio and video, search field on the Projects page, autocomplete prompt when editing the labeling configuration</div>
 
 *Sep 13, 2023*
 
@@ -4440,12 +4440,12 @@ This release addresses a vulnerability regarding how SECRET_KEY is set.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-7md"></a>
 
 ## Label Studio Enterprise 2.4.9-7
 
-<div class="onprem-highlight">Bug fixes</div>
+<div className="onprem-highlight">Bug fixes</div>
 
 *Aug 22, 2023*
 
@@ -4460,12 +4460,12 @@ This release addresses a vulnerability regarding how SECRET_KEY is set.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-6md"></a>
 
 ## Label Studio Enterprise 2.4.9-6
 
-<div class="onprem-highlight">Bug fixes</div>
+<div className="onprem-highlight">Bug fixes</div>
 
 *Aug 21, 2023*
 
@@ -4478,12 +4478,12 @@ This release addresses a vulnerability regarding how SECRET_KEY is set.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-5md"></a>
 
 ## Label Studio Enterprise 2.4.9-5
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Aug 11, 2023*
 
@@ -4495,12 +4495,12 @@ This release addresses a vulnerability regarding how SECRET_KEY is set.
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-4md"></a>
 
 ## Label Studio Enterprise 2.4.9-4
 
-<div class="onprem-highlight">Draft column in the Data Manager</div>
+<div className="onprem-highlight">Draft column in the Data Manager</div>
 
 *Aug 04, 2023*
 {/* Release notes generated using configuration in .github/release.yml at lse-release/2.4.9 */}
@@ -4519,12 +4519,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="249-2md"></a>
 
 ## Label Studio Enterprise 2.4.9-2
 
-<div class="onprem-highlight">New workspace actions, per-image classifications</div>
+<div className="onprem-highlight">New workspace actions, per-image classifications</div>
 
 *July 26, 2023*
 
@@ -4562,12 +4562,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="248-1md"></a>
 
 ## Label Studio Enterprise 2.4.8-1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *Jun 26, 2023*
 
@@ -4579,12 +4579,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="248md"></a>
 
 ## Label Studio Enterprise 2.4.8
 
-<div class="onprem-highlight">Enhanced UI for panels and tabs, new Ranker tag, new Outliner filter, async imports</div>
+<div className="onprem-highlight">Enhanced UI for panels and tabs, new Ranker tag, new Outliner filter, async imports</div>
 
 *Jun 16, 2023*
 
@@ -4690,12 +4690,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="247md"></a>
 
 ## Label Studio Enterprise 2.4.7
 
-<div class="onprem-highlight">Updated content for empty project pages, UI changes for async export conversion</div>
+<div className="onprem-highlight">Updated content for empty project pages, UI changes for async export conversion</div>
 
 *May 18, 2023*
 
@@ -4717,12 +4717,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="246-1md"></a>
 
 ## Label Studio Enterprise 2.4.6-1
 
-<div class="onprem-highlight">Bug fix</div>
+<div className="onprem-highlight">Bug fix</div>
 
 *May 09, 2023*
 
@@ -4734,12 +4734,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="246md"></a>
 
 ## Label Studio Enterprise 2.4.6
 
-<div class="onprem-highlight">Data Manager actions for reviewers, better placement for annotation instructions, allow email lists when inviting users</div>
+<div className="onprem-highlight">Data Manager actions for reviewers, better placement for annotation instructions, allow email lists when inviting users</div>
 
 *Apr 27, 2023*
 
@@ -4760,12 +4760,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="245md"></a>
 
 ## Label Studio Enterprise 2.4.5
 
-<div class="onprem-highlight">Performance optimization for projects API, storage link resolver for nested task data fields</div>
+<div className="onprem-highlight">Performance optimization for projects API, storage link resolver for nested task data fields</div>
 
 *Apr 10, 2023*
 
@@ -4791,11 +4791,11 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="244md"></a>
 
 ## Label Studio Enterprise 2.4.4
-<div class="onprem-highlight"><code>skipDuplicates</code> parameter for TextArea, audio v3 Web Audio alternative decoder option, S3 custom endpoint for persistent storage </div>
+<div className="onprem-highlight"><code>skipDuplicates</code> parameter for TextArea, audio v3 Web Audio alternative decoder option, S3 custom endpoint for persistent storage </div>
 
 ### New features
 - New parameter skipDuplicates of TextArea allows to keep submissions unique.
@@ -4822,12 +4822,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="243md"></a>
 
 ## Label Studio Enterprise 2.4.3
 
-<div class="onprem-highlight">New <code>splitchannels</code> option on audio configs, keyboard shortcuts for the Data Manager, restore locked annotations</div>
+<div className="onprem-highlight">New <code>splitchannels</code> option on audio configs, keyboard shortcuts for the Data Manager, restore locked annotations</div>
 
 ### Enhancements
 - Support simultaneous render of multi-channel audio with added splitchannels="true" option on Audio config (larger memory requirement)
@@ -4858,12 +4858,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="242md"></a>
 
 ## Label Studio Enterprise 2.4.2
 
-<div class="onprem-highlight">Label placement change for regions, YOLO support for PolygonLabels</div>
+<div className="onprem-highlight">Label placement change for regions, YOLO support for PolygonLabels</div>
 
 ### New features
 - Labels are not displayed inside the regions
@@ -4905,11 +4905,11 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="241md"></a>
 
 ## Label Studio Enterprise 2.4.1
-<div class="onprem-highlight">Improved logging, API for project annotation history</div>
+<div className="onprem-highlight">Improved logging, API for project annotation history</div>
 
 ### New features and enhancements 
 - Add project annotation history API
@@ -4944,12 +4944,12 @@ Add Draft Column to the Data Manager
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="240md"></a>
 
 ## Label Studio Enterprise 2.4.0
 
-<div class="onprem-highlight">Audio player enhancements, comments and notifications improvements, support for numpad hotkeys</div>
+<div className="onprem-highlight">Audio player enhancements, comments and notifications improvements, support for numpad hotkeys</div>
 
 This section highlights the new features and enhancements, and bug fixes in Label Studio Enterprise 2.4.
 
@@ -5031,12 +5031,12 @@ This section highlights the new features and enhancements, and bug fixes in Labe
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="231md"></a>
 
 ## Label Studio Enterprise 2.3.1
 
-<div class="onprem-highlight">New helm chart, multiple usability enhancements, including new Data Manager columns and the ability to duplicate projects</div>
+<div className="onprem-highlight">New helm chart, multiple usability enhancements, including new Data Manager columns and the ability to duplicate projects</div>
 
 This section highlights the breaking changes, new features and enhancements, and bug fixes in Label Studio Enterprise 2.3.1.
 
@@ -5299,12 +5299,12 @@ Label Studio 2.3.1 includes the following bug fixes:
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="2210md"></a>
 
 ## Label Studio Enterprise 2.2.10
 
-<div class="onprem-highlight">Bug fixes</div>
+<div className="onprem-highlight">Bug fixes</div>
 
 This section highlights the bug fixes in Label Studio Enterprise 2.2.10.
 
@@ -5323,12 +5323,12 @@ Label Studio 2.2.10 includes the following bug fixes:
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="229md"></a>
 
 ## Label Studio Enterprise 2.2.9
 
-<div class="onprem-highlight">Dynamic Labels template, Comments column in the Data Manager, decommissioning MinIO</div>
+<div className="onprem-highlight">Dynamic Labels template, Comments column in the Data Manager, decommissioning MinIO</div>
 
 This section highlights the breaking changes, new features and enhancements, and bug fixes in Label Studio Enterprise 2.2.9. 
 
@@ -5402,12 +5402,12 @@ Label Studio 2.2.9 includes the following bug fixes:
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="228md"></a>
 
 ## Label Studio Enterprise 2.2.8
 
-<div class="onprem-highlight">Comment visibility, SCIM enhancements, Redis SSL support, notification center, drafts in Annotation History, new history types</div>
+<div className="onprem-highlight">Comment visibility, SCIM enhancements, Redis SSL support, notification center, drafts in Annotation History, new history types</div>
 
 This section highlights the breaking changes, new features and enhancements, and bug fixes in Label Studio Enterprise 2.2.8. 
 
@@ -5482,12 +5482,12 @@ Label Studio 2.2.8 includes the following bug fixes:
 
 
 
-</div><div class="release-note"><button class="release-note-toggle"></button>
+</div><div className="release-note"><button className="release-note-toggle"></button>
 <a name="220md"></a>
 
 ## Label Studio Enterprise 2.2.0
 
-<div class="onprem-highlight">SCIM 2.0 support, rotating bounding boxes, 'Last updated by' column in the Data Manager, ability to navigate to the previous task </div>
+<div className="onprem-highlight">SCIM 2.0 support, rotating bounding boxes, 'Last updated by' column in the Data Manager, ability to navigate to the previous task </div>
 
 This section highlights the new features and enhancements in Label Studio Enterprise 2.2.0.
 
@@ -5498,7 +5498,7 @@ Label Studio Enterprise 2.2.0 introduces the following new features and enhancem
 
 
    <i>Check the following video tutorial about SCIM and Okta setup.</i>
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/MA3de3gu18A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/MA3de3gu18A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 - Starting with this release, as an annotator you can create a rotated bounding box with the "three point click" or "two point click" feature to annotate images.  
 
@@ -5507,12 +5507,12 @@ Label Studio Enterprise 2.2.0 introduces the following new features and enhancem
     - Third point click - Draw the height of the bounding box.
 
     <br />
-    <div style="margin:auto; text-align:center;"><img src="/images/two-point-click.png" style="opacity: 0.8"/></div>
+    <div style={{margin: 'auto', textAlign: 'center'}}><img src="/images/two-point-click.png" style={{opacity: '0.8'}}/></div>
     <i>Figure 1: Two point click rectangle.</i>
 
     
     <br />
-    <div style="margin:auto; text-align:center;"><img src="/images/three-point-click.png" style="opacity: 0.8"/></div>
+    <div style={{margin: 'auto', textAlign: 'center'}}><img src="/images/three-point-click.png" style={{opacity: '0.8'}}/></div>
     <i>Figure 2: Three point click rectangle.</i>
 
     After you create the bounding box, you can do the following: 
@@ -5524,18 +5524,18 @@ Label Studio Enterprise 2.2.0 introduces the following new features and enhancem
     
     
     <br />
-    <div style="margin:auto; text-align:center;"><img src="/images/last-updated-by-column.png" style="opacity: 0.8"/></div>
+    <div style={{margin: 'auto', textAlign: 'center'}}><img src="/images/last-updated-by-column.png" style={{opacity: '0.8'}}/></div>
     <i>Figure 3: "Last updated by" column in Data Manager.</i>
 
 - This release introduces the go-back functionality (`<` icon) that allows you to navigate back to the previous task through the review stream.
 
     <br />
-    <div style="margin:auto; text-align:center;"><img src="/images/go-back-reviewstream.png" style="opacity: 0.8"/></div>
+    <div style={{margin: 'auto', textAlign: 'center'}}><img src="/images/go-back-reviewstream.png" style={{opacity: '0.8'}}/></div>
     <i>Figure 4: Go back to the previous task. </i>
 
 - Starting with this release, you can create a **Lead Time** column in **Data Manager** with averaged lead time per task.
 
     <br />
-    <div style="margin:auto; text-align:center;"><img src="/images/lead-time.png" style="opacity: 0.8"/></div>
+    <div style={{margin: 'auto', textAlign: 'center'}}><img src="/images/lead-time.png" style={{opacity: '0.8'}}/></div>
     <i>Figure 5: Lead Time column in Data Manager. </i>
 </div>

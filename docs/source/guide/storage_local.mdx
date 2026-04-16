@@ -62,11 +62,11 @@ export LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/home/user
 ```
 Then when you configure your local storage in the UI as [outlined below](#Create-a-source-storage-connection), your absolute local path would be (to have the option to reference files in both folders):
 
-**Absolute local path:** home/user<span style="color:red">/ls-demo</span> 
+**Absolute local path:** home/user<span style={{color: 'red'}}>/ls-demo</span> 
 
 Or to pull from only one folder:
 
-**Absolute local path:** home/user<span style="color:red">/ls-demo/my-data</span> 
+**Absolute local path:** home/user<span style={{color: 'red'}}>/ls-demo/my-data</span> 
 
 #### Windows example
 
@@ -94,11 +94,11 @@ set LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=C:\\Users\\YourName\\Documents
 
 Then when you configure your local storage in the UI as [outlined below](#Create-a-source-storage-connection), your absolute local path would be (to have the option to reference files in both folders):
 
-**Absolute local path:** C:\Users\YourName\Documents<span style="color:red">\ls-demo</span>
+**Absolute local path:** C:\Users\YourName\Documents<span style={{color: 'red'}}>\ls-demo</span>
 
 Or to pull from only one folder: 
 
-**Absolute local path:** C:\Users\YourName\Documents<span style="color:red">\ls-demo\my-data</span>
+**Absolute local path:** C:\Users\YourName\Documents<span style={{color: 'red'}}>\ls-demo\my-data</span>
 
 ## Create a source storage connection
 
@@ -126,13 +126,13 @@ Complete the following fields and then click **Test connection**:
 
     * `LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=home/user`
 
-    * **Absolute local path:** home/user<span style="color:red">/ls-demo/my-data</span>
+    * **Absolute local path:** home/user<span style={{color: 'red'}}>/ls-demo/my-data</span>
 
     **Windows:** 
 
     * `LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=C:\\Users\\YourName\\Documents`
 
-    * **Absolute local path:** C:\Users\YourName\Documents<span style="color:red">\ls-demo\my-data</span>
+    * **Absolute local path:** C:\Users\YourName\Documents<span style={{color: 'red'}}>\ls-demo\my-data</span>
 
 
 
@@ -140,7 +140,7 @@ Complete the following fields and then click **Test connection**:
 
 Complete the following fields and then click **Load preview** to ensure you are syncing the correct data:
 
-<div class="noheader rowheader">
+<div className="noheader rowheader">
 
 | | |
 | --- | --- |
@@ -194,7 +194,7 @@ So you set up your local file storage as follows:
 
 `LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=home/user/ls-demo`
 
-**Absolute local path:** home/user/ls-demo<span style="color:red">/my-data</span>
+**Absolute local path:** home/user/ls-demo<span style={{color: 'red'}}>/my-data</span>
     
 When you reference files within your tasks, you will need to repeat what you appended to the absolute local path (`my-data`) + the file name. 
 
@@ -232,7 +232,7 @@ So you set up your local file storage as follows:
 
 `LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=home/user`
 
-**Absolute local path:** home/user<span style="color:red">/ls-demo</span>
+**Absolute local path:** home/user<span style={{color: 'red'}}>/ls-demo</span>
     
 When you reference files within your tasks, you will need to repeat what you appended to the absolute local path (`ls-demo`) + the subfolder + the file name. 
 
@@ -264,7 +264,7 @@ There are several ways to get your JSON/JSONL/Parquet files into Label Studio:
 
 Although the UI has since changed, this video demonstrates how to setup local storage from scratch and import JSON tasks in a complex task format that are linked to the local storage files.
 
-<iframe class="video-border" width="100%" height="400vh" src="https://www.youtube.com/embed/lo6ncQajbdU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<iframe className="video-border" width="100%" height="400vh" src="https://www.youtube.com/embed/lo6ncQajbdU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>  
 
 ## Create a target storage connection
 

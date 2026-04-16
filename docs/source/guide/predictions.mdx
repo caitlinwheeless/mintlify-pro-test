@@ -32,7 +32,7 @@ With Prompts, you can leverage LLMs to automatically generate predictions for yo
 
 To import predicted labels into Label Studio, you must use the [Basic Label Studio JSON format](tasks#Basic-Label-Studio-JSON-format) and set up your tasks with the `predictions` JSON key. The Label Studio ML backend also outputs tasks in this format. Check this common video tutorial showing how to convert a submitted annotation to a prediction:
 
-<iframe class="video-border" width="100%" height="400vh" src="https://www.youtube.com/embed/CyRe73VD4EE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe className="video-border" width="100%" height="400vh" src="https://www.youtube.com/embed/CyRe73VD4EE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ### JSON format for pre-annotations
 
@@ -91,7 +91,7 @@ If you're generating pre-annotations for a [custom ML backend](ml_create), you c
 Predictions cannot be modified and are always read-only.
 
 If the "Show predictions to annotators in the Label Stream and Quick View" toggle in the project settings (Machine Learning section) is enabled, predictions will be automatically copied to newly created annotations. In Quick View mode, annotations can be created from predictions by using the special copy button on the editor tool panel: 
-<img src="/images/quickview-copy-button.png" class="gif-border" />
+<img src="/images/quickview-copy-button.png" className="gif-border" />
 
 
 ### Specific examples for pre-annotations
@@ -195,7 +195,7 @@ The prediction score applies to the entire prediction.
 Import pre-annotated tasks into Label Studio [using the UI](tasks#Import-data-from-the-Label-Studio-UI) or [using the API](/api#operation/projects_import_create). 
 
 In the Label Studio UI, the imported prediction for this task looks like the following: 
-<img src="../images/predictions_loaded.png" alt="screenshot of the Label Studio UI showing an image of airplanes with bounding boxes covering each airplane." style="max-width: 600px;" class="gif-border" />
+<img src="../images/predictions_loaded.png" alt="screenshot of the Label Studio UI showing an image of airplanes with bounding boxes covering each airplane." style={{maxWidth: '600px'}} className="gif-border" />
 
 ## Import pre-annotated rectangle, polygon, ellipse & keypoint regions without labels for images  
 
@@ -685,7 +685,7 @@ Save this example JSON as a file, for example: `example_preannotated_ner_tasks.j
 
 Import pre-annotated tasks into Label Studio [using the UI](tasks#Import-data-from-the-Label-Studio-UI) or [using the API](/api#operation/projects_import_create). In the Label Studio UI, the imported prediction for the first task looks like the following:
 
-<center><img src="../images/predictions_loaded_text.png" alt="screenshot of the Label Studio UI showing the text with highlighted text labels and prediction scores visible." style="max-width: 100%;" /></center>
+<center><img src="../images/predictions_loaded_text.png" alt="screenshot of the Label Studio UI showing the text with highlighted text labels and prediction scores visible." style={{maxWidth: '100%'}} /></center>
 
 You can sort the prediction scores for each labeled region using the **Regions** pane options. 
 

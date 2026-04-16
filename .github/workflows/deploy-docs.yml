@@ -1,0 +1,38 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        product: [opensource, enterprise]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up deployment branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          BRANCH="deploy/${{ matrix.product }}"
+
+          # Start from current main
+          git checkout -B "$BRANCH"
+
+          # Swap in the product-specific docs.json
+          cp "${{ matrix.product }}/docs.json" docs.json
+          git add docs.json
+
+          # Commit only if there are changes
+          git diff --cached --quiet || git commit -m "Deploy ${{ matrix.product }} docs from ${GITHUB_SHA::8}"
+
+          # Force-push the deployment branch
+          git push origin "$BRANCH" --force

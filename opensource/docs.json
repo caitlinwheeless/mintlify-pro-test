@@ -1,0 +1,422 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "colors": {
+    "primary": "#0D9373"
+  },
+  "fonts": {
+    "family": "Poppins",
+    "weight": 400,
+    "heading": {
+      "family": "Poppins"
+    },
+    "body": {
+      "family": "Poppins"
+    }
+  },
+  "name": "Label Studio",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Discover & Learn",
+            "pages": [
+              "docs/source/guide/get_started",
+              "docs/source/guide/glossary",
+              "docs/source/guide/label_studio_compare",
+              "docs/source/guide/enterprise_features"
+            ]
+          },
+          {
+            "group": "Install & Setup",
+            "pages": [
+              "docs/source/guide/quick_start",
+              {
+                "group": "Installation",
+                "root": "docs/source/guide/install",
+                "pages": [
+                  {
+                    "group": "Install using Kubernetes",
+                    "root": "docs/source/guide/install_k8s",
+                    "pages": [
+                      "docs/source/guide/ingress_config",
+                      "docs/source/guide/install_k8s_airgapped",
+                      "docs/source/guide/helm_values"
+                    ]
+                  },
+                  "docs/source/guide/install_troubleshoot"
+                ]
+              },
+              "docs/source/guide/install_requirements",
+              "docs/source/guide/storedata",
+              "docs/source/guide/persistent_storage",
+              "docs/source/guide/start",
+              "docs/source/guide/upgrade_community",
+              "docs/source/guide/security",
+              "docs/source/guide/troubleshooting"
+            ]
+          },
+          {
+            "group": "Create & Manage Projects",
+            "pages": [
+              "docs/source/guide/setup_project",
+              "docs/source/guide/setup",
+              {
+                "group": "Manage projects",
+                "root": "docs/source/guide/manage_projects_lso",
+                "pages": [
+                  "docs/source/guide/project_settings",
+                  "docs/source/guide/manage_data"
+                ]
+              },
+              {
+                "group": "Labeling",
+                "root": "docs/source/guide/labeling",
+                "pages": [
+                  "docs/source/guide/hotkeys",
+                  "docs/source/guide/skip"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Import & Export",
+            "pages": [
+              {
+                "group": "Add project storage",
+                "root": "docs/source/guide/storage",
+                "pages": [
+                  "docs/source/guide/storage_s3",
+                  "docs/source/guide/storage_gcp",
+                  "docs/source/guide/storage_azure",
+                  "docs/source/guide/storage_databricks",
+                  "docs/source/guide/storage_redis",
+                  "docs/source/guide/storage_local"
+                ]
+              },
+              {
+                "group": "Import data",
+                "root": "docs/source/guide/tasks",
+                "pages": [
+                  "docs/source/guide/task_format",
+                  "docs/source/guide/predictions"
+                ]
+              },
+              "docs/source/guide/export"
+            ]
+          },
+          {
+            "group": "Manage Your Organization",
+            "pages": [
+              "docs/source/guide/signup",
+              "docs/source/guide/admin_manage",
+              "docs/source/guide/user_account",
+              "docs/source/guide/access_tokens"
+            ]
+          },
+          {
+            "group": "Machine Learning",
+            "pages": [
+              "docs/source/guide/ml",
+              "docs/source/guide/ml_create"
+            ]
+          },
+          {
+            "group": "Integrate & Extend",
+            "pages": [
+              "docs/source/guide/frontend",
+              "docs/source/guide/api",
+              "docs/source/guide/sdk",
+              {
+                "group": "Webhooks",
+                "root": "docs/source/guide/webhooks",
+                "pages": [
+                  "docs/source/guide/webhook_create",
+                  "docs/source/guide/webhook_reference"
+                ]
+              },
+              "docs/source/guide/frontend_reference"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Templates",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "docs/source/templates/get_started"
+            ]
+          },
+          {
+            "group": "Computer Vision",
+            "pages": [
+              "docs/source/templates/image_polygons",
+              "docs/source/templates/image_segmentation",
+              "docs/source/templates/image_bbox",
+              "docs/source/templates/image_ellipse",
+              "docs/source/templates/image_keypoints",
+              "docs/source/templates/optical_character_recognition",
+              "docs/source/templates/pdf_ocr",
+              "docs/source/templates/multi-page-document-annotation",
+              "docs/source/templates/image_captioning",
+              "docs/source/templates/image_classification",
+              "docs/source/templates/multi-image_classification",
+              "docs/source/templates/visual_question_answering",
+              "docs/source/templates/inventory_tracking",
+              "docs/source/templates/visual_genome",
+              "docs/source/templates/medical_imaging_classification",
+              "docs/source/templates/vector_segmentation"
+            ]
+          },
+          {
+            "group": "Natural Language Processing",
+            "pages": [
+              "docs/source/templates/named_entity",
+              "docs/source/templates/sentiment_analysis",
+              "docs/source/templates/taxonomy",
+              "docs/source/templates/relation_extraction",
+              "docs/source/templates/text_summarization",
+              "docs/source/templates/machine_translation",
+              "docs/source/templates/question_answering",
+              "docs/source/templates/content_moderation",
+              "docs/source/templates/contextual_scrolling"
+            ]
+          },
+          {
+            "group": "Audio & Speech",
+            "pages": [
+              "docs/source/templates/transcribe_audio",
+              "docs/source/templates/automatic_speech_recognition_segments",
+              "docs/source/templates/signal_quality_detection",
+              "docs/source/templates/sound_event_detection",
+              "docs/source/templates/voice_activity_detection",
+              "docs/source/templates/speaker_segmentation",
+              "docs/source/templates/audio_classification",
+              "docs/source/templates/audio_regions",
+              "docs/source/templates/intent_classification"
+            ]
+          },
+          {
+            "group": "Custom Interfaces",
+            "pages": [
+              "docs/source/templates/react_spreadsheet",
+              "docs/source/templates/react_audio",
+              "docs/source/templates/react_claims"
+            ]
+          },
+          {
+            "group": "Ranking & Scoring",
+            "pages": [
+              "docs/source/templates/generative-visual-ranker",
+              "docs/source/templates/serp_ranking",
+              "docs/source/templates/website_rating",
+              "docs/source/templates/pairwise_regression",
+              "docs/source/templates/pairwise_comparison",
+              "docs/source/templates/content_image_retrieval",
+              "docs/source/templates/document_retrieval",
+              "docs/source/templates/text_to_image",
+              "docs/source/templates/asr_hypotheses"
+            ]
+          },
+          {
+            "group": "Structured Data",
+            "pages": [
+              "docs/source/templates/freeform_metadata",
+              "docs/source/templates/tabular_data",
+              "docs/source/templates/pdf_classification",
+              "docs/source/templates/html_document",
+              "docs/source/templates/html_classification"
+            ]
+          },
+          {
+            "group": "Time Series",
+            "pages": [
+              "docs/source/templates/time_series",
+              "docs/source/templates/time_series_classification",
+              "docs/source/templates/time_series_forecasting",
+              "docs/source/templates/timeseries_audio_video",
+              "docs/source/templates/change_point_detection",
+              "docs/source/templates/activity_recognition",
+              "docs/source/templates/signal_quality",
+              "docs/source/templates/outliers_anomaly_detection"
+            ]
+          },
+          {
+            "group": "Video",
+            "pages": [
+              "docs/source/templates/video_classification",
+              "docs/source/templates/video_frame_classification",
+              "docs/source/templates/video_timeline_segmentation",
+              "docs/source/templates/video_object_detector"
+            ]
+          },
+          {
+            "group": "Conversational AI",
+            "pages": [
+              "docs/source/templates/response_generation",
+              "docs/source/templates/response_selection",
+              "docs/source/templates/coreference_entity_linking",
+              "docs/source/templates/dialogue_analysis",
+              "docs/source/templates/slot_filling",
+              "docs/source/templates/chatbot",
+              "docs/source/templates/chat_llm_eval",
+              "docs/source/templates/chat_eval",
+              "docs/source/templates/chat_red_team",
+              "docs/source/templates/chat_rlhf"
+            ]
+          },
+          {
+            "group": "Generative AI",
+            "pages": [
+              "docs/source/templates/generative-supervised-llm",
+              "docs/source/templates/generative-pairwise-human-preference",
+              "docs/source/templates/generative-llm-ranker",
+              "docs/source/templates/llm_response_moderation",
+              "docs/source/templates/llm_response_grading",
+              "docs/source/templates/llm_side_by_side",
+              "docs/source/templates/llm_rag_human_feedback",
+              "docs/source/templates/llm_ragas",
+              "docs/source/templates/multi_turn_chat"
+            ]
+          },
+          {
+            "group": "Practical Examples",
+            "pages": [
+              "docs/source/templates/breast_cancer_mammogram_classification",
+              "docs/source/templates/html_ner_tagging_person_and_organization",
+              "docs/source/templates/ner_tagging_invoices_bio_format",
+              "docs/source/templates/ocr_invoices_pre_ner_bio_format",
+              "docs/source/templates/two_level_sentiment_analysis_of_x_twitter_posts"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "docs/source/templates/use-cases/bbox_ag",
+              "docs/source/templates/use-cases/bbox_autonomous",
+              "docs/source/templates/use-cases/bbox_fashion",
+              "docs/source/templates/use-cases/bbox_medical",
+              "docs/source/templates/use-cases/bbox_quality",
+              "docs/source/templates/use-cases/bbox_security",
+              "docs/source/templates/use-cases/bbox_smarthome",
+              "docs/source/templates/use-cases/bbox_sports",
+              "docs/source/templates/use-cases/bbox_traffic",
+              "docs/source/templates/use-cases/bbox_urban",
+              "docs/source/templates/use-cases/ocr_docs",
+              "docs/source/templates/use-cases/ocr_ed",
+              "docs/source/templates/use-cases/ocr_market",
+              "docs/source/templates/use-cases/ocr_plates",
+              "docs/source/templates/use-cases/polygon_medical",
+              "docs/source/templates/use-cases/polygon_sports",
+              "docs/source/templates/use-cases/polygon_wildlife"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Tags",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "docs/source/tags/index"
+            ]
+          },
+          {
+            "group": "Data Types",
+            "pages": [
+              "docs/source/tags/audio",
+              "docs/source/tags/chat",
+              "docs/source/tags/hypertext",
+              "docs/source/tags/image",
+              "docs/source/tags/list",
+              "docs/source/tags/paragraphs",
+              "docs/source/tags/pdf",
+              "docs/source/tags/reactcode",
+              "docs/source/tags/table",
+              "docs/source/tags/text",
+              "docs/source/tags/timeseries",
+              "docs/source/tags/video"
+            ]
+          },
+          {
+            "group": "Labeling & Annotation",
+            "pages": [
+              "docs/source/tags/brush",
+              "docs/source/tags/brushlabels",
+              "docs/source/tags/bitmasklabels",
+              "docs/source/tags/choice",
+              "docs/source/tags/choices",
+              "docs/source/tags/datetime",
+              "docs/source/tags/ellipse",
+              "docs/source/tags/ellipselabels",
+              "docs/source/tags/hypertextlabels",
+              "docs/source/tags/keypoint",
+              "docs/source/tags/keypointlabels",
+              "docs/source/tags/label",
+              "docs/source/tags/labels",
+              "docs/source/tags/magicwand",
+              "docs/source/tags/number",
+              "docs/source/tags/pairwise",
+              "docs/source/tags/paragraphlabels",
+              "docs/source/tags/polygon",
+              "docs/source/tags/polygonlabels",
+              "docs/source/tags/ranker",
+              "docs/source/tags/rating",
+              "docs/source/tags/rectangle",
+              "docs/source/tags/rectanglelabels",
+              "docs/source/tags/relation",
+              "docs/source/tags/relations",
+              "docs/source/tags/shortcut",
+              "docs/source/tags/taxonomy",
+              "docs/source/tags/textarea",
+              "docs/source/tags/timeserieslabels",
+              "docs/source/tags/timelinelabels",
+              "docs/source/tags/vector",
+              "docs/source/tags/vectorlabels",
+              "docs/source/tags/videorectangle",
+              "docs/source/tags/videovector",
+              "docs/source/tags/videovectorlabels"
+            ]
+          },
+          {
+            "group": "Layout & Styling",
+            "pages": [
+              "docs/source/tags/collapse",
+              "docs/source/tags/filter",
+              "docs/source/tags/header",
+              "docs/source/tags/markdown",
+              "docs/source/tags/style",
+              "docs/source/tags/view"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Tutorials",
+        "groups": [
+          {
+            "group": "Tutorials",
+            "pages": [
+              "docs/source/tutorials/index",
+              "docs/source/tutorials/how_to_embed_evaluation_workflows_in_your_research_stack_with_Label_Studio",
+              "docs/source/tutorials/how_to_debug_agents_with_LangSmith_and_Label_Studio",
+              "docs/source/tutorials/how_to_connect_Hugging_Face_with_Label_Studio_SDK",
+              "docs/source/tutorials/how_to_create_a_Benchmark_and_Evaluate_your_models_with_Label_Studio",
+              "docs/source/tutorials/how_to_compare_two_ai_models_with_label_studio",
+              "docs/source/tutorials/how_to_measure_inter_annotator_agreement_and_build_human_consensus",
+              "docs/source/tutorials/how_to_multi_turn_chat_evals_with_chainlit_and_label_studio",
+              "docs/source/tutorials/how_to_review_braintrust_traces_with_label_studio",
+              "docs/source/tutorials/how_to_review_langsmith_traces_with_label_studio",
+              "docs/source/tutorials/how_to_review_langfuse_traces_with_label_studio"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

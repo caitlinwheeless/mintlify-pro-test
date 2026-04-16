@@ -10,7 +10,7 @@ Task agreement, also known as "labeling consensus" or "annotation consensus," sh
 
 Agreement helps you determine the quality of your dataset, its readiness to be used to train models, and assess the performance of your annotators and reviewers.
 
-<iframe class="video-border" style="width: 560px; display: block; margin-left: auto; margin-right: auto;" src="https://www.youtube.com/embed/ivT4UN5LzFw?si=UK88TAuE_iNOEkhj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe className="video-border" style={{width: '560px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} src="https://www.youtube.com/embed/ivT4UN5LzFw?si=UK88TAuE_iNOEkhj" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ## View agreement
 
@@ -110,7 +110,7 @@ See [Non-categorical examples](#Non-categorical-examples) for an example of how 
 
 You can configure the methodology to use for each project under **Settings > Quality > Agreement** section.
 
-<img src="/images/review/agreement-methodology.png" class="gif-border" style="max-width:600px" />
+<img src="/images/review/agreement-methodology.png" className="gif-border" style={{maxWidth: '600px'}} />
 
 You have the following methodologies to choose from:
 
@@ -129,7 +129,7 @@ You can switch between methodologies at any time.
 
 Agreement is calculated across all annotators at once, measuring how much they converge to a common answer. 
 
-<img src="/images/review/consensus-1.png" alt="Screenshot" style="display: block; margin: 0 auto; max-width: 300px" />
+<img src="/images/review/consensus-1.png" alt="Screenshot" style={{display: 'block', margin: '0 auto', maxWidth: '300px'}} />
 
 There are two equally valid ways to look at consensus:
 
@@ -175,7 +175,7 @@ Once annotations have been reduced to a `1` or `0`, consensus calculates how muc
 
 As the name "Pairwise" indicates, Pairwise looks at agreement between every unique *pair* of annotators, and then averages that agreement. 
 
-<img src="/images/review/pairwise-1.png" alt="Screenshot" style="display: block; margin: 0 auto; max-width: 300px" />
+<img src="/images/review/pairwise-1.png" alt="Screenshot" style={{display: 'block', margin: '0 auto', maxWidth: '300px'}} />
 
 Pairwise measures agreement by comparing every unique pair of annotators independently, calculating a score for each pair, and then averaging all those scores together. 
 
@@ -253,7 +253,7 @@ In extremely simple terms:
 [Categorical control tags](#Categorical-control-tags) are control tags that have a fixed set of choices. For example, a control tag that has the choices "Opossum", "Cat", "Hamster".
 
 
-<div class="code-tabs">
+<div className="code-tabs">
   <div data-name="Pairwise">
 
 Say you have 3 annotators select between 3 different choices: "A", "B", "C".
@@ -353,9 +353,9 @@ For more information on how IoU is calculated, see [Intersection over Union (IoU
 
 For more information on thresholds, see the following video:
 
-<iframe class="video-border" style="width: 560px; display: block; margin-left: auto; margin-right: auto;" src="https://www.youtube.com/embed/j5xsZQHQ_s0?si=k0QqWNpKBdJD_FW2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe className="video-border" style={{width: '560px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} src="https://www.youtube.com/embed/j5xsZQHQ_s0?si=k0QqWNpKBdJD_FW2" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-<div class="code-tabs">
+<div className="code-tabs">
   <div data-name="Pairwise">
 
 Say you have 3 annotators drawing boxes using **RectangleLabels**. You are using the **Intersection over Union (IoU)** metric to calculate agreement. 
@@ -432,7 +432,7 @@ In this example, we'll look at **Span Overlap** and **Span Overlap (Threshold)**
 Span Overlap measures how much annotators' highlighted regions coincide. For more information on how it's calculated, see [Span Overlap](agreement_metrics#Span-Overlap). 
 
 
-<div class="code-tabs">
+<div className="code-tabs">
   <div data-name="Pairwise">
 
 You have three annotators who are highlighting text spans to label as "Positive" or "Negative."
@@ -499,7 +499,7 @@ Under **Settings > Quality > Agreement > Overall Agreement**, you can customize 
 
 This ensures that a critical control tag has more bearing on the overall agreement score than a less important control tag.
 
-<img src="/images/review/agreement-overall.png" class="gif-border" style="max-width:600px" />
+<img src="/images/review/agreement-overall.png" className="gif-border" style={{maxWidth: '600px'}} />
 
 For example, if you have a project with the following control tags and weights:
 - RectangleLabels: 1.0
@@ -520,7 +520,7 @@ Then the overall agreement is calculated as:
 
 Under **Settings > Quality > Agreement > Agreement Columns**, you can customize how agreement is calculated for each control tag. 
 
-<img src="/images/review/agreement-column-settings.png" class="gif-border" style="max-width:600px" />
+<img src="/images/review/agreement-column-settings.png" className="gif-border" style={{maxWidth: '600px'}} />
 
 Your options depend on the agreement methodology you have selected and what type of control tag you are configuring. 
 

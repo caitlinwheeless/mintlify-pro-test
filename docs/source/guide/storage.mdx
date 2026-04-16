@@ -44,7 +44,7 @@ Source storage functionality can be divided into two parts:
 * Sync - when Label Studio scans your storage and imports tasks from it.
 * URI resolving - when the Label Studio backend requests Cloud Storage to resolve URI links (e.g., `s3://bucket/1.jpg`) into HTTPS (`https://aws.amazon.com/bucket/1.jpg`). This way, user's browsers are able to load media. 
 
-<img src="/images/source-cloud-storages.png" class="make-intense-zoom" />
+<img src="/images/source-cloud-storages.png" className="make-intense-zoom" />
 
 ### Import method
 
@@ -57,7 +57,7 @@ Label Studio Source Storages feature an "Import method" dropdown. This setting e
 
 When set to "Tasks", tasks in JSON, JSONL/NDJSON or Parquet format can be loaded directly from storage buckets into Label Studio. This approach is particularly helpful when dealing with complex tasks that involve multiple media sources.
 
-<img src="/images/source-storages-treat-off.png" class="make-intense-zoom" />
+<img src="/images/source-storages-treat-off.png" className="make-intense-zoom" />
 
 You may put multiple tasks inside the same JSON file, but not mix task formats inside the same file.
 
@@ -165,7 +165,7 @@ In Label Studio Enterprise and Starter Cloud editions, Parquet files can also be
 
 When set to "Files", Label Studio automatically lists files from the storage bucket and constructs tasks. This is only possible for simple labeling tasks that involve a single media source (such as an image, text, etc.).* 
 
-<img src="/images/source-storages-treat-on.png" class="make-intense-zoom" />
+<img src="/images/source-storages-treat-on.png" className="make-intense-zoom" />
 
 
 ### Pre-signed URLs vs. Storage proxies
@@ -189,7 +189,7 @@ In this scenario, your browser receives an HTTP 303 redirect to a time-limited S
 
 The main benefit to using pre-signed URLs is if you want to ensure that your media files are isolated **from** the Label Studio network as much as possible. 
 
-<img src="/images/storages/storage-proxy-presigned.png" style="max-width:600px; margin: 0 auto" alt="Diagram of presigned URL flow" />
+<img src="/images/storages/storage-proxy-presigned.png" style={{maxWidth: '600px', margin: '0 auto'}} alt="Diagram of presigned URL flow" />
 
 The permissions required for this are already included in the cloud storage configuration documentation below. 
 
@@ -198,7 +198,7 @@ The permissions required for this are already included in the cloud storage conf
 
 When in proxy mode, the Label Studio backend fetches objects server-side and streams them directly to the browser.
 
-<img src="/images/storages/storage-proxy.png" style="max-width:600px; margin: 0 auto" alt="Diagram of proxy flow" />
+<img src="/images/storages/storage-proxy.png" style={{maxWidth: '600px', margin: '0 auto'}} alt="Diagram of proxy flow" />
 
 This has multiple benefits, including:
 

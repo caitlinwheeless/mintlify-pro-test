@@ -3,7 +3,7 @@ title: Text Summarization
 description: Template for summarizing text with Label Studio for your machine learning and data science projects.
 ---
 
-<img src="/images/templates/text-summarization.png" alt="" class="gif-border" width="552px" height="408px" />
+<img src="/images/templates/text-summarization.png" alt="" className="gif-border" width="552px" height="408px" />
 
 If you want to build a machine learning model to summarize text, use this template to create a dataset of one sentence summaries of text samples. You can also customize this template to ask for different types or lengths of summaries. 
 
@@ -53,7 +53,7 @@ There are many ways to enhance this template.
 
 If you want to display the text box next to the text to summarize, do the following:
 
-1. Add flex display styling to the [View](/tags/view) tag for the labeling configuration: `<View style="display: flex;">`
+1. Add flex display styling to the [View](/tags/view) tag for the labeling configuration: `<View style={{display: 'flex'}}>`
 2. Add new [View](/tags/view) tags to wrap the [Header](/tags/header) and the [Text](/tags/text) sample so that they display on the left.
 3. Wrap the [TextArea](/tags/textarea) and [Header](/tags/header) tags in [View](/tags/view) tags with the following CSS styling so that they display neatly on the right:
 ```xml

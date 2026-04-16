@@ -135,9 +135,9 @@ To ensure maximum security and isolation of your data behind a VPC, only allow a
 
 <i>This image shows how you can securely configure source cloud storages with Label Studio using your VPC and IP restrictions</i>
 
-<img width="49%" style="display: inline-block; margin-right: 5px;" src="/images/storages/cloud-storage-ip-restriction.jpg" alt="Label Studio + Cloud Storage IP Restriction" class="make-intense-zoom" />
+<img width="49%" style={{display: 'inline-block', marginRight: '5px'}} src="/images/storages/cloud-storage-ip-restriction.jpg" alt="Label Studio + Cloud Storage IP Restriction" className="make-intense-zoom" />
 
-<img width="49%" style="display: inline-block;" src="/images/storages/cloud-storage-vpn.jpg" alt="Label Studio + Cloud Storage VPC" class="make-intense-zoom" />
+<img width="49%" style={{display: 'inline-block'}} src="/images/storages/cloud-storage-vpn.jpg" alt="Label Studio + Cloud Storage VPC" className="make-intense-zoom" />
 
 
 
@@ -165,7 +165,7 @@ You can disable data collection by setting the environment variable `COLLECT_ANA
 
 ## Add self-signed certificate to trusted root store
 
-<div class="code-tabs">
+<div className="code-tabs">
   <div data-name="Docker Compose">
 
 1. Mount your self-signed certificate as a volume into `app` container:

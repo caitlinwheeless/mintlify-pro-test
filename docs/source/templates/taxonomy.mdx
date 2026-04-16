@@ -3,7 +3,7 @@ title: Taxonomy
 description: Template for classifying a taxonomy or hierarchy with Label Studio for your machine learning and data science projects.
 ---
 
-<img src="/images/templates/taxonomy.png" alt="" class="gif-border" width="552px" height="408px" />
+<img src="/images/templates/taxonomy.png" alt="" className="gif-border" width="552px" height="408px" />
 
 Perform classification tasks within the context of a defined taxonomy or hierarchy of choices. 
 
@@ -111,7 +111,7 @@ The `apiUrl` must be accessible to Label Studio. You can accomplish this in seve
     If you are unable to use a separate bucket for your taxonomy, see the workaround below. 
 2. [Follow these instructions](/guide/storage) to set up cloud storage for Label Studio. This should be a separate connection from your other storage connections.
 
-    <div class="admonition note"><p class="admonition-title">note</p><p>Do not sync this storage connection. If you do, you will need to delete the task that is automatically created when syncing the taxonomy.</p></div>
+    <div className="admonition note"><p className="admonition-title">note</p><p>Do not sync this storage connection. If you do, you will need to delete the task that is automatically created when syncing the taxonomy.</p></div>
 
 3. When configuring your labeling interface, format your `apiUrl` using the appropriate URL format for your cloud service provider: `gs://`, `s3://`, `azure-blob://`. 
 
