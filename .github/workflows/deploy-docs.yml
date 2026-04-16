@@ -17,22 +17,26 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up deployment branch
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Prepare deployment
+        run: |
+          # Swap in the product-specific docs.json
+          cp "${{ matrix.product }}/docs.json" docs.json
+
+          # Strip the other product's content divs and unwrap this product's
+          python3 scripts/strip_product_divs.py "${{ matrix.product }}"
+
+      - name: Push to deployment branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           BRANCH="deploy/${{ matrix.product }}"
-
-          # Start from current main
           git checkout -B "$BRANCH"
-
-          # Swap in the product-specific docs.json
-          cp "${{ matrix.product }}/docs.json" docs.json
-          git add docs.json
-
-          # Commit only if there are changes
+          git add -A
           git diff --cached --quiet || git commit -m "Deploy ${{ matrix.product }} docs from ${GITHUB_SHA::8}"
-
-          # Force-push the deployment branch
           git push origin "$BRANCH" --force
